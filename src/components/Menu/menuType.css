@@ -1,0 +1,117 @@
+.menu__go-back {
+    font-size: 1.5rem;
+    font-weight: 600;
+    /**
+     * If you set it to a value higher than the 'font-size', 
+     * you will have to take account of the difference 
+     * between the 'line-height' and the 'font-size' 
+     * to vertically centre the arrow and align it with the text.
+     **/
+    line-height: 1;
+  
+    /* Makes some place for the arrow */
+    padding-left: 15px;
+  
+    /* The arrow will be absolutely positioned */
+    position: relative;
+    border: none;
+    background-color: white;
+    position: absolute;
+  }
+  
+  .menu__go-back::before {  
+    color:  white;
+    border-style: solid;
+    border-width: 0 0 2px 2px;
+    content: "";
+    display: block;
+    height: 8px;
+    left: 0px;
+    position: absolute;
+    width: 8px;
+  
+    /* These two lines vertically centre the point of the arrow */
+    margin-top: -3px;
+    top: 50%;
+  
+    /* The arrow sprints to the left when the link is hovered */
+    transition: left 0.1s;
+  
+    transform: rotate( 45deg );
+    -webkit-transform: rotate( 45deg );
+  }
+  
+  .dishes__displayed-menu {
+    position: relative;
+  }
+
+  .menu__type-items{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 10px;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .menu__type-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background: rgb(241, 241, 241);
+    border-radius: 10px;
+    justify-content: space-between;
+    /* cursor: pointer; */
+    height: 300px;
+    cursor: pointer;
+    width: 500px;
+    margin: 1rem;
+    align-items: center !important;
+    align-self: center;
+  }
+
+  .menu__type-item img {
+    max-width: 200px;
+    max-height: 150px;
+    object-fit: contain;
+  }
+
+  .menu__type-item p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: red;
+  }
+
+  .menu__type-item h3 {
+    text-align: center;
+    color: black;
+    font-size: 1.8rem;
+  }
+
+  .menu__ordering-time{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    text-align:center;
+    font-style: italic;
+  }
+
+
+  
+  @media (max-width: 420px) {
+    .menu__type-item {
+      width: 300px;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .menu__type-item {
+      width: 210px;
+      height: 350px;
+    }
+  }
+  
+        
+ 

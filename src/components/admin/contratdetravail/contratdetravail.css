@@ -1,0 +1,32 @@
+.Contratdetravail-header h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    padding-bottom: 1em;
+    border-bottom: 1px solid gray;
+    font-weight: bold;
+    color: #04295d;
+  }
+  
+  .Contratdetravail_button {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 6em;
+    margin-top: 5em;
+  }
+  
+  .button {
+    padding: 1.5em;
+    margin: 1em;
+    font-weight: bold;
+    border-radius: 1em;
+    background-color: #04295d;
+    color: white;
+    width: 220px;
+    height: 170px;
+  }
+  
+  .button:hover {
+    background-color: #2fbfff;
+  }
+  

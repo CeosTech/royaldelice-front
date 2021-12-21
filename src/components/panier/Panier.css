@@ -1,0 +1,191 @@
+#Btn_Panier{
+    
+    font-size: 1.5em;
+    background-color: #AF323F;
+    color: #FFFFFF;
+    Width: 7em;
+    height: 2em;
+    justify-content: center;   
+    text-align: center;
+    box-shadow: none;
+    font-family: Teko;
+    border-color: #AF323F;
+    border-radius: 20px;
+    margin-top: 10em; 
+}
+
+#btn_test{
+    
+    background-color: #AF323F;
+    color: #FFFFFF;
+    width: 39px;
+    height: 40px;
+    justify-content: center;   
+    text-align: center;
+    box-shadow: none;
+    font-weight: bold;
+    border-color: #AF323F;
+    margin: 1em;
+}
+
+#Btn_Panier_emporter{
+    font-size: 1.5em;
+    background-color: #AF323F;
+    color: #FFFFFF;
+    width: 380px;
+    height: 105px;
+    box-shadow: none;
+    font-family: Teko;
+    font-weight: bold;
+    border-color: #AF323F;
+    border-radius: 50px;
+    margin-top: 2em;
+}
+
+#Btn_Panier_livraison{
+    font-size: 1.5em;
+    background-color: #FFFFFF;
+    color: #AF323F;
+    width: 380px;
+    height: 105px;
+    box-shadow: none;
+    font-weight: bold;
+    font-family: Teko;
+    border-color: #FFFFFF;
+    border-radius: 50px;
+    margin-top: 2em;
+}
+
+.Grid_container_produit{
+
+    border-bottom: 1px solid;
+    border-color: #bdbdbd;
+    padding-bottom: 5em;
+    
+}
+
+
+.div_img_panier{
+    width: 211px;
+    height: 211px;
+    background: rgba(137, 146, 156, 0.14);
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+.div_poubelle_panier{
+
+    width: 40px;
+    height: 40px;
+    background: #89929C;
+    border-radius: 50px;
+}
+
+.text_top_commentaire{
+    margin-top: 4em;
+    margin-left: 9.5em;
+    color: #AF323F;
+    font-weight: bold;
+    
+}
+
+.div_emporter{
+
+
+width: 80%;
+height: 380px;
+background: #292929;
+border-radius: 25px;
+margin: 0 auto;
+margin-top: 2em;
+}
+
+#stepper_panier .MuiStepIcon-root.MuiStepIcon-active{
+
+
+    color: #AF323F;
+}
+
+#stepper_panier .MuiStepIcon-root.MuiStepIcon-completed{
+
+    color: #AF323F;
+}
+
+#stepper_panier .MuiSvgIcon-root{
+
+    font-size: 3em;
+}
+
+#stepper_panier .MuiStepConnector-line{
+
+    margin: 0.8em;
+}
+
+#stepper_panier .MuiStepper-alternativeLabel {
+    
+    border-bottom: solid 1px;
+    padding-bottom: 4em;
+
+    border-color: #bdbdbd;
+}
+
+.text_header_panier{
+
+font-family: Teko;
+font-style: normal;
+font-weight: bold;
+font-size: 62px;
+line-height: 103px;
+text-align: center;
+color: #292929;
+
+
+}
+
+.text_mode_livraison{
+
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 1em;
+    font-family: Teko;
+font-style: normal;
+font-weight: bold;
+font-size: 64px;
+line-height: 92px;
+
+}
+
+.div_delai_commande{
+
+
+font-family: Teko;
+font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 69px;
+text-align: center;
+color: #292929;
+margin-top: 2em;
+}
+
+.sous_div_delai_commande{
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 42px;
+text-align: center;
+
+
+}
+
+#radioGroup .MuiRadio-colorSecondary.Mui-checked{
+
+    color: black;
+}
+
+#radioGroup .MuiTypography-body1{
+
+    font-size: 2rem
+}

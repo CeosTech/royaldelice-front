@@ -1,0 +1,37 @@
+.Comptabilite-header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding-bottom: 1em;
+  border-bottom: 1px solid gray;
+  font-weight: bold;
+  color: #04295d;
+}
+
+.Comptabilite-button {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 5em;
+  margin-top: 5em;
+}
+
+.button {
+  padding: 1.5em;
+  margin: 1em;
+  font-weight: bold;
+  border-radius: 1em;
+  background-color: #04295d;
+  color: white;
+  width: 220px;
+  height: 170px;
+}
+
+.button:hover {
+  border: solid 4px #3ebde6;
+}
+@media screen and (max-width: 1050px) {
+  .button {
+    padding-top: 2em;
+    margin: -2em;
+  }
+}

@@ -1,0 +1,151 @@
+.product {
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  display: block ruby;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 2rem 0;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 3em;
+  min-width: 400px;
+}
+
+.product img {
+  width: 100%;
+  margin: 30px auto;
+}
+
+.product--info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.product--info p {
+  margin: 0;
+}
+
+.product--info-title {
+  font-size: 1.5rem;
+  margin-bottom: 0rem !important;
+  justify-self: center;
+}
+
+.product-list p {
+  margin-bottom: 0;
+}
+
+.menu__details-title {
+  font-weight: bold;
+  margin: 0 0 0 2rem;
+}
+
+.menu__details {
+  margin: 0 0 0 2rem;
+  width: 100%;
+}
+
+.product--info-prix {
+  font-size: 1.5rem;
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 0px !important;
+  font-weight: thin;
+}
+
+.product--quantite {
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bold;
+  -moz-box-shadow-bottom: 2px 2px 2px grey;
+  -webkit-box-shadow-bottom: 2px 2px 2px grey;
+  box-shadow: 2px 2px 2px grey;
+  border-radius: 18px;
+
+}
+.product--quantite button {
+  margin: 0 10px;
+}
+
+
+
+.delete__product .MuiSvgIcon-root {
+  color: rgb(22, 20, 20);
+  font-size: 1.5rem;
+  margin-top: -1px;
+  margin-left: 20px;
+}
+
+.ecarter-prix {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .product--info-title {
+    font-size: 1.2rem;
+  }
+  .product-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0.5em;
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 350px) {
+  .product {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+
+}
+
+/* ------- Product of panier ----------*/
+.product-img {
+  background-color: #EFF0F1;
+  height: max-content;
+  width: max-content;
+  border-radius: 30px;
+}
+
+
+.btn-remove .MuiSvgIcon-root {
+  background-color: #C3232B;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+  font-size: 1.5rem;
+}
+
+.btn-add .MuiSvgIcon-root{
+  background-color: #C3232B;
+  color: white;
+  margin-left: 10px;
+  border-radius: 4px;
+  font-size: 1.5rem;
+}
+
+.text-quantite {
+  font-weight: 700;
+}
+
+.product__prix {
+  text-align: end;
+}
+
+.product .MuiFormHelperText-root.MuiFormHelperText-root {
+  color: #C3232B;
+}

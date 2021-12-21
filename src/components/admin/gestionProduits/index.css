@@ -1,0 +1,68 @@
+.commander__ {
+  margin-top: 80px !important;
+  /* background: url("../images/etoile.png") no-repeat center fixed; */
+  background-size: cover;
+}
+
+.commander__container {
+  padding: 1rem 0rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+#demo-simple-select {
+  min-width: 100px;
+  margin-top: 1%;
+}
+.commander__container__cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row !important;
+  justify-content: center;
+}
+
+.commander__container__cards fieldset {
+  width: 100%;
+}
+
+.dishes-menu__radio-container {
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu__radio-container {
+  flex-direction: row !important;
+}
+
+.commander__carte {
+  display: none;
+}
+
+.radio-choice__menu {
+  display: flex;
+  justify-content: center;
+  margin: 0 !important;
+}
+
+@media (max-width: 1080px) {
+  .commander__container {
+    grid-template-columns: 1fr;
+    padding: 12rem 1rem;
+  }
+
+  .commander__carte {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+  }
+
+  .commander__carte.white i {
+    color: rgb(238, 236, 236) !important;
+  }
+}

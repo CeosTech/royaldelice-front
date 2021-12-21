@@ -1,0 +1,17 @@
+.sides__radio-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.sides-radioGroup {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  align-items: self-end;
+}
+
+.sides-radioGroup h2 {
+  margin-bottom: 0;
+  margin-left: 1rem;
+}
+

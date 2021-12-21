@@ -1,0 +1,100 @@
+
+
+.commander {
+    margin-top: 80px !important;
+    background-color: #C3232B;
+  }
+  
+  .commander__container {
+    padding: 2rem 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .commander__container__cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row !important;
+    justify-content: center;
+  }
+  
+  .commander__container__cards fieldset {
+    width: 100%;
+  }
+  
+  .dishes-menu__radio-container {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .menu__radio-container {
+    flex-direction: row !important;
+  }
+  
+  .commander__carte {
+    display: none;
+  }
+  
+  .radio-choice__menu {
+    display: flex;
+    justify-content: center;
+    margin: 0 !important;
+  }
+  
+  .lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid black;
+    border-color: black transparent black transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (max-width: 1080px) {
+    .commander__container {
+      grid-template-columns: 1fr;
+      padding: 3rem 1rem;
+    }
+  
+    .commander__carte {
+      display: block;
+      position: absolute;
+      top: 35px;
+      left: 10px;
+      z-index: 100;
+    }
+  
+    .commander__carte.white i {
+      color: rgb(238, 236, 236) !important;
+    }
+  }
+  

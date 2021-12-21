@@ -1,0 +1,104 @@
+.formulaire{
+    background-color: #1C1F2B;
+    width: 100%;
+    padding-bottom: 200px;
+}
+
+.formulaireTitle{
+
+        padding-top: 1em !important;
+        color: white;
+        font-family: "Teko" !important;
+        text-align: center;
+        font-size: 82px !important;
+        font-weight: 900 !important;
+        padding-top: 30px;
+        line-height: 132px;
+        text-transform: uppercase;
+        letter-spacing: 5% !important;
+        
+        
+        
+   
+}
+
+.contact-coord{
+    background-color: white;
+    margin: 0 auto;
+    width: 80%;
+    padding-bottom: 4em;
+    border-radius: 20px;
+}
+
+.contact-coord h2{
+    font-family: "Teko";
+    font-size: 48px !important;
+    font-weight: 600 !important;
+    padding-top: 30px;
+    line-height: 69px;
+    text-transform: uppercase;
+    letter-spacing: 5% !important;
+    text-align: center;
+    
+}
+
+#Btn_Envoyer_Franchise{
+
+    font-size: 1.5em;
+    background-color: #C3232B;
+    color: #FFFFFF;
+    Width: 6em;
+    height: 2em;
+    justify-content: center;   
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: none;
+    font-family: Teko;
+    border-color: #C3232B;
+    border-radius: 15px;
+}
+
+#Grid_formulaire{
+
+    display: contents;
+}
+
+
+
+
+
+@media only screen and (max-width: 1000px) {
+
+    .formulaireTitle{
+        
+        font-size: 3.3rem !important;
+
+}
+.contact-coord h2{
+    
+    font-size: 2rem !important;
+    
+    
+}
+
+}
+
+@media only screen and (max-width: 650px) {
+
+    .formulaireTitle{
+        
+        text-align: center;
+        font-size: 2.3rem !important;
+}
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    .formulaireTitle{
+        
+        text-align: center;
+        font-size: 1.6rem !important;
+}
+
+}

@@ -1,0 +1,159 @@
+.panier {
+  max-width: 80% !important;
+  margin: 80px auto 2rem !important;
+  padding: 1rem !important;
+}
+
+.panier__vide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 4rem;
+}
+.panier__vide img {
+  max-width: 80%;
+  object-fit: contain;
+}
+
+.panier__vide{
+  text-align: center;
+  margin: 2rem 0;
+  font-weight: 450;
+  font-size: 2rem;
+}
+
+.panier__container {
+  padding: 4rem 0rem;
+}
+
+.panier__nombre-articles {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.panier__container--prix {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+.panier__container--prix h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
+}
+.panier__container--prix p {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0rem;
+}
+
+.panier__container--btn-valider {
+  text-align: center !important;
+  background: rgb(77, 76, 76) !important;
+  margin: auto !important;
+  display: block !important;
+}
+
+.panier__choice-delivery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.choice-delivery__form {
+  margin: 1rem;
+}
+
+.go-back {
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding-left: 15px;
+  position: relative;
+  border: none;
+  background-color: #C3232B;
+  color: white;
+  padding: 10px 46px 10px 28px;
+  border-radius: 15px;
+  text-transform: uppercase;
+}
+.go-back:hover {
+  background-color: #db0b15;
+}
+
+.go-back .MuiSvgIcon-root {
+  font-size: 32px;
+  margin-right: 20px;
+}
+
+
+
+
+@media (max-width: 850px) {
+  .panier__container {
+    padding: 1rem 3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .panier__container {
+    padding: 1rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .panier__vide img {
+    max-width: 70%;
+  }
+  .panier__container_titre {
+    font-size: 40px !important;
+    margin: 0;
+    line-height: 60px;
+  }
+  .go-back {
+    font-size: 0.9rem !important;
+    padding: 7px 20px 5px 20px;
+
+  }
+  .go-back .MuiSvgIcon-root {
+    font-size: 27px;
+    margin-right: 10px;
+  }
+  .panier__nombre-articles {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  .panier__vide h1 {
+    font-size: 1.3rem;
+  }
+
+  .panier__container--prix h1 {
+    font-size: 1.3rem;
+  }
+  .panier__container--prix p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 350px) and (max-width: 380px) {
+  .panier__container {
+    padding: 4rem 10px;
+  }
+}
+
+.panier__container_titre{
+
+  font-family: Teko;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 62px;
+  line-height: 80px;
+  text-align: center;
+  color: #292929;
+}
+

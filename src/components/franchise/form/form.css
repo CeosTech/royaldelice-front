@@ -1,0 +1,146 @@
+
+.formulaireTitle{
+
+      padding-top: 1em !important;
+      color: white;
+      font-family: "Teko" !important;
+      text-align: center;
+      font-size: 75px !important;
+      font-weight: 900 !important;
+      padding-top: 30px;
+      line-height: 132px;
+      text-transform: uppercase;
+      letter-spacing: 5% !important;
+}
+
+.contact-coord{
+  background-color: white;
+  margin: 0 auto;
+  width: 80%;
+  padding-bottom: 4em;
+  border-radius: 20px;
+}
+
+.contact-coord h2{
+  font-family: "Teko";
+  font-size: 48px !important;
+  font-weight: 600 !important;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  line-height: 69px;
+  text-transform: uppercase;
+  letter-spacing: 5% !important;
+  text-align: center;
+  
+}
+
+#Btn_Envoyer_Franchise{
+
+  font-size: 1.5em;
+  background-color: #C3232B;
+  color: #FFFFFF;
+  Width: 6em;
+  height: 2em;
+  justify-content: center;   
+  text-align: center;
+  margin: 0 auto;
+  box-shadow: none;
+  font-family: Teko;
+  border-color: #C3232B;
+  border-radius: 15px;
+}
+
+#Grid_formulaire{
+
+  display: contents;
+}
+
+.form__container {
+  background-color: #1C1F2B;
+  justify-content: center; 
+  width: 100%;
+  padding-bottom: 4%;
+}
+form {
+  background: white;
+  text-align: left;
+  /* padding: 10px 40px; */
+  border-radius: 10px;
+  justify-content: center; 
+}
+.formDisplay {
+  display: flex;
+  justify-content: center; 
+} 
+.formInput {
+  width: 500px;
+  padding: 2%;
+
+}
+.formMessage {
+  width: 650px;
+  padding: 2%;
+  margin-top: 2%;
+}
+
+.form__container h3 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.submit {
+  text-align: center !important;
+ 
+
+}
+
+.error {
+  display: block;
+  width: 100%;
+  color: #ff0062;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.error:last-of-type {
+  margin-bottom: 8px;
+}
+
+.MuiFormLabel-root{
+  
+  margin-top: -0.4rem !important;
+}
+
+.MuiFormControl-root{
+  border: 1pw solid black !important;
+}
+
+  /* mobile */
+
+
+  @media screen and (max-width:960px) {
+
+    .formulaireTitle{
+
+      padding-top: 2em !important;
+      padding-bottom: 1em !important;
+      font-size: 7vw !important;
+     
+}
+
+.contact-coord h2{
+  
+  font-size: 5vw !important;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+
+.contact-coord{
+  
+  padding-bottom: 3em;
+  margin-bottom: 3em;
+  
+}
+
+  }

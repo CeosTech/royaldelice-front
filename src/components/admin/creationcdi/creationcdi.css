@@ -1,0 +1,173 @@
+.societe-header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-bottom: 1em;
+    border-bottom: 1px solid gray;
+    font-weight: bold;
+    color: #04295D;
+}
+
+
+.societe_label {
+    padding: 1em;
+}
+.societe_container {
+    
+    display: grid;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.societe_input {
+    padding: 1em;
+    border: none;
+    box-shadow: 5px 4px 11px rgb(0 0 255 / 20%);
+    margin: 1em;
+    font-weight: bold;
+    
+    /* border: solid 4px #3EBDE6; */
+}
+
+.registr_button{
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 0.5em;
+    background-color: #3EBDE6;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    width: 11em;
+    height: 3.2em;
+    padding: 0; 
+    margin: 1em auto;
+    
+}
+
+.edit_button{
+    text-align: center;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 0.5em;
+    background-color: #D22B31;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    width: 11em;
+    height: 3.2em;
+    padding: 0; 
+    margin: 1em auto;
+    
+    
+}
+
+.societe_adresse {
+    display: flex;
+}
+
+.societe_label {
+    font-weight: bold;
+}
+
+.code_input {
+    padding: 1em;
+    border: none;
+    box-shadow: 5px 4px 11px rgb(0 0 255 / 20%);
+    margin: 1em;
+    font-weight: bold;
+    
+    
+}
+
+.ville_input {
+    padding: 1em;
+    border: none;
+    box-shadow: 5px 4px 11px rgb(0 0 255 / 20%);
+    margin: 1em;
+    font-weight: bold;
+    
+}
+
+.pays_input {
+    padding: 1em;
+    border: none;
+    box-shadow: 5px 4px 11px rgb(0 0 255 / 20%);
+    margin: 1em;
+    font-weight: bold;
+    
+}
+
+.adresse {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.societe_button {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.errors {
+    color: black;
+
+}
+
+.sexe_input {
+    padding: 1em;
+    border: none;
+    box-shadow: 1px 4px 11px rgb(0 0 255 / 20%);
+    margin: 1em;
+    font-weight: bold;
+    padding: 18.5px 20px;
+    
+}
+
+
+.numsejour_input {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.numdetitre_employe {
+    padding: 1em;
+    border: none;
+    box-shadow: 9px 3px 21px rgb(0 0 255 / 80%);
+    margin: 8em;
+    font-weight: bold;
+    
+}
+
+
+
+
+.MuiOutlinedInput-input {
+    padding: 18.5px 20px;
+}
+
+
+
+
+.prenomemploye_input {
+    padding: 1em;
+    border: none;
+    box-shadow: 1px 4px 11px rgb(0 0 255 / 20%);
+    margin: 1em;
+    font-weight: bold;
+    
+}
+
+
+
+@media screen and (max-width: 750px){
+    .societe_adresse {
+
+    display: flex;
+    flex-direction: column;
+    }
+
+
+}

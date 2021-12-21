@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+.plats {
+  /* background-color: #3c3c3c; */
+  width: 100%;
+  height: 100%;
+  /*background-image: url("../../images/bg.png");*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #1C1F2B;
+  position: relative;
+  justify-content: center;
+  z-index: 1;
+  font-family: 'Teko' !important;
+}
+.platsTitle {
+  color: white;
+  font-family: "Teko" !important;
+  text-align: center;
+  font-size: var(--font-size-titre-grande) !important;
+  font-weight: 700 !important;
+  padding-top: 135px;
+  line-height: 72px;
+  letter-spacing: 15% !important;
+  text-decoration-line: underline;
+  text-underline-offset: 15px !important;
+}
+.cardItem {
+  width: 280px;
+  height: 500px;
+  text-align: center;
+  border-radius: 22px !important;
+  margin: 0 auto;
+  margin-bottom: 77px;
+}
+
+.cardItem img {
+  width: 100%;
+  height: 280px;
+}
+
+.cardTitle {
+  font-family: "Teko" !important;
+  padding-top:  10px !important;
+  text-align: center;
+  font-weight: 900 !important;
+  font-size: 26px !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase;
+}
+.cardPrice {
+  font-family: "Teko" !important;
+
+  color: #C3232B;
+  font-weight: bold !important;
+  font-size: 30px !important;
+}
+
+.cardText {
+  font-family: "Raleway" !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px !important;
+  padding: 2%;
+
+}
+
+.command_button{
+  text-align: center;
+}
+
+.telecharger_btn {
+  text-align: center;
+  text-decoration: none !important;
+  color: white !important;
+  background-color: #f3cf40;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-size: var(--font-size-button);
+  font-weight: 700;
+  display: inline-block;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  padding: 2px 60px;
+}
+.telecharger_btn:hover {
+  background-color: #dbc12f;
+
+}
+
+/* --------------- responsive ----------------- */
+#plats {
+  height: 100vh;
+  position: relative;
+  z-index: 4;
+  margin-top: -98px;
+}
+
+.plats-card {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  padding-top: 2vh;
+}
+
+.slider-card {
+  padding-top: 3vh;
+  margin-bottom: 20px;
+}
+
+/* for w < 960 or h < 730 */
+@media  screen and (max-width: 960px) , (max-height: 800px) {
+  .platsTitle{
+    font-size: var(--font-size-titre-moyenne) !important;
+  }
+
+  .telecharger_btn{
+    font-size: var(--font-size-button-mobile);
+    padding: 8px 20px;
+  }
+
+  .cardTitle {
+    font-size: 22px !important;
+  }
+  .cardText {
+    font-size: 14px !important;
+  }
+  .cardPrice{
+    font-size: 24px !important;
+  }
+}
+
+/* for w < 960 or h < 730 */
+@media  screen and (max-width: 612px) , (max-height: 600px) {
+  .platsTitle{
+    font-size: calc(var(--font-size-titre-petite)/1) !important;
+  }
+
+  .telecharger_btn{
+    font-size: var(--font-size-button-mobile);
+    padding: 8px 20px;
+  }
+
+  .cardTitle {
+    font-size: 22px !important;
+  }
+  .cardText {
+    font-size: 14px !important;
+  }
+  .cardPrice{
+    font-size: 24px !important;
+  }
+}
+
+@media  screen and (max-width: 428px){
+  .platsTitle{
+    font-size: 30px !important;
+  }
+}
+
+/* ------------- WIDTH ----------------*/
+
+@media screen and (max-width: 1262px) {
+  .cardItem{
+    width: 270px;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .cardItem{
+    width: 270px;
+  }
+
+  .command_button {
+    padding-bottom: 30px;
+  }
+
+  #plats {
+    height: max-content;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .cardItem{
+    width: 66vw;
+  }
+}
+
+/* --------- MIN WIDTH 343 ------------- */
+
+/* ---------- HEIGHT with width >= ------------- */
+@media screen and (min-width: 960px) and (max-height: 960px) {
+  .cardItem img {
+    width: 100%;
+    height: 23vh;
+  }
+
+  .cardItem {
+    height: max-content;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-height: 870px) {
+  .cardItem img {
+    width: 100%;
+    height: 20vh;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-height: 738px) {
+  .command_button {
+    margin-top: -4vh;
+  }
+
+}
+
+@media screen and (min-width: 960px) and (max-height: 677px) {
+  .command_button {
+    margin-top: -6vh;
+  }
+
+  .cardItem img {
+    width: 100%;
+    height: 15vh;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-height: 630px) {
+  .command_button {
+    margin-top: -7vh;
+  }
+
+  .cardItem img {
+    width: 100%;
+    height: 12vh;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-height: 578px) {
+  .cardTitle {
+    padding-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  .cardText {
+    padding: 0px !important;
+  }
+  .cardPrice {
+    margin-bottom: -18px !important;
+  }
+  .command_button {
+    margin-top: -10vh;
+  }
+  .platsTitle{
+    padding-top: 116px;
+  }
+}
+
+/* --------- MIN HEIGHT 477 ------------- */
+
+/* --------- MOBILE VERSION ------------- */
+@media only screen and (max-width: 960px) and (max-height: 677px) {
+  .command_button{
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .cardItem img {
+    height: 230px;
+  }
+
+  .cardItem  {
+    height: max-content;
+  }
+}
+/* --------- MOBILE VERSION - MIN HEIGHT 493 ------------- */

@@ -1,0 +1,85 @@
+.caisse-header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-bottom: 1em;
+    border-bottom: 1px solid gray;
+    font-weight: bold;
+    color: #04295D;
+}
+
+
+.caisse_container {
+    
+    display: grid;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+
+.caisse_div {
+    padding: 1em;
+}
+
+.caisse_input {
+
+    padding: 1em ;
+    border: none;
+    box-shadow: 5px 4px 11px rgb(0 0 255 / 20%);
+    margin: 1em;
+    font-weight: bold;
+}
+
+
+
+.caisse_title h2 {
+    text-align: center;
+    padding-bottom: 1em;
+    color: #04295D;
+}
+
+.caisse_label {
+    font-weight: bold;
+}
+
+.adresse_caisse {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.registre_caisse_button{
+    text-align: center;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 0.5em;
+    background-color: #3EBDE6;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    width: 11em;
+    height: 3.2em;
+    padding: 0; 
+    margin: 1em auto;
+    
+}
+
+.errors {
+    color: black;
+
+}
+
+.caisse_button {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 850px){
+    .adresse_caisse {
+
+    display: flex;
+    flex-direction: column;
+    }
+
+}

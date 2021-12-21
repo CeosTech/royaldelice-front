@@ -1,0 +1,206 @@
+.panier__fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.radio__panier-choice {
+  margin: 0 0 1rem 0 !important;
+  color: white;
+  background-color: #C3232B;
+  padding: 10px 30px;
+  border-radius: 15px;
+
+}
+.radio__panier-choice:hover {
+  background-color: #db0b15;
+}
+
+.radio__panier-choice .MuiTypography-body1 {
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.radio__panier-choice span {
+  margin: 0 0.2rem;
+  color: #FFFFFF;
+}
+.radio__panier-zone {
+  margin-bottom: 40px;
+}
+.radio__panier-zone span {
+  margin: 0 1.2rem;
+}
+.radio__text-zone {
+  margin-bottom: -20px;
+}
+.livraison__container {
+  text-align: center;
+}
+.livraison__container p {
+  margin-top: 20px;
+  font-style: italic;
+  margin-bottom: 10%;
+}
+.panier__container--btn-valider {
+  margin-top: 2rem !important;
+  
+}
+.error_cart {
+  text-align: center;
+}
+.CGV__container {
+  display: flex;
+  margin-top: 3rem;
+}
+.CGV__container p {
+  margin-bottom: 0rem;
+  margin-left: 3px;
+  width: auto;
+  text-align: center;
+}
+.CGV__container p a {
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  color: black;
+}
+.CGV__container p a:hover {
+  color: black;
+}
+.MuiCheckbox-colorPrimary.Mui-checked {
+  color: #C3232B !important;
+}
+.MuiRadio-colorSecondary.Mui-checked {
+  color: #C3232B !important;
+}
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #C3232B !important;
+}
+@media (max-width: 535px) {
+  .CGV__container p {
+    width: 80%;
+  }
+}
+
+
+
+#btn_commander_panier{
+
+    font-size: 1.6em;
+    font-weight: bold;
+    background-color: #C3232B !important;
+    color: #FFFFFF;
+    Width: 7em;
+    height: 2em;
+    justify-content: center;   
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: none;
+    font-family: Teko;
+    border-color: #C3232B;
+    border-radius: 15px;
+}
+#btn_commander_panier:hover {
+  background-color: #db0b15;
+}
+
+
+.livraison__container h1 {
+  font-family: Teko;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 1em;
+  text-align: center;
+  color: #292929;
+}
+
+.div_emporter{
+
+
+  width: 90%;
+  height: max-content;
+  background: #1C1F2B;
+  border-radius: 25px;
+  margin: 0 auto;
+  margin-top: 2em;
+  padding-bottom: 30px;
+  }
+
+  .text_mode_livraison{
+
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: Teko;
+font-style: normal;
+font-weight: bold;
+font-size: 64px;
+
+
+}
+
+@media screen and (max-width:1050px) {
+
+  .text_mode_livraison{
+
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-family: Teko;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 7vw;
+  
+}
+
+.radio__panier-choice .MuiTypography-body1 {
+  font-size: 15px;
+}
+
+.div_emporter{
+  width: 90%;
+  height: max-content;
+  }
+  .panier {
+    max-width: 100% !important;
+  }
+}
+
+#radio_emporter{
+
+    padding-left: 1em;
+}
+
+/*=========== PROMO CODE SECTION ======================*/
+
+#promo{
+  width: 100%;
+  display: flex;
+}
+
+.stylePromo{
+  margin-right: 5%;
+}
+
+.promo--btn-text img {
+  max-width: 30px;
+  object-fit: contain;
+}
+
+.promo--btn {
+  font-family: "Teko";
+  width: 20%;
+  background: #C3232B !important;
+}
+
+.promo--btn:hover{
+  color:#fafafa;
+}
+
+.promo--btn-text h4{
+  margin-top: 2%;
+}

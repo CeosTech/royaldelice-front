@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
+
+.carte {
+  box-sizing: border-box;
+  padding: 1em 1em 2em 1em;
+  margin-left: 2.5rem;
+  height: max-content;
+  margin-right: 2.5rem;
+  background-position: center;
+}
+
+.carte_contain {
+  background-color: #1C1F2B;
+  border-radius: 20px !important;
+  margin-left: 2em;
+  margin-top: 2em;
+}
+
+.carteTitle {
+  color: white;
+  font-family: "Teko" !important;
+  text-align: center;
+  font-size: 44px !important;
+  font-weight: 700 !important;
+  line-height: 72px;
+  letter-spacing: 15% !important;
+}
+.carteStar {
+  width: 30px !important;
+}
+
+.carte__image-container {
+  display: flex;
+  justify-content: center;
+  padding: 0.1em;
+}
+
+.carte__image-container img {
+  width: 102px;
+  height: 93px;
+  object-fit: contain;
+}
+
+.carte_title {
+  font-style: normal;
+  font-size: 2.5rem;
+  line-height: 90px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.carte__items {
+  margin-top: 15px;
+  padding: 0 25px 1em;
+  text-align: center;
+  margin-bottom: -1em;
+}
+
+.carte__item {
+  color: white;
+  padding: 5px 0;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  text-align: left;
+  font-family: "Teko" !important;
+  width: 240px;
+}
+
+.carte__item:hover {
+}
+
+.carte__item::before {
+  position: absolute;
+  left: -50px;
+  width: 40px;
+  height: 40px;
+  content: "";
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: -1px;
+  display: none;
+}
+
+.carte__item.active::before {
+  display: block;
+}
+.carte__item.active {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+
+.carte.active {
+  height: 100%;
+}
+
+@media (max-width: 1080px) {
+  .carte {
+    position: absolute;
+    top: 0;
+    left: -120%;
+    padding-top: 2rem;
+    /* left: -500px; */
+    width: 100%;
+    z-index: 99;
+    transition: all 0.5s;
+  }
+
+  .carte.active {
+    left: 0px;
+    overflow: visible;
+    margin-left: 0px !important;
+  }
+
+  .carte__item {
+    color: rgb(238, 238, 238);
+  }
+
+  .commander__carte i {
+    position: absolute;
+    left: 2rem;
+    margin-bottom: -4em;
+    color: rgb(238, 238, 238);
+  }
+}
+
+@media (max-width: 800px) {
+  .carte__image-container img {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .carte_title {
+    line-height: normal;
+  }
+  
+}
+
+@media (max-height: 700px) {
+  .carte_title {
+    display: none;
+  }
+  .carte__item {
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 500px) {
+  .commander__carte i {
+    position: absolute;
+    left: 14px;
+    margin-bottom: -2em;
+  }
+  .carte_contain {
+    background-color: #1C1F2B;
+    border-radius: 20px !important;
+  }
+}
+
+@media (min-width: 1080px) {
+.commander__container__cards {
+    display: flex;
+    align-items: flex-start;
+    align-content: start;
+    width: 100%;
+}
+}
+
+/* for carte not backdrop */
+.modal-backdrop{
+    position: inherit !important;
+}
+
+/* style for carte side */
+.menu-side {
+  padding-top: 6em;
+}
+
+/* Arrow icon for Menu Side */
+.menu-arrow-back .MuiSvgIcon-root {
+  fill: white;
+  font-size: 50px;
+  margin: 0.3em;
+}
+
+.menu-arrow-forward .MuiSvgIcon-root {
+  fill: white;
+  font-size: 50px;
+  position: fixed;
+  margin-top: -19px;
+}
+
+.menu-offcanvas .offcanvas-body {
+  background-color: #1C1F2B;
+  padding: 0rem 0rem;
+  
+}

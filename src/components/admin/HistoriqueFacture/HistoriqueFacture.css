@@ -1,0 +1,162 @@
+.dirigeant-header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding-bottom: 1em;
+  /*border-bottom: 1px solid gray;*/
+  font-weight: bold;
+  color: #04295d;
+}
+
+.facture__fournisseur {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fournisseur_fact {
+  text-align: center;
+  position: relative;
+  font-size: 2.5em;
+}
+
+.facture__montantHT {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.montantHT_fact {
+  text-align: center;
+  position: relative;
+  font-size: 1.8em;
+}
+
+.facture__montantTVA {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.montantTVA_fact {
+  text-align: center;
+  position: relative;
+  font-size: 1.8em;
+  color: black;
+}
+
+.facture__date {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.date_fact {
+  text-align: center;
+  position: relative;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.facture__photo {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.facture_button {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo_fact {
+  border: 1px solid black;
+  text-align: center;
+  position: relative;
+  padding: 0;
+  margin: 1em auto;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+.facture__button {
+  display: flex;
+  justify-content: space-between;
+}
+.registre__button {
+  text-align: center;
+  position: relative;
+  border: 1px solid white;
+  border-radius: 0.5em;
+  background-color: #3ebde6;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  width: 11em;
+  height: 3.2em;
+  padding: 0;
+  margin: 1em auto;
+}
+
+.supp_button {
+  text-align: center;
+  position: relative;
+  border: 1px solid white;
+  border-radius: 0.5em;
+  background-color: #ec412a;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  width: 11em;
+  height: 3.2em;
+  padding: 0;
+  margin: 1em auto;
+}
+
+.facture__container {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.suivi_activite__jour_exacte-calendrier {
+  margin: auto;
+  max-width: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.suivi_activite__jour_exacte-calendrier label {
+  margin: 0;
+}
+
+.reset_button {
+  margin-left: 28rem;
+  text-align: center;
+  position: relative;
+  border: 1px solid white;
+  border-radius: 0.5em;
+  background-color: #3ebde6;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  width: 11em;
+  height: 3.2em;
+  padding: 0;
+  margin: 1em auto;
+}
+
+.res_button {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.MuiAccordionDetails-root {
+  display: flex;
+  padding: 8px 16px 16px;
+  justify-content: center;
+}

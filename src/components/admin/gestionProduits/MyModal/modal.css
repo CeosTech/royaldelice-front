@@ -1,0 +1,155 @@
+.myModal__backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(57, 57, 57, 0.15);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myModal__modal {max-height: 100vh;
+  overflow-y: auto;
+  max-width: 500px;
+  width: 95%;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  position: relative;
+  /*border: 7px solid #285AB1;*/
+}
+
+.myModal__modal__close {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+}
+.myModal__modal__close i {
+  font-size: 20px;
+  pointer-events: none;
+}
+
+.myModal__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.myModal__header h1 {
+  text-align: center;
+  /*color: rgb(100, 100, 100);*/
+  font-size: 2.2rem;
+
+}
+.myModal__header h2 {
+  text-align: center;
+  /*color: rgb(100, 100, 100);*/
+  font-size: 1.5rem;
+}
+.myModal__header p {
+  margin: 0;
+  /*color:#285AB1;*/
+  font-size: 1.6rem;
+
+}
+
+.myModal__header img {
+  max-width: 200px;
+  max-height: 150px;
+  object-fit: contain;
+}
+
+.myModal__body,
+.myModal__footer {
+  padding: 10px 0;
+  /*font-family: 'Bevan';*/
+  font-size: 1rem;
+  /*font-weight: bold;*/
+}
+
+.myModal__body__heading {
+  font-size: 1.3rem;
+  /*color: #D22B31;*/
+  /*font-family: 'Bevan';*/
+  /*font-weight: bold;*/
+}
+
+.myModal__footer {
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+
+#ajouter_produit {
+    padding: 19px;
+    margin-top: -7px;
+    margin-left: 10px;
+    color: white;
+    border-radius: 10px;
+    background-color: #04295d;  
+}
+
+#ajouter_btn {
+    padding: 10px 15px;
+    color: white;
+    margin-top: 0px;
+    background-color: #04295d;
+}
+
+#modifier_btn {
+    padding: 10px 20px;
+    color: white;
+    margin-top: 0px;
+    background-color: #04295d;
+}
+
+
+
+#supprimer_btn{
+    padding: 10px;
+    color: white;
+    margin-top: 0px;
+    background-color: red;
+}
+
+/*@media (max-width: 600px) {
+  .MuiButton-label {
+    padding: 1rem;
+    font-size: 1rem;
+   
+  }
+  .MuiButton-label .MuiButton-endIcon{
+    display: none !important;
+  }
+}*/
+
+.basic-input{
+  padding-bottom: 15px ;
+
+} 
+
+/*@media (max-width: 500px) {
+  .myModal__header img {
+    max-width: 175px;
+    max-height: 125px;
+  }
+
+  .myModal__header h1 {
+    font-size: 1.8rem;
+  }
+  .myModal__header h2 {
+    font-size: 1.3rem;
+  }
+  .myModal__modal {
+    margin-top: 50px;
+  }
+}*/

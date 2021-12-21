@@ -1,0 +1,76 @@
+.Qrcode-header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding-bottom: 1em;
+  border-bottom: 1px solid gray;
+  font-weight: bold;
+  color: #04295d;
+}
+.nom {
+  box-sizing: content-box;
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #04295d;
+  margin-top: 1em;
+  justify-content: center;
+}
+
+.button {
+  padding: 1.5em;
+  /* box-shadow: 1px 5px 6px 2px rgb(0 0 255 / 20%); */
+  margin: 1em;
+  font-weight: bold;
+  border-radius: 1em;
+  background-color: #04295d;
+  color: white;
+  width: 220px;
+  height: 170px;
+}
+
+.button:hover {
+  background-color: #2fbfff;
+}
+
+@media screen and (max-width: 800px) {
+  .Gestioncommercial {
+    display: grid;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 1em;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .Gestioncommercial {
+    padding-top: 2em;
+    margin: -2em;
+    justify-content: center;
+  }
+}
+
+.reg_button {
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 0.5em;
+  background-color: #3ebde6;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  width: 11em;
+  height: 3.2em;
+  padding: 0;
+
+  margin: auto;
+}
+.QrcodeContent {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.societe_button {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,203 @@
+.informations{
+
+  padding-top: 1em;
+  padding-bottom: 3.8em;
+
+}
+
+.infosTitle {
+    color: rgb(7, 7, 7);
+    font-family: "Teko" !important;
+    text-align: center;
+    font-size: 75px !important;
+    font-weight: 900 !important;
+    padding-top: 30px;
+    line-height: 132px;
+    text-transform: uppercase;
+    letter-spacing: 5% !important;
+  }
+
+  .cardContainerTop {
+      margin-top: -30px !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .cardContainerBottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+  .infosItemContainer {
+    
+    width: 300px;
+    height: 250px;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);    
+    margin: 2%;
+    padding: 3em;
+    
+  }
+  .infosItemDescription {
+      padding: 5%;
+  }
+  .infosItemDescription h5 {
+    font-weight: bold;
+}
+
+.rond_red_info {
+  margin: 0 auto;
+}
+
+.rond_red_info img{
+  margin: 0 auto;
+ width: 50%;
+}
+
+.icon_info{
+  margin-top: 0.6em !important;
+  fill: white  !important;
+  width: 50px !important;
+  height: 50px !important;
+  
+
+}
+
+
+  /* responsive PC*/
+
+  #informations_franchise{
+
+    height: 100vh;
+
+  }
+
+  @media screen and (max-height:800px) {
+
+    #informations_franchise{
+
+      height: max-content;
+  
+    }
+
+    .infosTitle {
+      font-size: 10vh !important;
+    }
+  
+
+  }
+
+
+  /* mobile */
+
+
+  @media screen and (max-width:960px) {
+    .rond_red_info img{
+      margin: 0 auto;
+     width: 100%;
+    }
+    #informations_franchise{
+
+      height: max-content;
+  
+    }
+
+    .infosTitle {
+      font-size: 7vw !important;
+    }
+  .infosItemContainer {
+      width: 350px;
+      height: 300px;
+      margin: 5%;
+      padding: 3.5em;
+    }
+
+
+    .rond_red_info{
+      
+      width: 90px;
+      height: 90px;
+      
+    
+    }
+    
+    .icon_info{
+      margin-top: 0.8em !important;
+      width: 50px !important;
+      height: 50px !important;
+      
+    }
+
+    .infosItemDescription {
+      padding: 10%;
+  }
+    .infosItemDescription h5 {
+      font-size: 1.7em;
+  }
+
+  .cardContainerTop {
+      flex-direction: column;
+      margin-top: 0px !important;
+
+  }
+  .cardContainerBottom {
+      flex-direction: column;
+}
+
+  }
+
+  @media screen and (max-width:600px) {
+
+    #informations_franchise{
+
+      height: max-content;
+  
+    }
+
+    .infosTitle {
+      font-size: 7vw !important;
+    }
+  .infosItemContainer {
+      width: 200px;
+      height: 200px;
+      margin: 5%;
+      padding: 6%;
+    }
+
+
+    .rond_red_info{
+      
+      width: 60px;
+      height: 60px;
+      
+    
+    }
+    
+    .icon_info{
+      margin-top: 0.6em !important;
+      width: 30px !important;
+      height: 30px !important;
+      
+    }
+
+    .infosItemDescription {
+      padding: 10%;
+  }
+    .infosItemDescription h5 {
+      font-size: 1em;
+  }
+
+  .cardContainerTop {
+      flex-direction: column;
+      margin-top: 0px !important;
+
+  }
+  .cardContainerBottom {
+      flex-direction: column;
+}
+
+  }

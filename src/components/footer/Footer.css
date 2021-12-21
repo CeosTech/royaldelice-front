@@ -1,0 +1,72 @@
+.footer-copyright{
+
+    color: #FFFFFF;
+    margin: 1em;
+    font-family: Raleway;
+    
+}
+
+#footer{
+    padding: 50px 30px;
+    font-family: Raleway;
+}
+
+/* Style for text in Footer */
+#footer h5 {
+    font-weight: bolder;
+}
+
+/* Style for image logo in Footer */
+
+.footer-logo-border {
+    border-right: solid 1px black;
+}
+
+
+/* Text go to left in desktop version */
+.footer-text {
+    padding-left: 20px;
+}
+
+
+/* Mobile version */
+@media screen and (max-width: 960px) {
+    /* Style for Footer */
+    #footer {
+        text-align: center;
+    }
+
+    #footer img {
+        
+        margin-bottom: 20px;
+    }
+
+    /* Border on the right for footer logo */
+    .footer-logo-border {
+        border-right: solid 0px var(--secondary-color-dark);
+    }
+
+    /* Text reset position */
+    .footer-text {
+        padding-left: 0px;
+    }
+
+    /* Copyright go to center in mobile version */
+    .footer-copyright {
+         text-align: center;
+        margin: 2em;
+        width: 100%;
+    }
+}
+
+/* style for link footer */
+.footer-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* When mouse on it */
+.footer-link:hover {
+    font-weight: bolder;
+    color: inherit;
+}

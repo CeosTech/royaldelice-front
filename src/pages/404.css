@@ -1,0 +1,14 @@
+.olokoso__icon-404{
+    width: 80px;
+    animation: spin 4.5s infinite linear;   
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+

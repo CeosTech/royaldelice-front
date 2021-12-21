@@ -1,0 +1,57 @@
+.procedure-panier {
+    border-bottom: solid 0.2px lightgray;
+    display: flex;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    width: max-content;
+    margin: 0 auto;
+  }
+  
+  .procedure-in {
+    background-color: #C3232B;
+    font-size: 3em;
+    color: white;
+    font-family: Teko, sans-serif;
+    padding: 20px 50px;
+    font-weight: 700;
+    border-radius: 100%;
+  }
+  
+  .procedure-out {
+    background-color: #1C1F2B;
+    font-size: 3em;
+    color: white;
+    font-family: Teko, sans-serif;
+    padding: 20px 50px;
+    font-weight: 700;
+    border-radius: 100%;
+  }
+
+  .procedure-icon {
+    width: 20vw;
+    margin-top: 58px;
+    border-top: solid 0.2px lightgray;
+  }
+
+  .procedure-text {
+    font-size: 18px;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 959px) {
+    .procedure-icon {
+        width: 10vw;
+        margin-top: 34px;
+      }
+      .procedure-in, .procedure-out {
+        font-size: 2em;
+        padding: 7px 27px;
+      }
+      .procedure-text {
+        font-size: 11px;
+        width: 60px;
+        margin: 0 auto;
+      }
+  }

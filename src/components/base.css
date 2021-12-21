@@ -1,0 +1,11 @@
+/* when height < 730 and width < 960 => change size to mobile */
+
+:root {
+    --font-size: 18px;
+    --font-size-mobile: 15px;
+    --font-size-titre-grande: 70px;
+    --font-size-titre-moyenne: 55px;
+    --font-size-titre-petite: 40px;
+    --font-size-button: 40px;
+    --font-size-button-mobile: 30px;
+}

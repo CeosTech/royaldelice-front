@@ -1,0 +1,246 @@
+.franchise {
+    background-color: #1C1F2B;
+    width: 100%;
+    height: 100%;
+    padding-top: 3em;
+    padding-bottom: 3.8em;
+   
+}
+.rond_red_header {
+  margin: 0 auto;
+}
+.rond_red_header img{
+
+  margin: 0 auto;
+  width: 50%;
+}
+
+.icon_info_header{
+  
+  margin-top: 1.3em !important;
+  fill: white  !important;
+  width: 60px !important;
+  height: 60px !important;
+}
+
+.franchiseTitle {
+    padding-top: 180px !important;
+    color: white;
+    font-family: "Teko" !important;
+    text-align: center;
+    font-size: 75px !important;
+    font-weight: 900 !important;
+    padding-top: 30px;
+    line-height: 132px;
+    text-transform: uppercase;
+    letter-spacing: 5% !important;
+    text-decoration-line: underline;
+    text-underline-offset: 10px !important;
+  }
+
+  .franchiseAvantagesContainer {
+    margin-top: 50px !important;
+    margin-bottom: 80px !important;
+    width: 30%;
+    margin: 0 auto;
+  }
+  .franchiseAvantages {
+    color: white;
+    font-family: "Teko" !important;
+    text-align: center;
+    padding: 20px;
+    font-size: 50px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    line-height: 82px;
+    letter-spacing: 15% !important;
+    justify-content: center;
+    align-items: center;
+    background-color: #C3232B;
+  }
+  .franchiseDescriptionContainer {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 90px;
+  }
+  .itemContainer {
+      width: 18%;
+      text-align: center;
+      justify-content: center;
+  }
+  .itemDescription {
+      color: white;
+      padding-top: 15% !important;
+  }
+
+  @media(max-width: 960px) {
+    .rond_red_header img{
+
+      margin: 0 auto;
+      width: 100%;
+    }
+    .franchiseDescriptionContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .itemContainer {
+        width: 50% !important;
+        text-align: center;
+        padding-bottom: 5%;
+        justify-content: center;
+    }
+    .franchiseAvantages {
+        font-size: 2em !important;
+    }
+    .franchiseAvantagesContainer {
+        width: 80%;
+      }
+  }
+
+
+  @media (max-width: 1199px) {
+    .franchiseTitle {
+      font-size:  3.3rem !important;
+    }
+}
+
+  @media (max-width: 575px) {
+    .franchiseTitle {
+      font-size: 2.3rem !important;
+      padding-bottom: 2%;
+    }
+  }
+
+  .franchiseTitle {
+    padding-top: 150px !important;
+    
+  }
+
+  /* responsive PC*/
+
+  #header_franchise{
+
+    height: 100vh;
+    
+
+  }
+
+  @media screen and (max-height:800px) {
+
+    .franchise {
+     
+      padding-top: 0em;
+      
+     
+  }
+
+    .franchiseTitle {
+      
+      font-size: 10vh !important;
+      
+  }
+
+  .franchiseAvantages {
+    padding: 1vh !important;
+    font-size: 7vh !important;
+    
+}
+
+.franchiseAvantagesContainer {
+  margin-top: 2vh !important;
+  margin-bottom: 7vh !important;
+  
+}
+    
+  }
+
+/* mobile*/
+  @media screen and (max-width:960px) {
+
+    .franchise {
+      
+      padding-bottom: 0em;
+      padding-top: 0em;
+     
+  }
+
+    .franchiseTitle {
+      padding-bottom: 0%;
+      font-size: 7vw !important;
+      padding-top: 140px !important;
+      
+  }
+
+  .franchiseAvantages {
+    padding: 1vw;
+    font-size: 6vw !important;
+    
+    
+}
+
+.franchiseAvantagesContainer {
+  margin-bottom: 7vw !important;
+  
+}
+.rond_red_header {
+  
+  width: 90px;
+  height: 90px;
+  
+}
+
+.icon_info_header{
+  
+  margin-top: 0.8em !important;
+  width: 50px !important;
+  height: 50px !important;
+
+
+}
+
+.itemDescription h5 {
+
+
+  font-size: 3vw;
+}
+
+.franchiseAvantagesContainer {
+  margin-top: 40px !important;
+  
+}
+
+#header_franchise{
+
+  height: max-content;
+  
+
+}
+  }
+
+  @media screen and (max-width:600px) {
+
+
+
+.itemDescription h5 {
+
+
+      font-size: 4vw;
+}
+
+.rond_red_header {
+  
+  width: 60px;
+  height: 60px;
+  
+}
+
+.icon_info_header{
+  
+  margin-top: 0.6em !important;
+  width: 30px !important;
+  height: 30px !important;
+
+
+}
+  }

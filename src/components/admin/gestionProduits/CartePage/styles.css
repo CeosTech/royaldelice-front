@@ -1,0 +1,13 @@
+#menu-page {
+    display: contents;
+}
+
+.product-item{
+    width: 70%;
+}
+
+.menu-board-img{
+    width: 70%;
+    height: 150px;
+    margin: 20px auto;
+}

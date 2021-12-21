@@ -1,0 +1,116 @@
+.facture-header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding-bottom: 1em;
+  border-bottom: 1px solid gray;
+  font-weight: bold;
+  color: #04295d;
+}
+
+.facture {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.facture_center {
+  display: flex;
+  justify-content: center;
+}
+
+.facture_container {
+  display: grid;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 5em;
+}
+
+.facture_div {
+  padding: 1em;
+}
+
+.facture_input {
+  border: none;
+  margin: 1em;
+  font-weight: bold;
+  box-shadow: 5px 4px 11px rgb(0 0 255 / 20%);
+}
+
+.facture_label {
+  font-weight: bold;
+}
+
+.adresse_facture {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.registre_facture_button {
+  text-align: center;
+  position: relative;
+  border: 1px solid white;
+  border-radius: 0.5em;
+  background-color: #3ebde6;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  width: 11em;
+  height: 3.2em;
+  padding: 0;
+  margin: 1em auto;
+}
+
+.errors {
+  color: black;
+}
+
+.facture_button {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button {
+  color: black;
+}
+
+/* .telecharger_div {
+    text-align: center;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 0.5em;
+    background-color: #3EBDE6;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    width: 11em;
+    height: 3.2em;
+    padding: 0; 
+    margin: 1em auto;
+} */
+
+.facture_tva {
+  border: none;
+  margin: 1em;
+  font-weight: bold;
+  box-shadow: 5px 4px 11px rgb(0 0 255 / 20%);
+  width: 6em;
+}
+
+.fas {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+  .adresse_facture {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .facture_tva {
+    margin-left: 3em;
+  }
+}
