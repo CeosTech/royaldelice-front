@@ -26,7 +26,7 @@
 
 .MuiFormHelperText-root {
   font-weight: bold;
-  color: red;
+  color: rgb(87, 43, 131);
 }
 
 .card__item__heading {
@@ -67,7 +67,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin-top: 2rem;
-  color: red !important;
+  color: rgb(87, 43, 131) !important;
 }
 
 .card__item__details i {

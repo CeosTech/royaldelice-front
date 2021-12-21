@@ -6,13 +6,13 @@
 .radio__panier-choice {
   margin: 0 0 1rem 0 !important;
   color: white;
-  background-color: #C3232B;
+  background-color: #DCA10B;
   padding: 10px 30px;
   border-radius: 15px;
 
 }
 .radio__panier-choice:hover {
-  background-color: #db0b15;
+  background-color: #f7b206;
 }
 
 .radio__panier-choice .MuiTypography-body1 {
@@ -69,13 +69,13 @@
   color: black;
 }
 .MuiCheckbox-colorPrimary.Mui-checked {
-  color: #C3232B !important;
+  color: #DCA10B !important;
 }
 .MuiRadio-colorSecondary.Mui-checked {
-  color: #C3232B !important;
+  color: #DCA10B !important;
 }
 .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-  border-color: #C3232B !important;
+  border-color: #DCA10B !important;
 }
 @media (max-width: 535px) {
   .CGV__container p {
@@ -89,7 +89,7 @@
 
     font-size: 1.6em;
     font-weight: bold;
-    background-color: #C3232B !important;
+    background-color: #DCA10B !important;
     color: #FFFFFF;
     Width: 7em;
     height: 2em;
@@ -98,11 +98,11 @@
     margin: 0 auto;
     box-shadow: none;
     font-family: Teko;
-    border-color: #C3232B;
+    border-color: #DCA10B;
     border-radius: 15px;
 }
 #btn_commander_panier:hover {
-  background-color: #db0b15;
+  background-color: #ffb700;
 }
 
 
@@ -194,7 +194,7 @@ font-size: 64px;
 .promo--btn {
   font-family: "Teko";
   width: 20%;
-  background: #C3232B !important;
+  background: #DCA10B !important;
 }
 
 .promo--btn:hover{

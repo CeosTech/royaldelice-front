@@ -122,7 +122,7 @@
 
 
 .btn-remove .MuiSvgIcon-root {
-  background-color: #C3232B;
+  background-color: #DCA10B;
   color: white;
   margin-left: 10px;
   margin-right: 10px;
@@ -131,7 +131,7 @@
 }
 
 .btn-add .MuiSvgIcon-root{
-  background-color: #C3232B;
+  background-color: #DCA10B;
   color: white;
   margin-left: 10px;
   border-radius: 4px;
@@ -147,5 +147,5 @@
 }
 
 .product .MuiFormHelperText-root.MuiFormHelperText-root {
-  color: #C3232B;
+  color: #DCA10B;
 }

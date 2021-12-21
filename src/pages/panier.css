@@ -74,14 +74,14 @@
   padding-left: 15px;
   position: relative;
   border: none;
-  background-color: #C3232B;
+  background-color: #DCA10B;
   color: white;
   padding: 10px 46px 10px 28px;
   border-radius: 15px;
   text-transform: uppercase;
 }
 .go-back:hover {
-  background-color: #db0b15;
+  background-color: #DCA10B;
 }
 
 .go-back .MuiSvgIcon-root {

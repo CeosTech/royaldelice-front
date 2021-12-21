@@ -1,7 +1,7 @@
 #Btn_Panier{
     
     font-size: 1.5em;
-    background-color: #AF323F;
+    background-color: #DCA10B;
     color: #FFFFFF;
     Width: 7em;
     height: 2em;
@@ -9,14 +9,14 @@
     text-align: center;
     box-shadow: none;
     font-family: Teko;
-    border-color: #AF323F;
+    border-color: #DCA10B;
     border-radius: 20px;
     margin-top: 10em; 
 }
 
 #btn_test{
     
-    background-color: #AF323F;
+    background-color: #DCA10B;
     color: #FFFFFF;
     width: 39px;
     height: 40px;
@@ -24,20 +24,20 @@
     text-align: center;
     box-shadow: none;
     font-weight: bold;
-    border-color: #AF323F;
+    border-color: #DCA10B;
     margin: 1em;
 }
 
 #Btn_Panier_emporter{
     font-size: 1.5em;
-    background-color: #AF323F;
+    background-color: #DCA10B;
     color: #FFFFFF;
     width: 380px;
     height: 105px;
     box-shadow: none;
     font-family: Teko;
     font-weight: bold;
-    border-color: #AF323F;
+    border-color: #DCA10B;
     border-radius: 50px;
     margin-top: 2em;
 }
@@ -45,7 +45,7 @@
 #Btn_Panier_livraison{
     font-size: 1.5em;
     background-color: #FFFFFF;
-    color: #AF323F;
+    color: #DCA10B;
     width: 380px;
     height: 105px;
     box-shadow: none;
@@ -84,7 +84,7 @@
 .text_top_commentaire{
     margin-top: 4em;
     margin-left: 9.5em;
-    color: #AF323F;
+    color: #DCA10B;
     font-weight: bold;
     
 }
@@ -103,12 +103,12 @@ margin-top: 2em;
 #stepper_panier .MuiStepIcon-root.MuiStepIcon-active{
 
 
-    color: #AF323F;
+    color: #DCA10B;
 }
 
 #stepper_panier .MuiStepIcon-root.MuiStepIcon-completed{
 
-    color: #AF323F;
+    color: #DCA10B;
 }
 
 #stepper_panier .MuiSvgIcon-root{

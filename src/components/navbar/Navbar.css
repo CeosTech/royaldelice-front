@@ -1,13 +1,13 @@
 #Navbar_Mustang{
 
 
-    background-color: #FFFFFF;
+    background-color: rgb(87, 43, 131);
     
 }
 
 #Icon_Navbar{
 
-    color: #C3232B;
+    color: #DCA10B;
     font-size: 2.8em;
     
     
@@ -35,7 +35,7 @@
 #Btn_Panier_Accueil{
 
     font-size: 1.5em;
-    background-color: #C3232B;
+    background-color: #DCA10B;
     color: #FFFFFF;
     Width: 6em;
     height: 2em;
@@ -44,20 +44,20 @@
     margin: 0 auto;
     box-shadow: none;
     font-family: Teko;
-    border-color: #C3232B;
+    border-color: #DCA10B;
     border-radius: 15px;
 }
 
 #Btn_Ouvert_Accueil{
 
     font-size: 1.5em;
-    background-color: #000000;
+    background-color: #DCA10B;
     color: #FFFFFF;
     Width: 6em;
     height: 2em;
     box-shadow: none;
     font-family: Teko;
-    border-color: #000000;
+    border-color: #DCA10B;
     border-radius: 25px;
     
 }
@@ -97,7 +97,7 @@
 
 #test .MuiPaper-root{
 
-    background-color: #C3232B;
+    background-color: #DCA10B;
     width: 27em;
     
 }
@@ -116,7 +116,7 @@
 
     #Icon_Navbar{
 
-        color: #C3232B;
+        color: #DCA10B;
         font-size: 2em;
         
         

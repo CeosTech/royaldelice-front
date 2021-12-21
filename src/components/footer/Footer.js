@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid } from '@material-ui/core';
 import Logo_Fb from '../../images/Logo_Fb.png';
 import Logo_Insta from '../../images/Logo_Insta.png';
-import Logo_Mustang from '../../images/Logo_Mustang.png';
+import Logo_Mustang from '../../images/Logo_Royaldelice.png';
 import './Footer.css';
 import { useLocation } from "react-router-dom";
 import CGV from "../../Documents/CGV_MUSTANG_BONDY.pdf";
@@ -70,7 +70,7 @@ const Footer = () => {
 
               </Grid>
             </Grid>
-            <Grid container justifyContent="center" style={{backgroundColor:'#C3232B'}}>
+            <Grid container justifyContent="center" style={{backgroundColor:'rgb(87, 43, 131)'}}>
                 
                     <span className="footer-copyright">Copyright 2021 ©  |  Made by <a 
                       className="footer-link" 

@@ -1,7 +1,7 @@
 import axios from "axios";
 
- export const URL = "https://royaldelice.herokuapp.com/";
- //export const URL = "http://localhost:3000/";
+ export const URL = "https://lemustang.herokuapp.com/";
+//  export const URL = "http://localhost:3000/";
 
 /**
  * global function to send http requests using fetch api
