@@ -33,24 +33,25 @@ const Footer = () => {
                         rel="noreferrer"
                         href="https://www.google.com/maps/place/24+Rue+Jules+Guesde,+93140+Bondy/"                    
                       >
-                        24 Rue Jules Guesde, <br></br> 93140 Bondy 
+                        Centre Commercial du Manet <br/>3 rue Jean Goujon<br/> 78180 Montigny-le-Bretonneux 
                       </a>
                     </p>
                   </Grid>
                   <Grid xs={12} sm={6} md={3}>
                     <h5>HORAIRES</h5>
-                    <p>Lundi au Dimanche : 11h00 - 00h00</p>
+                    <p>Lundi au Samedi : 11h00 - 22h00</p>
+                    <p>Dimanche : 11h30 - 22h30</p>
                   </Grid>
                   <Grid xs={12} sm={6} md={3}>
                     <h5>CONTACT</h5>
                     <p>
-                    <a class="footer-link" href="tel:01-76-58-93-53"> 01 76 58 93 53 </a>
+                    <a class="footer-link" href="tel:01-30-43-26-35"> 01 30 43 26 35 </a>
                        <br></br> 
                     <a 
                       className="footer-link" 
                       href="mailto:lemustang93.site@gmail.com"
                       rel="noreferrer"
-                    > lemustang93.site@gmail.com</a>
+                    > leroyaldelice.site@gmail.com</a>
                     </p>
                   </Grid>
                   <Grid xs={12} sm={6} md={3}>

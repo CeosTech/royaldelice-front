@@ -14,6 +14,10 @@
 /* Style for text in Footer */
 #footer h5 {
     font-weight: bolder;
+    color: rgb(87, 43, 131);
+}
+#footer p {
+    color: #f7b309;
 }
 
 /* Style for image logo in Footer */

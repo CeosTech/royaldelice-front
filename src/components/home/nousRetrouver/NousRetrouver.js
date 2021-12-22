@@ -9,10 +9,10 @@ class NousRetrouver extends Component {
 			<div className="nousRetrouver_container">
 				<div className="img_container">
 					<div className="nousRetrouver_img">
-						<img src={adresse} alt="addresse du restaurent" />
+						<img className='image' src={adresse} alt="addresse du restaurent" />
 					</div>
 					<div className="nousRetrouver_img">
-						<img src={horaires} alt="horaires du restaurent" />
+						<img className='image' src={horaires} alt="horaires du restaurent" />
 					</div>
 				</div>
 				<div className="command_button">
