@@ -1,0 +1,29 @@
+.nousRetrouver_container{
+    display: flex;
+    flex-flow:nowrap;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: space-evenly; */
+    height: 920px;
+    background: url("../../../images/contact/NousRetrouver.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:rgb(87, 43, 131) ;
+    height: 647px;
+    width: 1344px;
+    align-self: center;
+    justify-self: center;
+    
+}
+.command_button{
+    text-align: center;
+    margin-bottom: 20px !important;
+    align-self: flex-end;
+    justify-self: center;
+  }

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
+
 .galeriePage {
   /* background-color: #3c3c3c; */
   width: 100%;
@@ -8,7 +9,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: rgb(87, 43, 131) !important;
+  background-color: #464646 !important;
   position: relative;
   z-index: 1;
   font-family: 'Teko' !important;
@@ -17,7 +18,7 @@
 
 .galerieTitle {
   color: white;
-  font-family: "Teko" !important;
+  /* font-family: 'Friday13v12', Arial, sans-serif !important; */
   text-align: center;
   font-size: var(--font-size-titre-grande) !important;
   font-weight: 700 !important;
@@ -27,6 +28,14 @@
   text-decoration-line: underline;
   text-underline-offset: 15px !important;
 }
+
+
+
+/* .cards__items {
+  padding: none;
+  margin:
+} */
+
 .galerieLine {
   justify-content: center;
 }

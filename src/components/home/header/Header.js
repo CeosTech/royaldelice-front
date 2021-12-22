@@ -18,7 +18,7 @@ class Header extends Component {
                         <br></br>
                         <Button id="Btn_Commander_Accueil">
                             <Link to="/carte" className="commanderHeader">
-                                <strong>J'AI FAIM !</strong>
+                                <strong>J'AI FAIM</strong>
                             </Link>
                         </Button>
                         </div>

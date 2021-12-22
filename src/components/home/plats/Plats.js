@@ -133,7 +133,7 @@ const Plats = () => {
 
 			<div className="command_button">
 				<Link to="/carte" className="telecharger_btn values__button">
-					Commander
+					J'AI FAIM !
 				</Link>
 			</div>
 		</div>
