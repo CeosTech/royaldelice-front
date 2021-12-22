@@ -1,6 +1,6 @@
 import axios from "axios";
 
- export const URL = "https://lemustang.herokuapp.com/";
+ export const URL = "https://royaldelice.herokuapp.com/";
 //  export const URL = "http://localhost:3000/";
 
 /**

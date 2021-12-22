@@ -4,21 +4,16 @@
   /* background-color: #3c3c3c; */
   width: 100%;
   height: 100%;
-  /*background-image: url("../../images/bg.png");*/
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   background-color: #DCA10B;
   position: relative;
   justify-content: center;
-  z-index: 1;
   font-family: 'Teko' !important;
 }
 .platsTitle {
   color: white;
   font-family: "Teko" !important;
   text-align: center;
-  font-size: var(--font-size-titre-grande) !important;
+  font-size: 30px !important;
   font-weight: 700 !important;
   padding-top: 135px;
   line-height: 72px;
@@ -28,33 +23,34 @@
 }
 .cardItem {
   width: 280px;
-  height: 500px;
+  height: 400px!important;
   text-align: center;
   border-radius: 22px !important;
   margin: 0 auto;
   margin-bottom: 77px;
+  display: block;
 }
 
 .cardItem img {
   width: 100%;
-  height: 280px;
+  height: 200px!important;
 }
 
 .cardTitle {
   font-family: "Teko" !important;
+  color: #DCA10B;
   padding-top:  10px !important;
   text-align: center;
   font-weight: 900 !important;
-  font-size: 26px !important;
-  letter-spacing: 0.05em !important;
-  text-transform: uppercase;
+  font-size: 40px !important;
+  /* letter-spacing: 0.05em !important; */
+  /* text-transform: uppercase; */
 }
 .cardPrice {
   font-family: "Teko" !important;
-
-  color: rgb(87, 43, 131);
+  color: #DCA10B;
   font-weight: bold !important;
-  font-size: 30px !important;
+  font-size: 20px !important;
 }
 
 .cardText {
@@ -68,6 +64,7 @@
 
 .command_button{
   text-align: center;
+  margin-bottom: 50px !important;
 }
 
 .telecharger_btn {
@@ -90,7 +87,7 @@
 
 /* --------------- responsive ----------------- */
 #plats {
-  height: 100vh;
+  height: 100%!important;
   position: relative;
   z-index: 4;
   margin-top: -98px;
@@ -120,7 +117,7 @@
   }
 
   .cardTitle {
-    font-size: 22px !important;
+    font-size: 28px !important;
   }
   .cardText {
     font-size: 14px !important;

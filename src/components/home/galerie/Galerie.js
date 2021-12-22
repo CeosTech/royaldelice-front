@@ -42,7 +42,7 @@ const Galerie = () => {
         <div className="galeriePage" id="galerie">
             <div className="galerieTitleContainer">
                 <Typography gutterBottom variant="h5" component="h1" className="galerieTitle">
-                    <img src={star} /> GALERIE <img src={star} />
+                NOTRE MENU 
                 </Typography>
             </div>
             <div className={classes.sectionDesktop}>

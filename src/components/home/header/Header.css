@@ -2,7 +2,7 @@
 .Grid_Container{
     height: 100%;
     width: 100%;
-    background: url("../../../images/Fond_Header_Accueil.png");
+    background: url("../../../images/Fond_accueil.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -20,7 +20,7 @@
 
 .Div_Text_Header{
     height: 40%;
-    font-size: 7em;
+    font-size: 6.5em;
     font-family: Teko;
     text-align: center;
     color: #FFFFFF;
@@ -35,7 +35,8 @@
     font-family: Teko;
     border-color: #DCA10B;
     border-radius: 20px;
-    padding: 8px 30px;    
+    padding: 8px 40px;
+   
 }
 #Btn_Commander_Accueil:hover {
     background-color: #f1cf0a;
@@ -61,14 +62,33 @@
 
 /* -------------- WIDTH --------------------- */
 /* w <= 1104 */
-@media screen and (max-width: 1104px) {
+
+@media screen and (max-width: 1609px) {
+    .Div_Text_Header {
+       font-size: 5.5em;
+       margin-top: -10vh;
+    }
+}
+@media screen and (max-width: 1380px) {
     .Div_Text_Header {
        font-size: 5em;
        margin-top: -10vh;
     }
 }
+@media screen and (max-width: 960px) {
+    .Div_Text_Header {
+       font-size: 4.5em;
+       margin-top: -10vh;
+    }
+}
+/* @media screen and (max-width: 1104px) {
+    .Div_Text_Header {
+       font-size: 5em;
+       margin-top: -10vh;
+    }
+} */
 /* 746 <= w <= 1104 */
-@media screen and (max-width: 746px) {
+@media screen and (max-width: 865px) {
     .Div_Text_Header {
        font-size: 4em;
        margin-top: -10vh;
@@ -79,6 +99,9 @@
     .Div_Text_Header {
        font-size: 3em;
        margin-top: -2vh;
+    }
+    .Grid_Container{
+        background-position: center;
     }
 }
 

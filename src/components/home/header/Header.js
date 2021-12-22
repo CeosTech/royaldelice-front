@@ -13,12 +13,12 @@ class Header extends Component {
             <div id="header">
                 <Grid container alignItems="center" justifyContent="center" className="Grid_Container">
                     
-                        <div className="Div_Text_Header"><strong>Un service rapide<br></br> Des choix variés<br></br> 
-                        Des plats savoureux</strong>
+                        <div className="Div_Text_Header"><strong>Bienvenu au Royaume du Goût <br></br> et des Saveurs !<br></br> 
+                        Disponible à emporter ou en livraison ;)</strong>
                         <br></br>
                         <Button id="Btn_Commander_Accueil">
                             <Link to="/carte" className="commanderHeader">
-                                <strong>COMMANDER</strong>
+                                <strong>J'AI FAIM !</strong>
                             </Link>
                         </Button>
                         </div>
