@@ -31,8 +31,6 @@ var compteurTriple = 0; // pour les garnitures
 var prix_total = 0;
 var tabGarniture = [];
 var tabSauce = [];
-var tabViande_2 = [];
-var tabViande_3 = [];
 var tabSupplement = [];
 
 let nomCategorie = "Menu Sandwich"; // à modifier selon la catégorie
@@ -46,6 +44,7 @@ const Card = ({
   categorie,
   disponibilite,
   image,
+  painByCategory,
   garnitureByCategory,
   supplementByCategory,
   sauceByCategory,
@@ -60,6 +59,7 @@ const Card = ({
   const [errorUnique, setErrorUnique] = useState(false);
   const [errorDouble, setErrorDouble] = useState(false);
   const [errorTriple, setErrorTriple] = useState(false);
+  const [errorViande, setErrorViande] = useState(false)
   const [errorSupplement, setErrorSupplement] = useState(false);
   const [errorSubmit, setErrorSubmit] = useState(false);
 
@@ -67,6 +67,7 @@ const Card = ({
   const [viande_1_Selected, setViande_1_Selected] = useState(null);
   const [viande_2_Selected, setViande_2_Selected] = useState([]);
   const [viande_3_Selected, setViande_3_Selected] = useState([]);
+  const [painSelected, setPainSelected] = useState(null)
 
   // const baskets = useSelector(selectBaskets)
   const [quantite, setQuantite] = useState(1);
@@ -120,9 +121,10 @@ const Card = ({
         nomCategorie: nomCategorie,
         boissonSelected: boissonSelected,
         garnitureSelected: tabGarniture,
-        painSelected: null,
+        painSelected: painSelected,
         viande_1_selected: viande_1_Selected,
         viande_2_selected: viande_2_Selected,
+        viande_3_selected: viande_3_Selected,
         sauceSelected: tabSauce,
         supplementSelected: tabSupplement,
         information: comment,
@@ -142,15 +144,11 @@ const Card = ({
 
   const verifySeletedDishes = () => {
     console.log(data);
-    //================ HAMBURGER
-    if (data.categorie === 1) {
-      console.log("BREAKPOINT 1")
+    if (data.categorie === 23) { // BURGER
       if (
         /* painSelected !== null && */
-        boissonSelected !== null &&
         tabGarniture.length > 0 &&
         tabSauce.length > 0 &&
-        viande_1_Selected !== null &&
         errorSupplement !== true &&
         errorDouble !== true &&
         errorTriple !== true
@@ -178,11 +176,396 @@ const Card = ({
         //Rajouter les erreurs pour chaque cas
         setErrorSubmit(true);
       }
-    }else {
+    }
+    else if (data.categorie === 26) { // TACOS
+      console.log("BREAKPOINT 1")
+      if (data.id === 12 || data.id === 11) {
+        if (
+          /* painSelected !== null && */
+          tabGarniture.length > 0 &&
+          tabSauce.length > 0 &&
+          errorSupplement !== true &&
+          errorDouble !== true &&
+          errorTriple !== true
+        ) {
+          setError(false);
+          handleSubmit(true);
+
+          compteurSupplement = 0;
+          compteurUnique = 0;
+          compteurDouble = 0;
+          compteurViandes = 0;
+          compteurTriple = 0;
+          tabGarniture = [];
+          tabSauce = [];
+          tabSupplement = [];
+
+          setSupplementSelected(null);
+          setViande_1_Selected(null);
+          setPrixTotal(prix);
+        } else {
+          //Rajouter les erreurs pour chaque cas
+          setErrorSubmit(true);
+        }
+
+      } else if (data.id === 6) {
+        if (
+          /* painSelected !== null && */
+          viande_1_Selected != null &&
+          tabGarniture.length > 0 &&
+          tabSauce.length > 0 &&
+          errorViande !== true &&
+          errorSupplement !== true &&
+          errorDouble !== true &&
+          errorTriple !== true
+        ) {
+          setError(false);
+          handleSubmit(true);
+
+          compteurSupplement = 0;
+          compteurUnique = 0;
+          compteurDouble = 0;
+          compteurViandes = 0;
+          compteurTriple = 0;
+          tabGarniture = [];
+          tabSauce = [];
+          tabSupplement = [];
+
+          setSupplementSelected(null);
+          setViande_1_Selected(null)
+          setViande_2_Selected(null)
+          setPrixTotal(prix);
+        } else {
+          //Rajouter les erreurs pour chaque cas
+          setErrorSubmit(true);
+        }
+      } else if (data.id === 7) {
+        if (
+          /* painSelected !== null && */
+          viande_2_Selected.length > 0 &&
+          tabGarniture.length > 0 &&
+          tabSauce.length > 0 &&
+          errorViande !== true &&
+          errorSupplement !== true &&
+          errorDouble !== true &&
+          errorTriple !== true
+        ) {
+          setError(false);
+          handleSubmit(true);
+
+          compteurSupplement = 0;
+          compteurUnique = 0;
+          compteurDouble = 0;
+          compteurViandes = 0;
+          compteurTriple = 0;
+          tabGarniture = [];
+          tabSauce = [];
+          tabSupplement = [];
+
+          setSupplementSelected(null);
+          setViande_1_Selected(null)
+          setViande_2_Selected(null)
+          setPrixTotal(prix);
+        } else {
+          //Rajouter les erreurs pour chaque cas
+          setErrorSubmit(true);
+        }
+      } else if (data.id === 10) {
+        if (
+          /* painSelected !== null && */
+          viande_3_Selected.length > 0 &&
+          tabGarniture.length > 0 &&
+          tabSauce.length > 0 &&
+          errorViande !== true &&
+          errorSupplement !== true &&
+          errorDouble !== true &&
+          errorTriple !== true
+        ) {
+          setError(false);
+          handleSubmit(true);
+
+          compteurSupplement = 0;
+          compteurUnique = 0;
+          compteurDouble = 0;
+          compteurViandes = 0;
+          compteurTriple = 0;
+          tabGarniture = [];
+          tabSauce = [];
+          tabSupplement = [];
+
+          setSupplementSelected(null);
+          setViande_1_Selected(null)
+          setViande_2_Selected(null)
+          setViande_3_Selected(null)
+          setPrixTotal(prix);
+        } else {
+          //Rajouter les erreurs pour chaque cas
+          setErrorSubmit(true);
+        }
+      }
+    }
+    else if (data.categorie === 25) { // SANDWICH
+      if (
+        /* painSelected !== null && */
+        painSelected !== null &&
+        tabGarniture.length > 0 &&
+        tabSauce.length > 0 &&
+        errorSupplement !== true &&
+        errorDouble !== true &&
+        errorTriple !== true
+      ) {
+        setError(false);
+        handleSubmit(true);
+
+        compteurSupplement = 0;
+        compteurUnique = 0;
+        compteurDouble = 0;
+        compteurViandes = 0;
+        compteurTriple = 0;
+        tabGarniture = [];
+        tabSauce = [];
+        tabSupplement = [];
+
+        /* setBoissonSelected(null);
+        setPainSelected(null);
+        setGarnitureSelected(null);
+        setSauceSelected(null); */
+        setPainSelected(null)
+        setSupplementSelected(null);
+        setViande_1_Selected(null)
+        setPrixTotal(prix);
+      } else {
+        //Rajouter les erreurs pour chaque cas
+        setErrorSubmit(true);
+      }
+    }
+    else if (data.categorie === 27) { // ASSIETTE
+      console.log("BREAKPOINT ASSIETTE")
+      if (data.id === 48) {
+        if (
+          /* painSelected !== null && */
+          viande_1_Selected != null &&
+          tabGarniture.length > 0 &&
+          tabSauce.length > 0 &&
+          errorViande !== true &&
+          errorSupplement !== true &&
+          errorDouble !== true &&
+          errorTriple !== true
+        ) {
+          setError(false);
+          handleSubmit(true);
+
+          compteurSupplement = 0;
+          compteurUnique = 0;
+          compteurDouble = 0;
+          compteurViandes = 0;
+          compteurTriple = 0;
+          tabGarniture = [];
+          tabSauce = [];
+          tabSupplement = [];
+
+          setSupplementSelected(null);
+          setViande_1_Selected(null)
+          setViande_2_Selected(null)
+          setPrixTotal(prix);
+        } else {
+          //Rajouter les erreurs pour chaque cas
+          setErrorSubmit(true);
+        }
+      } else if (data.id === 49) {
+        if (
+          /* painSelected !== null && */
+          viande_2_Selected.length > 0 &&
+          tabGarniture.length > 0 &&
+          tabSauce.length > 0 &&
+          errorViande !== true &&
+          errorSupplement !== true &&
+          errorDouble !== true &&
+          errorTriple !== true
+        ) {
+          setError(false);
+          handleSubmit(true);
+
+          compteurSupplement = 0;
+          compteurUnique = 0;
+          compteurDouble = 0;
+          compteurViandes = 0;
+          compteurTriple = 0;
+          tabGarniture = [];
+          tabSauce = [];
+          tabSupplement = [];
+
+          setSupplementSelected(null);
+          setViande_1_Selected(null)
+          setViande_2_Selected(null)
+          setPrixTotal(prix);
+        } else {
+          //Rajouter les erreurs pour chaque cas
+          setErrorSubmit(true);
+        }
+      } else if (data.id === 51) {
+        if (
+          /* painSelected !== null && */
+          viande_3_Selected.length > 0 &&
+          tabGarniture.length > 0 &&
+          tabSauce.length > 0 &&
+          errorViande !== true &&
+          errorSupplement !== true &&
+          errorDouble !== true &&
+          errorTriple !== true
+        ) {
+          setError(false);
+          handleSubmit(true);
+
+          compteurSupplement = 0;
+          compteurUnique = 0;
+          compteurDouble = 0;
+          compteurViandes = 0;
+          compteurTriple = 0;
+          tabGarniture = [];
+          tabSauce = [];
+          tabSupplement = [];
+
+          setSupplementSelected(null);
+          setViande_1_Selected(null)
+          setViande_2_Selected(null)
+          setViande_3_Selected(null)
+          setPrixTotal(prix);
+        } else {
+          //Rajouter les erreurs pour chaque cas
+          setErrorSubmit(true);
+        }
+      }
+    }
+    else if (data.categorie === 18) { // MENU BURGER
+      if (
+        boissonSelected !== null &&
+        tabGarniture.length > 0 &&
+        tabSauce.length > 0 &&
+        errorSupplement !== true &&
+        errorDouble !== true &&
+        errorTriple !== true
+      ) {
+        setError(false);
+        handleSubmit(true);
+
+        compteurSupplement = 0;
+        compteurUnique = 0;
+        compteurDouble = 0;
+        compteurViandes = 0;
+        compteurTriple = 0;
+        tabGarniture = [];
+        tabSauce = [];
+        tabSupplement = [];
+
+        setPainSelected(null);
+        setBoissonSelected(null)
+        setSupplementSelected(null);
+        setViande_1_Selected(null)
+        setPrixTotal(prix);
+        setPrixTotal(prix);
+      } else {
+        //Rajouter les erreurs pour chaque cas
+        setErrorSubmit(true);
+      }
+    }
+    else if (data.categorie === 19 || data.categorie === 21) { // MENU BURGER + TEX MEX ->SAUCE&BOISSON
+      if (
+        boissonSelected !== null &&
+        tabSauce.length > 0 &&
+        errorSupplement !== true &&
+        errorDouble !== true &&
+        errorTriple !== true
+      ) {
+        setError(false);
+        handleSubmit(true);
+
+        compteurSupplement = 0;
+        compteurUnique = 0;
+        compteurDouble = 0;
+        compteurViandes = 0;
+        compteurTriple = 0;
+        tabGarniture = [];
+        tabSauce = [];
+        tabSupplement = [];
+
+        setPainSelected(null);
+        setBoissonSelected(null)
+        setSupplementSelected(null);
+        setViande_1_Selected(null)
+        setPrixTotal(prix);
+        setPrixTotal(prix);
+      } else {
+        //Rajouter les erreurs pour chaque cas
+        setErrorSubmit(true);
+      }
+    }
+    else if (data.categorie === 20) { // MENU SANDWICH
+      if (
+        painSelected !== null &&
+        boissonSelected !== null &&
+        tabGarniture.length > 0 &&
+        tabSauce.length > 0 &&
+        errorSupplement !== true &&
+        errorDouble !== true &&
+        errorTriple !== true
+      ) {
+        setError(false);
+        handleSubmit(true);
+
+        compteurSupplement = 0;
+        compteurUnique = 0;
+        compteurDouble = 0;
+        compteurViandes = 0;
+        compteurTriple = 0;
+        tabGarniture = [];
+        tabSauce = [];
+        tabSupplement = [];
+
+        setPainSelected(null);
+        setBoissonSelected(null)
+        setSupplementSelected(null);
+        setViande_1_Selected(null)
+        setPrixTotal(prix);
+        setPrixTotal(prix);
+      } else {
+        //Rajouter les erreurs pour chaque cas
+        setErrorSubmit(true);
+      }
+    }
+    else if (data.categorie === 29 || data.categorie === 22) { // BARQUETTE DE FRITE + MENU ENFANT -> SAUCES
+      if (
+        tabSauce.length > 0 &&
+        errorSupplement !== true &&
+        errorDouble !== true &&
+        errorTriple !== true
+      ) {
+        setError(false);
+        handleSubmit(true);
+
+        compteurSupplement = 0;
+        compteurUnique = 0;
+        compteurDouble = 0;
+        compteurViandes = 0;
+        compteurTriple = 0;
+        tabGarniture = [];
+        tabSauce = [];
+        tabSupplement = [];
+
+        setPainSelected(null);
+        setBoissonSelected(null)
+        setSupplementSelected(null);
+        setViande_1_Selected(null)
+        setPrixTotal(prix);
+        setPrixTotal(prix);
+      } else {
+        //Rajouter les erreurs pour chaque cas
+        setErrorSubmit(true);
+      }
+    }
+    else {
       handleSubmit(true);
     }
-
-    //handleSubmit(true);
 
   };
 
@@ -294,6 +677,74 @@ const Card = ({
     }
   };
 
+  /* =================== Viandex2 ================================ */
+
+  const handleChangeViande2 = (event) => {
+    let testCompteur = event.target.checked;
+    let tmp = [...viande_2_Selected];
+
+    if (testCompteur === true) {
+      compteurViandes += 1;
+      tmp.push(event.target.value);
+      setViande_2_Selected(tmp)
+
+      if (compteurViandes > 2) {
+        setErrorViande(true);
+        //setLimitation(true)
+      } else {
+        setErrorViande(false);
+        //setLimitation(false)
+      }
+    } else {
+      compteurViandes -= 1;
+
+      for (let i in tmp) {
+        if (tmp[i] === event.target.value) {
+          tmp.splice(i, 1);
+          setViande_2_Selected(tmp)
+        }
+        if (compteurViandes <= 2) {
+          setErrorViande(false);
+          //setLimitation(true)
+        }
+      }
+    }
+    console.log(viande_2_Selected)
+  };
+
+  /* =================== Viandex3 ================================ */
+
+  const handleChangeViande3 = (event) => {
+    let testCompteur = event.target.checked;
+    let tmp = [...viande_3_Selected];
+
+    if (testCompteur === true) {
+      compteurViandes += 1;
+      tmp.push(event.target.value);
+      setViande_3_Selected(tmp)
+
+      if (compteurViandes > 3) {
+        setErrorViande(true);
+        //setLimitation(true)
+      } else {
+        setErrorViande(false);
+        //setLimitation(false)
+      }
+    } else {
+      compteurViandes -= 1;
+
+      for (let i in tmp) {
+        if (tmp[i] === event.target.value) {
+          tmp.splice(i, 1);
+          setViande_3_Selected(tmp)
+        }
+        if (compteurViandes <= 3) {
+          setErrorViande(false);
+          //setLimitation(true)
+        }
+      }
+    }
+  };
 
   return (
     // Depending on the availability or not of the item, the css style will vary, thanks to a different className
@@ -333,6 +784,45 @@ const Card = ({
             <Modal.Body.Heading>Description</Modal.Body.Heading>
             <p>{description}</p>
           </Modal.Body>
+
+          {/*------------------------- Choix Pain ------------------------------------------*/}
+          {painByCategory.length > 0 ? (
+            <>
+              <Modal.Body.Heading
+                style={{ marginBottom: "1.5rem", marginTop: "1.3rem" }}
+              >
+                Pain
+              </Modal.Body.Heading>
+              <FormControl component="fieldset">
+                <FormGroup>
+                  {
+                    painByCategory.map((data) => {
+                      if (data.disponibilite) {
+                        return (
+                          <div className="sides-radioGroup" key={data.id}>
+                            <FormControlLabel
+                              value={data.nom}
+                              control={<Radio />}
+                              id={data.id}
+                              className="radio-choice__menu"
+                              onClick={() => {
+                                console.log(data)
+                                setError(false);
+                                setPainSelected(data.nom);
+                              }}
+                            />
+                            <Modal.Body.Heading>{data.nom}</Modal.Body.Heading>
+                          </div>
+                        );
+                      }
+                    })
+                  }
+                </FormGroup>
+              </FormControl>
+
+              <div className="separation_ligne"> </div>
+            </>
+          ) : null}
 
           {/*------------------------- Choix Garniture ------------------------------------------*/}
           {garnitureByCategory.length > 0 ? (
@@ -422,7 +912,7 @@ const Card = ({
           }
 
           {/*------------------------- Choix Viandex1 ------------------------------------------*/}
-          {sauceByCategory.length > 0 ? (
+          {viandeByCategory.length > 0 && ([6, 48].includes(data.id)) ? (
             <>
               <Modal.Body.Heading
                 style={{ marginBottom: "1.5rem", marginTop: "1.3rem" }}
@@ -455,6 +945,92 @@ const Card = ({
                   }
                 </FormGroup>
               </FormControl>
+
+              <div className="separation_ligne"> </div>
+            </>
+          ) : null}
+
+          {/*------------------------- Choix Viandex2 ------------------------------------------*/}
+          {viandeByCategory.length > 0 && ([7, 49].includes(data.id)) ? (
+            <>
+              <Modal.Body.Heading
+                style={{ marginBottom: "1.5rem", marginTop: "1.3rem" }}
+              >
+                Deux viandes
+              </Modal.Body.Heading>
+              <FormControl component="fieldset">
+                <FormGroup>
+                  {
+                    viandeByCategory.map((data) => {
+                      if (data.disponibilite) {
+                        return (
+                          <div className="sides-radioGroup" key={data.id}>
+                            <FormControlLabel
+                              value={data.nom}
+                              control={
+                                <Checkbox onChange={handleChangeViande2} />
+                              }
+                              id={data.id}
+                              className="radio-choice__menu"
+                            />
+                            <Modal.Body.Heading>
+                              {data.nom}
+                            </Modal.Body.Heading>
+                          </div>
+                        );
+                      }
+                    })
+                  }
+                </FormGroup>
+              </FormControl>
+              {errorViande && (
+                <p className="error">
+                  Veuillez sélectionner jusqu'à 2 viandes.
+                </p>
+              )}
+
+              <div className="separation_ligne"> </div>
+            </>
+          ) : null}
+
+          {/*------------------------- Choix Viandex3 ------------------------------------------*/}
+          {viandeByCategory.length > 0 && ([10, 51].includes(data.id)) ? (
+            <>
+              <Modal.Body.Heading
+                style={{ marginBottom: "1.5rem", marginTop: "1.3rem" }}
+              >
+                Trois viandes
+              </Modal.Body.Heading>
+              <FormControl component="fieldset">
+                <FormGroup>
+                  {
+                    viandeByCategory.map((data) => {
+                      if (data.disponibilite) {
+                        return (
+                          <div className="sides-radioGroup" key={data.id}>
+                            <FormControlLabel
+                              value={data.nom}
+                              control={
+                                <Checkbox onChange={handleChangeViande3} />
+                              }
+                              id={data.id}
+                              className="radio-choice__menu"
+                            />
+                            <Modal.Body.Heading>
+                              {data.nom}
+                            </Modal.Body.Heading>
+                          </div>
+                        );
+                      }
+                    })
+                  }
+                </FormGroup>
+              </FormControl>
+              {errorViande && (
+                <p className="error">
+                  Veuillez sélectionner jusqu'à 3 viandes.
+                </p>
+              )}
 
               <div className="separation_ligne"> </div>
             </>

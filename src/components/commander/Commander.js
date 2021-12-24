@@ -12,7 +12,7 @@ import { sendrequest } from "../middlewares/request";
 import { IconButton } from "@material-ui/core";
 
 const Commander = () => {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(18);
   const [activeCarte, setActiveCarte] = useState(true);
   const [datas, setDatas] = useState([]);
   const [sideDishes, setSideDishes] = useState([]);
@@ -34,6 +34,7 @@ const Commander = () => {
   const [isCategoryLoading, setCategoryLoading] = useState(false);
 
   // LISTES DES ELEMENTS DANS LA BOX
+  const [painByCategory, setPainByCategory] = useState([]);
   const [supplementByCategory, setSupplementByCategory] = useState([]);
   const [garnitureByCategory, setGarnitureByCategory] = useState([]);
   const [sauceByCategory, setSauceByCategory] = useState([]);
@@ -62,31 +63,75 @@ const Commander = () => {
     /* =============== INGREDIENT ========================== */
     sendrequest(
       "get",
-      "ingredient/?categorie=" + active + "&typeIngredient=11",
+      "ingredient/?categorie=" + active + "&typeIngredient=1",
+      setPainByCategory
+    ); // categorie correspondant aux pains
+    sendrequest(
+      "get",
+      "ingredient/?categorie=" + active + "&typeIngredient=4",
       setGarnitureByCategory
     ); // categorie correspondant aux garniture
     sendrequest(
       "get",
-      "ingredient/?categorie=" + active + "&typeIngredient=1",
+      "ingredient/?categorie=" + active + "&typeIngredient=5",
       setSauceByCategory
     ); // categorie correspondant aux sauces
     sendrequest(
       "get",
-      "ingredient/?categorie=" + active + "&typeIngredient=8",
+      "ingredient/?categorie=" + active + "&typeIngredient=2",
       setViandeByCategory
     ); // categorie correspondant aux viandes
     sendrequest(
       "get",
-      "ingredient/?categorie=" + active + "&typeIngredient=12",
+      "ingredient/?categorie=" + active + "&typeIngredient=6",
       setBoissonByCategory
     ); // categorie correspondant aux boissons
+
+    /*========== OTHERWISE ==================== */
+    if ([1, 7, 8, 18, 20, 23, 25, 27].includes(active)) {// GARNITURE
+      sendrequest(
+        "get",
+        "ingredient/?categorie=" + 26 + "&typeIngredient=4",
+        setGarnitureByCategory
+      ); // categorie correspondant aux garniture
+    }
+    if ([1, 7, 8, 18, 19, 20, 21, 23, 25, 27, 22, 29].includes(active)) {
+      sendrequest(
+        "get",
+        "ingredient/?categorie=" + 26 + "&typeIngredient=5",
+        setSauceByCategory
+      ); // categorie correspondant aux sauces
+      sendrequest(
+        "get",
+        "ingredient/?categorie=" + 26 + "&typeIngredient=2",
+        setViandeByCategory
+      ); // categorie correspondant aux viandes
+    }
+    if ([16, 27].includes(active)) { // VIANDE
+      sendrequest(
+        "get",
+        "ingredient/?categorie=" + 26 + "&typeIngredient=2",
+        setViandeByCategory
+      ); // categorie correspondant aux viandes
+    }
+    if( [20, 25].includes(active)){ // PAIN
+      sendrequest(
+        "get",
+        "ingredient/?categorie=" + 25 + "&typeIngredient=1",
+        setPainByCategory
+      ); // categorie correspondant aux pains
+    }
+    if ([9, 18, 19, 20, 21].includes(active)) { // BOISSONS
+      sendrequest(
+        "get",
+        "ingredient/?categorie=" + 18 + "&typeIngredient=6",
+        setBoissonByCategory
+      ); // categorie correspondant aux boissons
+    }
   }
 
   useEffect(() => {
     fetchData();
-    console.log("==============================================================")
-    console.log(garnitureByCategory)
-    console.log("==============================================================")
   }, []);
 
   useEffect(() => {
@@ -143,8 +188,7 @@ const Commander = () => {
               boissonFamily={boissonFamily} //Boissons
               setBoissonFamily={setBoissonFamily} //Boissons
 
-              choixPain={choixPain}
-              setChoixPain={setChoixPain}
+              painByCategory={painByCategory}
 
               garnitureByCategory={garnitureByCategory}
 

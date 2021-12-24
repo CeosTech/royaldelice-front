@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Typography from '@material-ui/core/Typography';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
@@ -73,41 +73,8 @@ const Carte = ({
                                 </div>
 
                                 <div className="carte__items">
-                                {carte.map((carte) => (
-                                    [1,2,3].includes(carte.id) ?
-                                    <p
-                                      key={carte.id}
-                                      className={`carte__item ${active === carte.id ? "active" : ""}`}
-                                      onClick={() => {
-                                        setActive(carte.id);
-                                        handleClose();
-                                        setActiveCarte(false);
-                                        setDishesDisplay(false);
-                                        window.scrollTo(0, 0);
-                                      }}
-                                    >
-                                      {carte.libelle}
-                                    </p>
-                                  : null))}
-                                  {carte.map((carte) => (
-                                    [24].includes(carte.id) ?
-                                    <p
-                                      key={carte.id}
-                                      className={`carte__item ${active === carte.id ? "active" : ""}`}
-                                      onClick={() => {
-                                        setActive(carte.id);
-                                        handleClose();
-                                        setActiveCarte(false);
-                                        setDishesDisplay(false);
-                                        window.scrollTo(0, 0);
-                                      }}
-                                    >
-                                      {carte.libelle}
-                                    </p>
-                                  : null))}
 
-                                  {carte.map((carte) => (
-                                    ![1,2,3,24].includes(carte.id) ?
+                                  {carte.sort((a, b) => a.id - b.id).map((carte) => (
                                     <p
                                       key={carte.id}
                                       className={`carte__item ${active === carte.id ? "active" : ""}`}
@@ -121,7 +88,7 @@ const Carte = ({
                                     >
                                       {carte.libelle}
                                     </p>
-                                  : null))}
+                                  ))}
                                 </div>
                               </div>
                             
@@ -143,13 +110,13 @@ const Carte = ({
                                 </div>
 
                                 <div className="carte__items">
-                                  {carte.map((carte) => (
-                                    [1,2,3].includes(carte.id) ?
+                                {carte.sort((a, b) => a.id - b.id).map((carte) => (
                                     <p
                                       key={carte.id}
                                       className={`carte__item ${active === carte.id ? "active" : ""}`}
                                       onClick={() => {
                                         setActive(carte.id);
+                                        handleClose();
                                         setActiveCarte(false);
                                         setDishesDisplay(false);
                                         window.scrollTo(0, 0);
@@ -157,38 +124,7 @@ const Carte = ({
                                     >
                                       {carte.libelle}
                                     </p>
-                                  : null))}
-                                  {carte.map((carte) => (
-                                    [24].includes(carte.id) ?
-                                    <p
-                                      key={carte.id}
-                                      className={`carte__item ${active === carte.id ? "active" : ""}`}
-                                      onClick={() => {
-                                        setActive(carte.id);
-                                        setActiveCarte(false);
-                                        setDishesDisplay(false);
-                                        window.scrollTo(0, 0);
-                                      }}
-                                    >
-                                      {carte.libelle}
-                                    </p>
-                                  : null))}
-
-                                  {carte.map((carte) => (
-                                    ![1,2,3,24].includes(carte.id) ?
-                                    <p
-                                      key={carte.id}
-                                      className={`carte__item ${active === carte.id ? "active" : ""}`}
-                                      onClick={() => {
-                                        setActive(carte.id);
-                                        setActiveCarte(false);
-                                        setDishesDisplay(false);
-                                        window.scrollTo(0, 0);
-                                      }}
-                                    >
-                                      {carte.libelle}
-                                    </p>
-                                  : null))}
+                                  ))}
                                 </div>
                               </div>
                           
