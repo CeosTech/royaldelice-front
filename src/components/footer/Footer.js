@@ -58,11 +58,11 @@ const Footer = () => {
                     <h5>REJOIGNEZ-NOUS !</h5>
                     <p>
                       <a href="/" target="_blank" rel="noreferrer" >
-                        <img src={Logo_Fb}></img>
+                      <i className="fab fa-facebook-f"/>
                       </a>
                        &nbsp; 
                       <a href="https://www.instagram.com/lemustang93/?hl=fr" target="_blank" rel="noreferrer" >
-                      <img src={Logo_Insta}></img>
+                      <i className="fab fa-instagram"/>
                       </a>
                     </p>
                   </Grid>

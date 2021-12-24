@@ -14,10 +14,10 @@
 /* Style for text in Footer */
 #footer h5 {
     font-weight: bolder;
-    color: rgb(87, 43, 131);
+    color: #f7b309;
 }
 #footer p {
-    color: #f7b309;
+    color: rgb(87, 43, 131);
 }
 
 /* Style for image logo in Footer */
@@ -31,6 +31,17 @@
 .footer-text {
     padding-left: 20px;
 }
+.fab{
+    color: rgb(87, 43, 131);
+    text-decoration: none;
+    font-weight: 500 !important;
+    font-size: 30px;
+    margin-top: 5px;
+    
+}
+.fa-instagram{
+    margin-left: 10px;
+}
 
 
 /* Mobile version */
@@ -38,6 +49,7 @@
     /* Style for Footer */
     #footer {
         text-align: center;
+        
     }
 
     #footer img {

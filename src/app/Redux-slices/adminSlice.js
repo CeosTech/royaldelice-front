@@ -48,10 +48,11 @@ export const adminSlice = createSlice({
         icone: "fa-truck",
         active: false,
       },
+
       {
         name: "zone_livraison",
         path: "/zone-livraison",
-        libelle: "Zones de livraison",
+        libelle: "Zone de livraison",
         icone: "fa-truck",
         active: false,
       },
@@ -77,6 +78,13 @@ export const adminSlice = createSlice({
         active: false,
         icone: "fa-chalkboard-teacher",
       },*/
+      {
+        name: "creation-menus",
+        path: "/creation-menus",
+        libelle: "Création de menus",
+        icone: "fa-utensils",
+        active: false,
+      },
       {
         name: "gestion-produits",
         path: "/produits",

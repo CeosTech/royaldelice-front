@@ -67,13 +67,11 @@ export default function GestionProduits () {
         //sendrequest("get", "letexan/produit/?accompagnement=true", setSideDishes, setSideDishesLoading);
         axios.get(URL + "restaurant/produit/").then((res) => {
           setDatas(res.data);
-          console.log(res.data);
         });
    
 
         axios.get(URL + "restaurant/categorie/").then((res) => {
           setMenuCategories(res.data);
-          console.log(res.data);
         });
     };
 
@@ -88,8 +86,8 @@ export default function GestionProduits () {
         while(produit === []){
             //console.log(test);
         }
-        console.log("TEST1");
-        console.log(produit);
+/*         console.log("TEST1");
+        console.log(produit); */
         setShow(true);
 
     }

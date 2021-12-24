@@ -14,9 +14,7 @@ const Alerts = (props) => {
     return (
         <div className='alertsSupp'>
             <div className="content">
-                <h4>Etes vous sur de vouloir supprimer ?</h4>
-                <h5> {props.contactNom} </h5>
-                <h5> {props.contactPrenom} </h5>
+                <h4>Etes vous sur de vouloir {props.nom} ?</h4>
                 <div className="centeredButtons">
                     <button
                         className="yes_button"

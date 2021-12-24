@@ -21,6 +21,14 @@ const HistoriqueCommande = () => {
 
   return (
     <div className='historiqueCommande admin__container'>
+      <h1
+        style={{
+          textAlign: "center",
+          marginBottom: "2rem",
+          color: "#04295D",
+        }}>
+        {commandes.length > 0? "Historique des commandes" : "Pas de commanndes dans votre historique des commandes"}
+      </h1>
       <ProductList commandes={commandes} />
     </div>
   );

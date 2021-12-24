@@ -10,7 +10,7 @@
 }
 
 .carte_contain {
-  background-color: #DCA10B;
+  background-color: #464646;
   border-radius: 20px !important;
   margin-left: 2em;
   margin-top: 2em;
@@ -131,6 +131,9 @@
   .carte__image-container img {
     max-width: 50%;
   }
+  .carte_contain {
+    margin-right: 2em;
+  }
 }
 
 @media (max-width: 600px) {
@@ -158,6 +161,14 @@
     background-color: #1C1F2B;
     border-radius: 20px !important;
   }
+  .carte__item.active {
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+  .carte__item{
+    font-size: 2.2rem;
+  }
+  
 }
 
 @media (min-width: 1080px) {
@@ -176,7 +187,7 @@
 
 /* style for carte side */
 .menu-side {
-  padding-top: 6em;
+  padding-top: 5em;
 }
 
 /* Arrow icon for Menu Side */

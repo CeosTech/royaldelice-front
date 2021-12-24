@@ -25,6 +25,13 @@
 }
 @media (max-width: 676px) {
   .admin__container {
-    padding-top: 2rem;
+    padding-top: 2.5rem;
+    padding-right: 10px;
   }
+}
+@media (max-width: 676px) {
+  .admin__container h1 {
+    font-size: 25px;
+  }
+  html { font-size: 80.5%; }
 }

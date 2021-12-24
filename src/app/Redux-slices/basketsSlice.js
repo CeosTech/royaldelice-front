@@ -13,12 +13,6 @@ export const basketsSlice = createSlice({
         (product) => product.nom === action.payload.nom
       );
       if (productIdx !== -1) {
-        for (let i = 0; i < state[productIdx]?.supplementSelected.length; i++) {
-          let obj = JSON.parse(state[productIdx].supplementSelected[i])
-          console.log((obj.prix_supplement / state[productIdx].quantite) * (state[productIdx].quantite + 1))
-          obj.prix_supplement = (obj.prix_supplement / state[productIdx].quantite) * (state[productIdx].quantite + 1)
-          state[productIdx].supplementSelected[i] = JSON.stringify(obj)
-        }
         state[productIdx].quantite++;
       }
     },
@@ -31,12 +25,6 @@ export const basketsSlice = createSlice({
         if (state[productIdx].quantite === 1) {
           state.splice(productIdx, 1);
         } else {
-          for(let i = 0; i < state[productIdx].supplementSelected.length ; i++){
-            let obj =  JSON.parse(state[productIdx].supplementSelected[i])
-            console.log(obj.prix_supplement * (state[productIdx].quantite - 1) /(state[productIdx].quantite))
-            obj.prix_supplement = (obj.prix_supplement * (state[productIdx].quantite - 1) /(state[productIdx].quantite))
-            state[productIdx].supplementSelected[i] = JSON.stringify(obj)
-          }
           state[productIdx].quantite--;
         }
       }
@@ -46,7 +34,7 @@ export const basketsSlice = createSlice({
       const productIdx = state.findIndex(
         (product) => product.nom === action.payload.nom
       );
-      state.splice(productIdx, 1);
+      state.splice(productIdx, 1);      
     },
 
     addProduct: (state, action) => {
