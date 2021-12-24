@@ -72,7 +72,7 @@ const AdminNav = () => {
       
       </div>
 
-      <h2 className="adminNav__title">Mustang Bondy</h2>
+      <h2 className="adminNav__title">Royal Delice</h2>
       {/*Switch pour ouvrir et fermer (close and open restaurant)*/}
       
       {items[0] != undefined ? (

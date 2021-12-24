@@ -1,0 +1,26 @@
+html {
+    color: red;
+    
+}
+
+#zone_livraison h2 {
+    font-size: 30px;
+}
+#zone_livraison h3 {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+#zone_livraison {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:flex-start;
+    text-decoration: none;
+}
+#zone_livraison label {
+    display: none;
+}
+#zone_livraison input {
+    border-radius: 10px;
+}

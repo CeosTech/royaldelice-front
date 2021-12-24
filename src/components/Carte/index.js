@@ -1,5 +1,4 @@
 import { useState } from "react";
-import star from "../../images/star.svg";
 import Typography from '@material-ui/core/Typography';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
@@ -69,7 +68,7 @@ const Carte = ({
                               <div className="carte_contain">
                                 <div className="carte__image-container">
                                   <Typography gutterBottom variant="h5" component="h1" className="carteTitle">
-                                      <img src={star} className ="carteStar" /> CARTE <img src={star} className ="carteStar"/>
+                                       CARTE 
                                   </Typography>
                                 </div>
 
@@ -139,7 +138,7 @@ const Carte = ({
                               <div className="carte_contain">
                                 <div className="carte__image-container">
                                   <Typography gutterBottom variant="h5" component="h1" className="carteTitle">
-                                      <img src={star} className ="carteStar" /> CARTE <img src={star} className ="carteStar"/>
+                                       CARTE 
                                   </Typography>
                                 </div>
 

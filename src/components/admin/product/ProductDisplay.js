@@ -29,7 +29,7 @@ const ProductDisplay = ({ idPanierItem }) => {
   }, []);
 
   useEffect(() => {
-    console.log(supplements)
+    console.log(`panierItem`, panierItem);
   }, [panierItem]);
 
   return (
@@ -42,7 +42,7 @@ const ProductDisplay = ({ idPanierItem }) => {
             </p>
 
             {/* tester si c'est pizza, car sa structure est differente des autres*/}
-            {panierItem?.categorie === 100 ? (
+            {/* {panierItem?.categorie === 100 ? (
               <p>
                 {supplements?.prixPizzaSelected &&
                   splitPrix(
@@ -51,25 +51,25 @@ const ProductDisplay = ({ idPanierItem }) => {
               </p>
             ) : (
               <p>{splitPrix(panierItem.produit?.prix * panierItem.quantite)}</p>
-            )}
+            )} */}
           </div>
 
-          {supplements?.viande_1_selected && (
+          {/* {supplements?.viande_1_selected && (
             <>
               <p><span className="bold-details">Viande :</span> <span>{supplements.viande_1_selected}</span></p>
             </>
-          )}
+          )} */}
 
-          {supplements?.viande_2_selected?.length == 2 && (
+          {/* {supplements?.viande_2_selected?.length == 2 && (
             <>
               <p><span className="bold-details">Viandes</span> : {supplements.viande_2_selected.map((viandeItem) => (
               <span class="spacing">{viandeItem}</span>
         
           ))}</p>
             </>
-          )}
+          )} */}
 
-          {supplements?.viande_3_selected?.length == 3 && (
+          {/* {supplements?.viande_3_selected?.length == 3 && (
             <>
               <p>
                 <span className="bold-details">Viandes :</span>
@@ -78,7 +78,7 @@ const ProductDisplay = ({ idPanierItem }) => {
                 ))}
               </p>
             </>
-          )}
+          )} */}
 
           {/* {supplements?.viande_1_selected && (
             <>
@@ -103,40 +103,36 @@ const ProductDisplay = ({ idPanierItem }) => {
               <p>{supplements.viande_3_selected}</p>
             </>
           )} */}
-          {supplements&& supplements.hasOwnProperty("pain") && supplements.pain !== null &&(
+          {/*{supplements&& supplements.hasOwnProperty("pain") && supplements.pain !== null &&(
             <>
               <p>  <span className="bold-details">Pain : </span> {supplements.pain}</p>
-              {/* <p>{supplements.boisson}</p> */}
+              {/* <p>{supplements.boisson}</p>
             </>
-          )}
-           
+          )}*/}
 
-          {supplements?.sauce?.length !== 0 && 
-            <p>  <span className="bold-details" > Sauces : </span>{supplements?.sauce?.map((sauceItem) => (
-              <span class="spacing">{sauceItem}</span>
+          {/* =========== SAUCE ================== */}
+          {supplements?.sauce?.length !== 0 &&
+            <p>  <span className="bold-details" > Sauces : </span><br />{supplements?.sauce?.map((sauceItem) => (
+              <span class="spacing">{sauceItem}<br /></span>
 
-        
-          ))}
-          </p>}
 
+            ))}
+            </p>}
+          
           {supplements?.hasOwnProperty("garniture") &&
             supplements?.garniture?.length !== 0 && 
-              <p> <span className="bold-details"> Garnitures : </span>{supplements?.garniture?.map((garnitureItem) => (
-                <span class="spacing">{garnitureItem}</span>
+              <p> <span className="bold-details"> Garnitures : </span><br />{supplements?.garniture?.map((garnitureItem) => (
+                <span class="spacing">{garnitureItem}<br /></span>
              ))}
             </p>}
-            
-          {/* {supplements?.garniture?.map((garnitureItem) => (
-             garnitureItem
-          ))}
-          </p> */}
 
+          {/* =========== SUPPLEMENT PAYANT ================== */}
           {supplementsPayants?.length !== 0 && (
             <p className="bold-details">Suppléments :</p>
           )}
           {supplementsPayants?.map((supplementsPayantsItem) => (
             <div key={supplementsPayantsItem} className="ecarter-prix">
-              <p>{panierItem.quantite + "x " +supplementsPayantsItem.nom_supplement}</p>
+              <p>{panierItem.quantite}x{supplementsPayantsItem.nom_supplement}</p>
               <p>{supplementsPayantsItem.prix_supplement}€</p>
             </div>
           ))}
@@ -148,7 +144,7 @@ const ProductDisplay = ({ idPanierItem }) => {
                 <span className="bold-details">Boisson : </span>{" "}
                 {supplements.boisson}
               </p>
-              {/* <p>{supplements.boisson}</p> */}
+              <p>{supplements.boisson}</p> 
             </>
           )}
           {panierItem?.information && (

@@ -27,9 +27,9 @@ function Galerie() {
       <div className="cards">
         {/* <div className="cards__container"></div> */}
         <div className="galeriePage" id="galerie">
-            <div className="galerieTitleContainer">
+            <div className="galerieTitleContainer TITRE-container">
                 <Typography gutterBottom variant="h5" component="h1" className="galerieTitle">
-                     GALERIE
+                     NOTRE MENU
                 </Typography>
                 <br />
             </div>

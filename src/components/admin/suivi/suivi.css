@@ -106,4 +106,9 @@
   .suivi_activite__jour__commandes {
     margin-top: 2rem;
   }
+  .suivi_activite__jour__CA__card h1,
+.suivi_activite__jour__commandes__card h1 {
+  font-size: 2rem;
+}
+
 }

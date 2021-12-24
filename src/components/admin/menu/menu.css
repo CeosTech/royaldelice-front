@@ -136,7 +136,7 @@
 }
 
 .adminNav.active .adminNav__link-deconnexion p {
-  display: none;
+  /* display: none; */
 }
 
 .adminNav__link__icone {
@@ -275,7 +275,7 @@
   .adminNav__humburger {
     display: block;
     position: fixed;
-    top: 10px;
+    top: 25px;
     right: 15px;
     z-index: 99;
   }
@@ -295,6 +295,9 @@
 @media (max-width: 676px) {
   .adminNav.active {
     width: 58%;
+  }
+  .adminNav__header img {
+    padding-top: 12px;
   }
 }
 @media (max-width: 500px) {

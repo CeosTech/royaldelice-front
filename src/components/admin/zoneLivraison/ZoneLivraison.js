@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { TextField } from "@material-ui/core";
 
-import AlertValider from "../alert_message/AlertValider"
+import AlertValider from "../alert_message/Alert"
 import { URL } from "../../../middlewares/request";
 
 import "./index.css";
