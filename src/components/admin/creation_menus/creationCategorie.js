@@ -121,7 +121,7 @@ const CreationMenus = (props) => {
                 <h2>Création d'un menu</h2>
                 <br />
                 <h4>Catégorie :</h4>
-                <div>
+                <div className="creation_Title">
                     <TextField
                         label="Saisiez la catégorie"
                         id="outlined-basic"

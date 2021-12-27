@@ -801,7 +801,7 @@ const Card = ({
               <Modal.Body.Heading
                 style={{ marginBottom: "1.5rem", marginTop: "1.3rem" }}
               >
-                Pain
+                Choix du Pain
               </Modal.Body.Heading>
               <FormControl component="fieldset">
                 <FormGroup>
@@ -927,7 +927,7 @@ const Card = ({
               <Modal.Body.Heading
                 style={{ marginBottom: "1.5rem", marginTop: "1.3rem" }}
               >
-                Viande(s)
+                Choix de la viande
               </Modal.Body.Heading>
               <FormControl component="fieldset">
                 <FormGroup>
@@ -966,7 +966,7 @@ const Card = ({
               <Modal.Body.Heading
                 style={{ marginBottom: "1.5rem", marginTop: "1.3rem" }}
               >
-                Deux viandes
+                Chois des 2 viandes
               </Modal.Body.Heading>
               <FormControl component="fieldset">
                 <FormGroup>
@@ -1009,7 +1009,7 @@ const Card = ({
               <Modal.Body.Heading
                 style={{ marginBottom: "1.5rem", marginTop: "1.3rem" }}
               >
-                Trois viandes
+                Choix des 3 viandes
               </Modal.Body.Heading>
               <FormControl component="fieldset">
                 <FormGroup>

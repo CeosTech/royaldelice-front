@@ -43,7 +43,6 @@
     text-align: center;
     margin: 0 auto;
     box-shadow: none;
-    font-family: Teko;
     border-color: #DCA10B;
     border-radius: 15px;
 }
@@ -56,7 +55,6 @@
     Width: 6em;
     height: 2em;
     box-shadow: none;
-    font-family: Teko;
     border-color: #DCA10B;
     border-radius: 25px;
     
@@ -88,8 +86,6 @@
 }
 
 .Navbar_Text .MuiTypography-body1{
-
-    font-family: Teko;
     font-size: 1.8rem;
     font-weight: bold;
     margin: 0 auto;

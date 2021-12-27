@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
+
 
 
 .card__item {
@@ -32,9 +32,8 @@
 .card__item__heading {
   text-align: center;
   color: black;
-  font-size: 30px;
+  font-size: 25px;
   padding-top: 2%;
-  font-family: "Teko";
 }
 
 .separation_ligne {

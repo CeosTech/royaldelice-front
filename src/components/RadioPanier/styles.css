@@ -97,7 +97,6 @@
     text-align: center;
     margin: 0 auto;
     box-shadow: none;
-    font-family: Teko;
     border-color: #DCA10B;
     border-radius: 15px;
 }
@@ -107,7 +106,6 @@
 
 
 .livraison__container h1 {
-  font-family: Teko;
   font-style: normal;
   font-weight: bold;
   font-size: 30px;
@@ -134,7 +132,6 @@
     text-align: center;
     margin-top: 40px;
     margin-bottom: 40px;
-    font-family: Teko;
 font-style: normal;
 font-weight: bold;
 font-size: 64px;
@@ -150,7 +147,6 @@ font-size: 64px;
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;
-    font-family: Teko;
     font-style: normal;
     font-weight: bold;
     font-size: 7vw;
@@ -192,7 +188,6 @@ font-size: 64px;
 }
 
 .promo--btn {
-  font-family: "Teko";
   width: 20%;
   background: #DCA10B !important;
 }

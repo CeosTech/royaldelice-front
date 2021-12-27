@@ -21,7 +21,6 @@
 .Div_Text_Header{
     height: 40%;
     font-size: 6.5em;
-    font-family: Teko;
     text-align: center;
     color: #FFFFFF;
     margin: 0 auto;
@@ -32,7 +31,6 @@
     font-size: var(--font-size-button);
     background-color: #DCA10B;
     color: #FFFFFF;
-    font-family: Teko;
     border-color: #DCA10B;
     border-radius: 20px;
     padding: 8px 40px;

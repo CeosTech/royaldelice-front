@@ -1,0 +1,30 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 4268995, 2021-12-27T10:06:43-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: BebasKai by Dharma Type
+ * URL: https://www.myfonts.com/fonts/flat-it/bebas-kai/regular/
+ * Copyright: Copyright © 2014 by Dharma Type.
+ * 
+ * 
+ * 
+ * © 2021 MyFonts Inc
+*/
+
+
+
+  
+@font-face {
+  font-family: "BebasKai";
+  src: url('webFonts/BebasKai/font.woff2') format('woff2'), url('webFonts/BebasKai/font.woff') format('woff');
+}
+body { font-family: BebasKai!important; }
+h1, h2, h3, h4, h5 {
+	font-family: BebasKai;
+}
