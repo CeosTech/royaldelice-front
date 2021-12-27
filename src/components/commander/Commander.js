@@ -102,17 +102,18 @@ const Commander = () => {
         setSauceByCategory
       ); // categorie correspondant aux sauces
     }
-    if ([16, 27].includes(active)) { // VIANDE
+    if ([16, 25, 27].includes(active)) { // VIANDE
       sendrequest(
         "get",
         "ingredient/?categorie=" + 26 + "&typeIngredient=2",
         setViandeByCategory
       ); // categorie correspondant aux viandes
     }
-    if( [20, 25].includes(active)){ // PAIN
+    if( [18, 20].includes(active)){ // PAIN
+      console.log("PAIN")
       sendrequest(
         "get",
-        "ingredient/?categorie=" + 25 + "&typeIngredient=1",
+        "ingredient/?categorie=" + 26 + "&typeIngredient=1",
         setPainByCategory
       ); // categorie correspondant aux pains
     }
@@ -130,8 +131,9 @@ const Commander = () => {
   }, []);
 
   useEffect(() => {
+    console.log(active)
     fetchData();
-  }, [active])
+  }, [active, activeCarte, setActive])
 
   //Function that will check through if id of the selected menu item matches the one of 'Menu'. If so then we will want to display all of the datas, not just a selection.
   const isMenu = () => {
