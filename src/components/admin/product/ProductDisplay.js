@@ -31,7 +31,6 @@ const ProductDisplay = ({ idPanierItem }) => {
   useEffect(() => {
     console.log(`panierItem`, panierItem);
   }, [panierItem]);
-
   return (
     <div>
       {panierItem ? (
@@ -114,7 +113,7 @@ const ProductDisplay = ({ idPanierItem }) => {
           {supplements?.sauce?.length !== 0 &&
             <p>  <span className="bold-details" > Sauces : </span><br />{supplements?.sauce?.map((sauceItem) => (
               <span class="spacing">{sauceItem}<br /></span>
-
+          
 
             ))}
             </p>}
@@ -144,7 +143,7 @@ const ProductDisplay = ({ idPanierItem }) => {
                 <span className="bold-details">Boisson : </span>{" "}
                 {supplements.boisson}
               </p>
-              <p>{supplements.boisson}</p> 
+              {/* <p>{supplements.boisson}</p>  */}
             </>
           )}
           {panierItem?.information && (
