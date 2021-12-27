@@ -25,6 +25,6 @@
   src: url('webFonts/BebasKai/font.woff2') format('woff2'), url('webFonts/BebasKai/font.woff') format('woff');
 }
 body { font-family: BebasKai!important; }
-/* h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5 {
 	font-family: BebasKai;
-} */
+}
