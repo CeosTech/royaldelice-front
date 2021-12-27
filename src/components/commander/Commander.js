@@ -95,17 +95,12 @@ const Commander = () => {
         setGarnitureByCategory
       ); // categorie correspondant aux garniture
     }
-    if ([1, 7, 8, 18, 19, 20, 21, 23, 25, 27, 22, 29].includes(active)) {
+    if ([1, 7, 8, 18, 19, 20, 21, 23, 25, 27, 22, 29].includes(active)) {// SAUCE
       sendrequest(
         "get",
         "ingredient/?categorie=" + 26 + "&typeIngredient=5",
         setSauceByCategory
       ); // categorie correspondant aux sauces
-      sendrequest(
-        "get",
-        "ingredient/?categorie=" + 26 + "&typeIngredient=2",
-        setViandeByCategory
-      ); // categorie correspondant aux viandes
     }
     if ([16, 27].includes(active)) { // VIANDE
       sendrequest(

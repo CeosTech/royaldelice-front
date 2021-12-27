@@ -202,6 +202,8 @@ const Card = ({
 
           setSupplementSelected(null);
           setViande_1_Selected(null);
+          setViande_2_Selected(null);
+          setViande_3_Selected(null);
           setPrixTotal(prix);
         } else {
           //Rajouter les erreurs pour chaque cas
@@ -232,8 +234,9 @@ const Card = ({
           tabSupplement = [];
 
           setSupplementSelected(null);
-          setViande_1_Selected(null)
-          setViande_2_Selected(null)
+          setViande_1_Selected(null);
+          setViande_2_Selected(null);
+          setViande_3_Selected(null);
           setPrixTotal(prix);
         } else {
           //Rajouter les erreurs pour chaque cas
@@ -263,8 +266,9 @@ const Card = ({
           tabSupplement = [];
 
           setSupplementSelected(null);
-          setViande_1_Selected(null)
-          setViande_2_Selected(null)
+          setViande_1_Selected(null);
+          setViande_2_Selected(null);
+          setViande_3_Selected(null);
           setPrixTotal(prix);
         } else {
           //Rajouter les erreurs pour chaque cas
@@ -492,7 +496,9 @@ const Card = ({
         setPainSelected(null);
         setBoissonSelected(null)
         setSupplementSelected(null);
-        setViande_1_Selected(null)
+        setViande_1_Selected(null);
+        setViande_2_Selected(null);
+        setViande_3_Selected(null);
         setPrixTotal(prix);
         setPrixTotal(prix);
       } else {
@@ -525,7 +531,9 @@ const Card = ({
         setPainSelected(null);
         setBoissonSelected(null)
         setSupplementSelected(null);
-        setViande_1_Selected(null)
+        setViande_1_Selected(null);
+        setViande_2_Selected(null);
+        setViande_3_Selected(null);
         setPrixTotal(prix);
         setPrixTotal(prix);
       } else {
@@ -555,7 +563,9 @@ const Card = ({
         setPainSelected(null);
         setBoissonSelected(null)
         setSupplementSelected(null);
-        setViande_1_Selected(null)
+        setViande_1_Selected(null);
+        setViande_2_Selected(null);
+        setViande_3_Selected(null);
         setPrixTotal(prix);
         setPrixTotal(prix);
       } else {
