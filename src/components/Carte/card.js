@@ -89,6 +89,16 @@ const Card = ({
       setShow(false);
       setShowButton(false);
 
+      tabGarniture = [];
+      tabSauce = [];
+      tabSupplement = [];
+
+      setViande_1_Selected(null)
+      setViande_2_Selected([])
+      setViande_3_Selected([])
+      setPainSelected(null)
+      setBoissonSelected(null)
+
       compteurUnique = 0;
       compteurDouble = 0;
       compteurTriple = 0;
@@ -177,7 +187,7 @@ const Card = ({
         setErrorSubmit(true);
       }
     }
-    else if (data.categorie === 26) { // TACOS
+    else if (data.categorie === 25) { // TACOS
       console.log("BREAKPOINT 1")
       if (data.id === 12 || data.id === 11) {
         if (
@@ -441,38 +451,6 @@ const Card = ({
         }
       }
     }
-    else if (data.categorie === 18) { // MENU BURGER
-      if (
-        boissonSelected !== null &&
-        tabGarniture.length > 0 &&
-        tabSauce.length > 0 &&
-        errorSupplement !== true &&
-        errorDouble !== true &&
-        errorTriple !== true
-      ) {
-        setError(false);
-        handleSubmit(true);
-
-        compteurSupplement = 0;
-        compteurUnique = 0;
-        compteurDouble = 0;
-        compteurViandes = 0;
-        compteurTriple = 0;
-        tabGarniture = [];
-        tabSauce = [];
-        tabSupplement = [];
-
-        setPainSelected(null);
-        setBoissonSelected(null)
-        setSupplementSelected(null);
-        setViande_1_Selected(null)
-        setPrixTotal(prix);
-        setPrixTotal(prix);
-      } else {
-        //Rajouter les erreurs pour chaque cas
-        setErrorSubmit(true);
-      }
-    }
     else if (data.categorie === 19 || data.categorie === 21) { // MENU BURGER + TEX MEX ->SAUCE&BOISSON
       if (
         boissonSelected !== null &&
@@ -506,7 +484,7 @@ const Card = ({
         setErrorSubmit(true);
       }
     }
-    else if (data.categorie === 20) { // MENU SANDWICH
+    else if (data.categorie === 18 || data.categorie === 20) { // MENU SANDWICH + MENU PANINI & CROCS
       if (
         painSelected !== null &&
         boissonSelected !== null &&
@@ -804,7 +782,10 @@ const Card = ({
                 Choix du Pain
               </Modal.Body.Heading>
               <FormControl component="fieldset">
-                <FormGroup>
+                <RadioGroup
+                  name="pain"
+                  value={painSelected}
+                >
                   {
                     painByCategory.map((data) => {
                       if (data.disponibilite) {
@@ -827,7 +808,7 @@ const Card = ({
                       }
                     })
                   }
-                </FormGroup>
+                </RadioGroup>
               </FormControl>
 
               <div className="separation_ligne"> </div>
@@ -843,7 +824,7 @@ const Card = ({
                 Garniture(s)
               </Modal.Body.Heading>
               <FormControl component="fieldset">
-                <FormGroup>
+                <FormGroup value={tabGarniture}>
                   {
                     garnitureByCategory.map((data) => {
                       if (data.disponibilite) {
@@ -1098,7 +1079,10 @@ const Card = ({
                 Boisson
               </Modal.Body.Heading>
               <FormControl component="fieldset">
-                <FormGroup>
+                <RadioGroup
+                  name="boisson"
+                  value={boissonSelected}
+                >
                   {
                     boissonByCategory.map((data) => {
                       if (data.disponibilite) {
@@ -1110,7 +1094,7 @@ const Card = ({
                               id={data.id}
                               className="radio-choice__menu"
                               onClick={() => {
-                                setError(false);
+                                //setError(false);
                                 setBoissonSelected(data.nom)
                               }}
                             />
@@ -1120,7 +1104,7 @@ const Card = ({
                       }
                     })
                   }
-                </FormGroup>
+                </RadioGroup>
               </FormControl>
 
               <div className="separation_ligne"> </div>
@@ -1208,7 +1192,7 @@ const Card = ({
           )}
         </Modal>
       </div>
-    </div>
+    </div >
   );
 };
 
