@@ -27,6 +27,7 @@ const CreationIngredients = (props) => {
     const [trash, setTrash] = useState({ bool: false, index: null })
     const [modify, setModify] = useState(false)
 
+    // Retrieve data
     const fetchData = async () => {
         console.log("je lance")
         sendrequest(
@@ -54,10 +55,12 @@ const CreationIngredients = (props) => {
         changeValue("disponibilite", index, value)
     }
 
+    // Handle the disponibility for the creation
     const handleAddDispo = (index, value) => {
         setDispo(value)
     }
 
+    // Change the value for ingredients
     function changeValue(action, index, value) {
         let tmp = [...list]; // Temporaly variable to set the new list of ingredient updated
         let i = tmp.findIndex((element) => element.id == index);
@@ -73,6 +76,7 @@ const CreationIngredients = (props) => {
         }
     }
 
+    // Change type_ingredient's name
     function changeTypeValue(index, value) {
         let tmp = [...listType];
         let i = tmp.findIndex((element) => element.id == index);
@@ -80,6 +84,7 @@ const CreationIngredients = (props) => {
         setListType(tmp);
     }
 
+    // Send ingredient changes (for variable list)
     async function sendChanges() {
         for (let i = 0; i < list.length; i++) {
             await axios.put(URL + "restaurant/ingredient/" + list[i].id + '/',
@@ -100,6 +105,7 @@ const CreationIngredients = (props) => {
         }
     }
 
+    // Send type_ingredient changes 
     async function sendTypeChanges() {
         for (let i = 0; i < listType.length; i++) {
             await axios.put(URL + "restaurant/type_ingredient/" + listType[i].id + '/',
@@ -119,6 +125,7 @@ const CreationIngredients = (props) => {
         }
     }
 
+    // Check if the value exist in tab
     function check(tab, value) {
         let res = false
         tab.map((i) => {
@@ -129,6 +136,7 @@ const CreationIngredients = (props) => {
         return res
     }
 
+    // Add an ingredient  : nom, typeIngredient, categorie & disponibilite
     async function addIngredient() {
         if (typeIngredient !== null && typeIngredient !== "" && category !== null && category != "") {
             console.log(ingredient, typeIngredient)
@@ -152,6 +160,7 @@ const CreationIngredients = (props) => {
         }
     }
 
+    // Add a type_ingredient : nom
     async function addTypeIngredient() {
         if (!check(listType, nomType)) {
             await axios.post(URL + "restaurant/type_ingredient/",
@@ -167,6 +176,7 @@ const CreationIngredients = (props) => {
         }
     }
 
+    // Delete an ingredient value
     async function deleteValue(index) {
         await axios.delete(URL + "restaurant/ingredient/" + index + '/'
         )
@@ -178,6 +188,7 @@ const CreationIngredients = (props) => {
         }
     }
 
+    // Delete a type of type_ingredient
     async function deleteType(index) {
         await axios.delete(URL + "restaurant/type_ingredient/" + index + '/'
         )
@@ -190,6 +201,7 @@ const CreationIngredients = (props) => {
         fetchData()
     }
 
+    // Check if user confirm for his changes
     function callBackModify(bool) {
         if (bool) {
             sendChanges()
@@ -198,6 +210,7 @@ const CreationIngredients = (props) => {
         setModify(false)
     }
 
+    // Check if user confirm for his deletion
     function callBackTrash(bool) {
         switch (trash.choice) {
             case "ingredient":
@@ -214,14 +227,10 @@ const CreationIngredients = (props) => {
         setTrash(false)
     }
 
+    // Verify if all input are right
     function verifyForm() {
         setModify(true)
     }
-
-    useEffect(() => {
-        fetchData();
-        console.log(list)
-    }, [load]);
 
     useEffect(() => {
         fetchData();

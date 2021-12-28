@@ -30,6 +30,7 @@ const ZoneLivraison = () => {
     const [error, setError] = useState({ check: false, msg: "" })
     const [trash, setTrash] = useState(false)
 
+    // Retrieve data
     const fetchData = async () => {
         console.log("je lance")
         const res = await axios.get(URL + "restaurant/zone-livraison");
@@ -37,6 +38,7 @@ const ZoneLivraison = () => {
         setLoad(true)
     }
 
+    // Handle the different input changes (zone, frais, montant)
     function handleInputChange(e) {
         switch (e.target.name) {
             case "zone1":
@@ -74,6 +76,7 @@ const ZoneLivraison = () => {
         }
     }
 
+    // Send the information to the API
     async function sendChanges() {
         await axios.put(URL + "restaurant/zone-livraison/1/",
             {
@@ -101,6 +104,7 @@ const ZoneLivraison = () => {
         )
     }
 
+    // Check if the use confirm the changes
     function callBack(bool) {
         if (bool) {
             sendChanges()
@@ -108,6 +112,7 @@ const ZoneLivraison = () => {
         setTrash(false)
     }
 
+    // Verify the input
     function verifyForm() {
         console.log("Je verifie")
         if (
@@ -136,10 +141,11 @@ const ZoneLivraison = () => {
             setError({ check: true, msg: "Les informations fournies ne sont pas valides" })
         }
     }
+
     useEffect(() => {
         fetchData();
 
-        if (list.length > 0) {
+        if (list.length > 0) { // check if there is data in order to put them in the differents fields
             setZone1(list[0]?.description)
             setMin1(list[0]?.montant)
             setFrais1(list[0]?.frais)

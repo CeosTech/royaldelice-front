@@ -78,6 +78,7 @@ const Card = ({
 
 
   const handleClose = (e) => {
+    console.log("close")
     if (
       e.target.classList.contains("myModal__backdrop") ||
       e.target.classList.contains("myModal__modal__close-btn") ||
@@ -253,6 +254,7 @@ const Card = ({
           setErrorSubmit(true);
         }
       } else if (data.id === 7) {
+        console.log("BREAKPOINT TACOS")
         if (
           /* painSelected !== null && */
           viande_2_Selected.length > 0 &&
@@ -615,7 +617,7 @@ const Card = ({
       compteurTriple += 1;
       tabGarniture.push(event.target.value);
 
-      if (compteurTriple >= 3) {
+      if (compteurTriple > 3) {
         setErrorTriple(true);
         //setLimitation(true)
       } else {
@@ -624,6 +626,10 @@ const Card = ({
       }
     } else {
       compteurTriple -= 1;
+      if (compteurTriple <= 3) {
+        setErrorViande(false);
+        //setLimitation(true)
+      }
 
       for (let i in tabGarniture) {
         if (tabGarniture[i] === event.target.value) {

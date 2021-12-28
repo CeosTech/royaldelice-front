@@ -19,8 +19,8 @@ const CreationMenus = (props) => {
     const [trash, setTrash] = useState({ bool: false, index: null })
     const [modify, setModify] = useState(false)
 
+    // Retrieve data
     const fetchData = async () => {
-        console.log("je lance")
         sendrequest(
             "get",
             "restaurant/categorie/?ordering=id",
@@ -29,6 +29,7 @@ const CreationMenus = (props) => {
         );
     }
 
+    // Handle field changes 
     function changeValue(index, value) {
         let tmp = [...list];
         let i = tmp.findIndex((element) => element.id == index);
@@ -36,6 +37,7 @@ const CreationMenus = (props) => {
         setList(tmp);
     }
 
+    // Send all changes 
     async function sendChanges() {
         for (let i = 0; i < list.length; i++) {
             await axios.put(URL + "restaurant/categorie/" + list[i].id + '/',
@@ -55,6 +57,7 @@ const CreationMenus = (props) => {
         }
     }
 
+    // Check if the value exist in tab
     function check(tab, value){
         let res = false
         tab.map((i) => {
@@ -65,8 +68,9 @@ const CreationMenus = (props) => {
         return res
     }
 
+    // Add a new category
     async function addCategory() {
-        if (!check(list, category)) {
+        if (!check(list, category)) { // Check if the new category doesn't already exist
             await axios.post(URL + "restaurant/categorie/",
                 {
                     nom: category,
@@ -79,6 +83,7 @@ const CreationMenus = (props) => {
         }
     }
 
+    // Delete a category
     async function deleteValue(index) {
         await axios.delete(URL + "restaurant/categorie/" + index + '/'
         )
@@ -90,6 +95,7 @@ const CreationMenus = (props) => {
         }
     }
 
+    // Check if the user confirms his modifications
     function callBackModify(bool) {
         if (bool) {
             sendChanges()
@@ -97,6 +103,7 @@ const CreationMenus = (props) => {
         setModify(false)
     }
 
+    // Check if user confirms the deletion
     function callBackTrash(bool) {
         if (bool) {
             deleteValue(trash.index)
@@ -104,6 +111,7 @@ const CreationMenus = (props) => {
         setTrash(false)
     }
 
+    // Check if the user's input is valid
     function verifyForm() {
         setModify(true)
     }

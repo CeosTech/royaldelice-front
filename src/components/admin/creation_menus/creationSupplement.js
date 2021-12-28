@@ -129,7 +129,7 @@ const CreationIngredients = (props) => {
         }
     }
 
-    // Add the new ingredient
+    // Add the new ingredient : nom, prix, disponibilite, type_supplement, categorie
     async function addSupplement() {
         console.log(parseFloat(prix) > -0.1)
         if (supplement !== null && supplement != "" && typeSupplement !== null && typeSupplement !== "" && parseFloat(prix) > -0.1 && category !== null && category !== "") {

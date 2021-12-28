@@ -54,11 +54,6 @@ const Commander = () => {
       setMenuCategories,
       setCategoryLoading
     );
-    sendrequest(
-      "get",
-      "supplement/?categorie=" + active,
-      setSupplementByCategory
-    ); // categorie correspondant aux suppléments
 
     /* =============== INGREDIENT ========================== */
     // take the ingredient for the follow category or else take the ingredient for the active category
@@ -127,6 +122,21 @@ const Commander = () => {
         "ingredient/?categorie=" + active + "&typeIngredient=6",
         setBoissonByCategory
       ); // categorie correspondant aux boissons
+    }
+
+    /* ============= SUPPLEMENT ================== */
+    if ([18, 23, 26, 27].includes(active)) {// Supplément
+      sendrequest(
+        "get",
+        "supplement/?categorie=" + 20,
+        setSupplementByCategory
+      ); // categorie correspondant aux suppléments
+    }else{
+      sendrequest(
+        "get",
+        "supplement/?categorie=" + active,
+        setSupplementByCategory
+      ); // categorie correspondant aux suppléments
     }
   }
 
