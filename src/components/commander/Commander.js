@@ -61,6 +61,7 @@ const Commander = () => {
     ); // categorie correspondant aux suppléments
 
     /* =============== INGREDIENT ========================== */
+    // take the ingredient for the follow category or else take the ingredient for the active category
     if ([1, 7, 8, 18, 20, 23, 24, 25, 27].includes(active)) {// GARNITURE
       sendrequest(
         "get",
