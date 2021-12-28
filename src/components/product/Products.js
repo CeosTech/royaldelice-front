@@ -172,6 +172,7 @@ const Products = ({
             </>
           )}
 
+
           {boissonSelected && (
             <>
               <p className="menu__details-title">Boisson</p>
