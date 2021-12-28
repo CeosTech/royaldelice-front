@@ -154,7 +154,7 @@ const Card = ({
 
   const verifySeletedDishes = () => {
     console.log(data);
-    if (data.categorie === 23) { // BURGER
+    if (data.categorie === 24) { // BURGER
       if (
         /* painSelected !== null && */
         tabGarniture.length > 0 &&
@@ -318,7 +318,7 @@ const Card = ({
         }
       }
     }
-    else if (data.categorie === 25) { // SANDWICH
+    else if (data.categorie === 23) { // SANDWICH
       if (
         /* painSelected !== null && */
         painSelected !== null &&
@@ -519,7 +519,7 @@ const Card = ({
         setErrorSubmit(true);
       }
     }
-    else if (data.categorie === 29 || data.categorie === 22) { // BARQUETTE DE FRITE + MENU ENFANT -> SAUCES
+    else if (data.categorie === 29 || data.categorie === 22 || data.categorie === 26) { // BARQUETTE DE FRITE + MENU ENFANT -> SAUCES
       if (
         tabSauce.length > 0 &&
         errorSupplement !== true &&
@@ -911,7 +911,10 @@ const Card = ({
                 Choix de la viande
               </Modal.Body.Heading>
               <FormControl component="fieldset">
-                <FormGroup>
+              <RadioGroup
+                  name="viande1"
+                  value={viande_1_Selected}
+                >
                   {
                     viandeByCategory.map((data) => {
                       if (data.disponibilite) {
@@ -934,7 +937,7 @@ const Card = ({
                       }
                     })
                   }
-                </FormGroup>
+                </RadioGroup>
               </FormControl>
 
               <div className="separation_ligne"> </div>

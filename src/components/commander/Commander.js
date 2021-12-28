@@ -61,66 +61,69 @@ const Commander = () => {
     ); // categorie correspondant aux suppléments
 
     /* =============== INGREDIENT ========================== */
-    sendrequest(
-      "get",
-      "ingredient/?categorie=" + active + "&typeIngredient=1",
-      setPainByCategory
-    ); // categorie correspondant aux pains
-    sendrequest(
-      "get",
-      "ingredient/?categorie=" + active + "&typeIngredient=4",
-      setGarnitureByCategory
-    ); // categorie correspondant aux garniture
-    sendrequest(
-      "get",
-      "ingredient/?categorie=" + active + "&typeIngredient=5",
-      setSauceByCategory
-    ); // categorie correspondant aux sauces
-    sendrequest(
-      "get",
-      "ingredient/?categorie=" + active + "&typeIngredient=2",
-      setViandeByCategory
-    ); // categorie correspondant aux viandes
-    sendrequest(
-      "get",
-      "ingredient/?categorie=" + active + "&typeIngredient=6",
-      setBoissonByCategory
-    ); // categorie correspondant aux boissons
-
-    /*========== OTHERWISE ==================== */
-    if ([1, 7, 8, 18, 20, 23, 25, 27].includes(active)) {// GARNITURE
+    if ([1, 7, 8, 18, 20, 23, 24, 25, 27].includes(active)) {// GARNITURE
       sendrequest(
         "get",
-        "ingredient/?categorie=" + 26 + "&typeIngredient=4",
+        "ingredient/?categorie=" + 25 + "&typeIngredient=4",
+        setGarnitureByCategory
+      ); // categorie correspondant aux garniture
+    }else{
+      sendrequest(
+        "get",
+        "ingredient/?categorie=" + active + "&typeIngredient=4",
         setGarnitureByCategory
       ); // categorie correspondant aux garniture
     }
-    if ([1, 7, 8, 18, 19, 20, 21, 23, 25, 27, 22, 29].includes(active)) {// SAUCE
+    if ([1, 7, 8, 18, 19, 20, 21, 23, 24, 25, 26, 27, 22, 29].includes(active)) {// SAUCE
       sendrequest(
         "get",
-        "ingredient/?categorie=" + 26 + "&typeIngredient=5",
+        "ingredient/?categorie=" + 25 + "&typeIngredient=5",
+        setSauceByCategory
+      ); // categorie correspondant aux sauces
+    }else{
+      sendrequest(
+        "get",
+        "ingredient/?categorie=" + active + "&typeIngredient=5",
         setSauceByCategory
       ); // categorie correspondant aux sauces
     }
     if ([16, 25, 27].includes(active)) { // VIANDE
       sendrequest(
         "get",
-        "ingredient/?categorie=" + 26 + "&typeIngredient=2",
+        "ingredient/?categorie=" + 25 + "&typeIngredient=2",
+        setViandeByCategory
+      ); // categorie correspondant aux viandes
+    }else{
+      sendrequest(
+        "get",
+        "ingredient/?categorie=" + active + "&typeIngredient=2",
         setViandeByCategory
       ); // categorie correspondant aux viandes
     }
-    if( [18, 20].includes(active)){ // PAIN
+    if( [18, 20, 23].includes(active)){ // PAIN
       console.log("PAIN")
       sendrequest(
         "get",
-        "ingredient/?categorie=" + 26 + "&typeIngredient=1",
+        "ingredient/?categorie=" + 18 + "&typeIngredient=1",
+        setPainByCategory
+      ); // categorie correspondant aux pains
+    }else{
+      sendrequest(
+        "get",
+        "ingredient/?categorie=" + active + "&typeIngredient=1",
         setPainByCategory
       ); // categorie correspondant aux pains
     }
-    if ([9, 18, 19, 20, 21].includes(active)) { // BOISSONS
+    if ([9, 19, 20, 21].includes(active)) { // BOISSONS
       sendrequest(
         "get",
         "ingredient/?categorie=" + 18 + "&typeIngredient=6",
+        setBoissonByCategory
+      ); // categorie correspondant aux boissons
+    }else{
+      sendrequest(
+        "get",
+        "ingredient/?categorie=" + active + "&typeIngredient=6",
         setBoissonByCategory
       ); // categorie correspondant aux boissons
     }
