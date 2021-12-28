@@ -157,7 +157,6 @@ const Card = ({
     console.log(data);
     if (data.categorie === 24) { // BURGER
       if (
-        /* painSelected !== null && */
         tabGarniture.length > 0 &&
         tabSauce.length > 0 &&
         errorSupplement !== true &&

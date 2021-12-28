@@ -24,7 +24,52 @@
   font-family: "BebasKai";
   src: url('webFonts/BebasKai/font.woff2') format('woff2'), url('webFonts/BebasKai/font.woff') format('woff');
 }
-body { font-family: BebasKai!important; }
-h1, h2, h3, h4, h5 {
-	font-family: BebasKai;
+.Div_Text_Header{
+  font-family: BebasKai;
+}
+.alerts{
+  font-family: BebasKai;
+}
+.carte{
+  font-family: BebasKai;
+}
+.Footer{
+  font-family: BebasKai;
+}
+.franchise{
+  font-family: BebasKai;
+}
+.home{
+  font-family: BebasKai;
+}
+.commander{
+  font-family: BebasKai;
+}
+.menu-sidee{
+  font-family: BebasKai;
+
+}
+.menu__order{
+  font-family: BebasKai;
+
+}
+.panier{
+  font-family: BebasKai;
+
+}
+.product{
+  font-family: BebasKai;
+
+}
+.felicitation{
+  font-family: BebasKai;
+
+}
+.paiment{
+  font-family: BebasKai;
+
+}
+#Navbar_Mustang{
+  font-family: BebasKai;
+
 }

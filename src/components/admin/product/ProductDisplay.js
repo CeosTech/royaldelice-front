@@ -37,8 +37,9 @@ const ProductDisplay = ({ idPanierItem }) => {
         <div>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <p className="title-details">
-              {panierItem.quantite}x {panierItem.produit?.nom}{" "}
+              {panierItem.quantite}x {panierItem.produit?.nom}{""}
             </p>
+            <span class="spacing">{panierItem.produit?.prix + "€"}<br /></span>
 
             {/* tester si c'est pizza, car sa structure est differente des autres*/}
             {/* {panierItem?.categorie === 100 ? (
@@ -53,22 +54,22 @@ const ProductDisplay = ({ idPanierItem }) => {
             )} */}
           </div>
 
-          {/* {supplements?.viande_1_selected && (
+          {supplements?.viande_1_selected && (
             <>
               <p><span className="bold-details">Viande :</span> <span>{supplements.viande_1_selected}</span></p>
             </>
-          )} */}
+          )}
 
-          {/* {supplements?.viande_2_selected?.length == 2 && (
+          {supplements?.viande_2_selected?.length > 0 && (
             <>
               <p><span className="bold-details">Viandes</span> : {supplements.viande_2_selected.map((viandeItem) => (
               <span class="spacing">{viandeItem}</span>
         
           ))}</p>
             </>
-          )} */}
+          )}
 
-          {/* {supplements?.viande_3_selected?.length == 3 && (
+          {supplements?.viande_3_selected?.length > 0 && (
             <>
               <p>
                 <span className="bold-details">Viandes :</span>
@@ -77,7 +78,7 @@ const ProductDisplay = ({ idPanierItem }) => {
                 ))}
               </p>
             </>
-          )} */}
+          )}
 
           {/* {supplements?.viande_1_selected && (
             <>
@@ -102,12 +103,11 @@ const ProductDisplay = ({ idPanierItem }) => {
               <p>{supplements.viande_3_selected}</p>
             </>
           )} */}
-          {/*{supplements&& supplements.hasOwnProperty("pain") && supplements.pain !== null &&(
+          {supplements&& supplements.hasOwnProperty("pain") && supplements.pain !== null &&(
             <>
               <p>  <span className="bold-details">Pain : </span> {supplements.pain}</p>
-              {/* <p>{supplements.boisson}</p>
             </>
-          )}*/}
+          )}
 
           {/* =========== SAUCE ================== */}
           {supplements?.sauce?.length !== 0 &&
