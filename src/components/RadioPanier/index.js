@@ -85,6 +85,7 @@ const RadioButtonsGroup = (props) => {
   };
 
   const handleChangeZone = (event) => {
+    console.log("La valeur est : " +  zoneValue)
     switch (event.target.name) {
       case "zone 1":
         setFrais(frais1);

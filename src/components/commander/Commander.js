@@ -185,6 +185,7 @@ const Commander = () => {
             return false;
           }*/
         })
+        .sort((a, b) => a.id - b.id)
         //Once filtered, we can go through the selection to display them
         .map((data) => {
           return (

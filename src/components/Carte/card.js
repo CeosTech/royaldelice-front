@@ -189,7 +189,6 @@ const Card = ({
       }
     }
     else if (data.categorie === 25) { // TACOS
-      console.log("BREAKPOINT 1")
       if (data.id === 12 || data.id === 11) {
         if (
           /* painSelected !== null && */
@@ -213,8 +212,8 @@ const Card = ({
 
           setSupplementSelected(null);
           setViande_1_Selected(null);
-          setViande_2_Selected(null);
-          setViande_3_Selected(null);
+          setViande_2_Selected([]);
+          setViande_3_Selected([]);
           setPrixTotal(prix);
         } else {
           //Rajouter les erreurs pour chaque cas
@@ -246,8 +245,8 @@ const Card = ({
 
           setSupplementSelected(null);
           setViande_1_Selected(null);
-          setViande_2_Selected(null);
-          setViande_3_Selected(null);
+          setViande_2_Selected([]);
+          setViande_3_Selected([]);
           setPrixTotal(prix);
         } else {
           //Rajouter les erreurs pour chaque cas
@@ -279,8 +278,8 @@ const Card = ({
 
           setSupplementSelected(null);
           setViande_1_Selected(null);
-          setViande_2_Selected(null);
-          setViande_3_Selected(null);
+          setViande_2_Selected([]);
+          setViande_3_Selected([]);
           setPrixTotal(prix);
         } else {
           //Rajouter les erreurs pour chaque cas
@@ -311,8 +310,8 @@ const Card = ({
 
           setSupplementSelected(null);
           setViande_1_Selected(null)
-          setViande_2_Selected(null)
-          setViande_3_Selected(null)
+          setViande_2_Selected([])
+          setViande_3_Selected([])
           setPrixTotal(prix);
         } else {
           //Rajouter les erreurs pour chaque cas
@@ -382,7 +381,7 @@ const Card = ({
 
           setSupplementSelected(null);
           setViande_1_Selected(null)
-          setViande_2_Selected(null)
+          setViande_2_Selected([])
           setPrixTotal(prix);
         } else {
           //Rajouter les erreurs pour chaque cas
@@ -413,7 +412,7 @@ const Card = ({
 
           setSupplementSelected(null);
           setViande_1_Selected(null)
-          setViande_2_Selected(null)
+          setViande_2_Selected([])
           setPrixTotal(prix);
         } else {
           //Rajouter les erreurs pour chaque cas
@@ -444,8 +443,8 @@ const Card = ({
 
           setSupplementSelected(null);
           setViande_1_Selected(null)
-          setViande_2_Selected(null)
-          setViande_3_Selected(null)
+          setViande_2_Selected([])
+          setViande_3_Selected([])
           setPrixTotal(prix);
         } else {
           //Rajouter les erreurs pour chaque cas
@@ -477,8 +476,8 @@ const Card = ({
         setBoissonSelected(null)
         setSupplementSelected(null);
         setViande_1_Selected(null);
-        setViande_2_Selected(null);
-        setViande_3_Selected(null);
+        setViande_2_Selected([]);
+        setViande_3_Selected([]);
         setPrixTotal(prix);
         setPrixTotal(prix);
       } else {
@@ -512,8 +511,8 @@ const Card = ({
         setBoissonSelected(null)
         setSupplementSelected(null);
         setViande_1_Selected(null);
-        setViande_2_Selected(null);
-        setViande_3_Selected(null);
+        setViande_2_Selected([]);
+        setViande_3_Selected([]);
         setPrixTotal(prix);
         setPrixTotal(prix);
       } else {
@@ -544,8 +543,8 @@ const Card = ({
         setBoissonSelected(null)
         setSupplementSelected(null);
         setViande_1_Selected(null);
-        setViande_2_Selected(null);
-        setViande_3_Selected(null);
+        setViande_2_Selected([]);
+        setViande_3_Selected([]);
         setPrixTotal(prix);
         setPrixTotal(prix);
       } else {
