@@ -63,7 +63,7 @@ const ProductDisplay = ({ idPanierItem }) => {
           {supplements?.viande_2_selected?.length > 0 && (
             <>
               <p><span className="bold-details">Viandes</span> : {supplements.viande_2_selected.map((viandeItem) => (
-              <span class="spacing">{viandeItem}</span>
+              <span  class="spacing"><br />{viandeItem}</span>
         
           ))}</p>
             </>
@@ -74,7 +74,7 @@ const ProductDisplay = ({ idPanierItem }) => {
               <p>
                 <span className="bold-details">Viandes :</span>
                 {supplements.viande_3_selected.map((viandeItem) => (
-                  <span class="spacing">{viandeItem}</span>
+                  <span class="spacing"><br />{viandeItem}</span>
                 ))}
               </p>
             </>

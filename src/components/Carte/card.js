@@ -954,7 +954,7 @@ const Card = ({
               <Modal.Body.Heading
                 style={{ marginBottom: "1.5rem", marginTop: "1.3rem" }}
               >
-                Chois des 2 viandes
+                Choix des 2 viandes
               </Modal.Body.Heading>
               <FormControl component="fieldset">
                 <FormGroup>
