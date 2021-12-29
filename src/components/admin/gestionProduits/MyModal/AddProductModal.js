@@ -13,6 +13,7 @@ import {
 import FormGroup from "@material-ui/core/FormGroup";
 /*import "./modal.css";*/
 import Modal from "../MyModal/Modal";
+import Spinner from "../../../../images/spinner.gif"
 
 export default function ({
     categorieId,
@@ -44,6 +45,7 @@ export default function ({
 
     }
     const [product, setProduct] = useState(initialProduct());
+    const [loading, setLoading] = useState(false)
 
     const [imageImported, setImageImported] = useState(false);
 
@@ -70,6 +72,7 @@ export default function ({
 
     const addProduct = async (e) => {
         e.preventDefault();
+        setLoading(true)
         console.log("========= AJOUT =================")
         console.log(product)
 
@@ -91,25 +94,25 @@ export default function ({
                 },
             })
             .then((res) => {
+                setLoading(false)
                 console.log(`added susscessfully`)
+                window.location.reload(false)
             })
             .catch((error) => {
                 console.error(error.response)
             });
 
-        //window.location.reload(false);
     }
 
     const deleteProduct = async () => {
         await axios.delete(URL + "restaurant/produit/" + id + "/")
-            .then(() => console.log(`deleted`))
+            .then(() => { window.location.reload(false) })
             .catch(error => console.error(error));
-
-        window.location.reload(false);
     }
 
     const updateProduct = (e) => {
         e.preventDefault();
+        setLoading(true)
         console.log(`form_data`, product);
         let form_data = new FormData();
         form_data.append("nom", product.nom);
@@ -133,6 +136,7 @@ export default function ({
             })
             .then((res) => {
                 console.log(`updated susscessfully`);
+                setLoading(false)
                 window.location.reload(false);
             })
             .catch((error) => {
@@ -142,6 +146,7 @@ export default function ({
 
         //window.location.reload(false); 
     }
+
     const inputChange = (e) => {
         setProduct({ ...product, [e.target.name]: e.target.value })
     }
@@ -256,6 +261,8 @@ export default function ({
                     <Button id="ajouter_btn" onClick={addProduct}> Ajouter </Button>
                 }
             </Modal.Footer>
+
+            {loading ? (<img src={Spinner} className="loadingImg" />) : null}
         </Modal>
     );
 };

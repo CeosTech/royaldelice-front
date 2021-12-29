@@ -195,7 +195,6 @@ export default function GestionProduits () {
                 </FormControl>
             
                 <Button id="ajouter_produit" onClick={() => setShowProductModal(true)} > Ajouter Produit</Button>
-                {active}
                 <AddProductModal categorieId={active} show={showProductModal} setShow={setShowProductModal} ></AddProductModal>
             </div>
 

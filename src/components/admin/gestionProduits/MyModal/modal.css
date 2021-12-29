@@ -137,6 +137,18 @@
 
 } 
 
+.loadingImg{
+  position: absolute;
+  display: block;
+  background-color: #04295d;
+  border-radius: 50%;
+  height: 20%;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
 /*@media (max-width: 500px) {
   .myModal__header img {
     max-width: 175px;
