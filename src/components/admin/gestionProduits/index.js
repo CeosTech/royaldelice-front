@@ -43,7 +43,7 @@ const useStyles = makeStyles({
 
 export default function GestionProduits () {
     const classes = useStyles();
-    const [active, setActive] = useState(1);
+    const [active, setActive] = useState(18);
     const [activeCarte, setActiveCarte] = useState(true);
     const [datas, setDatas] = useState([]);
     const [sideDishes, setSideDishes] = useState([]);
@@ -116,7 +116,7 @@ export default function GestionProduits () {
             const selectedDishes = datas
                 // We filter the data :
                 .filter((data) => {
-                    console.log(data);
+                    //console.log(data);
                     // By only selecting the data that belongs to a category (categories is an array in which are the different categories to which a dish belongs) that matches the one selected by the user (var active)
                     return (
                         data.categorie === active
@@ -195,6 +195,7 @@ export default function GestionProduits () {
                 </FormControl>
             
                 <Button id="ajouter_produit" onClick={() => setShowProductModal(true)} > Ajouter Produit</Button>
+                {active}
                 <AddProductModal categorieId={active} show={showProductModal} setShow={setShowProductModal} ></AddProductModal>
             </div>
 

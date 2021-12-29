@@ -52,14 +52,8 @@ export default function ({
         if (productToUpdate !== null) {
             setProduct({...productToUpdate})
         }
-        console.log(product.supplement)
 
     }, [productToUpdate]);
-
-    useEffect(() => {
-        console.log("update")
-
-    }, [product]);
 
     const handleClose = (e) => {
         if (
@@ -76,6 +70,7 @@ export default function ({
 
     const addProduct = async (e) => {
         e.preventDefault();
+        console.log("========= AJOUT =================")
         console.log(product)
 
         let form_data = new FormData();
@@ -99,10 +94,10 @@ export default function ({
                 console.log(`added susscessfully`)
             })
             .catch((error) => {
-                console.error(error)
+                console.error(error.response)
             });
 
-        window.location.reload(false);
+        //window.location.reload(false);
     }
 
     const deleteProduct = async () => {
