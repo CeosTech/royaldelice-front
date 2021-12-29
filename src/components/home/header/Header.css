@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
 .Grid_Container{
     height: 100%;
     width: 100%;
@@ -21,6 +21,7 @@
 .Div_Text_Header{
     height: 40%;
     font-size: 6.5em;
+    /* font-family: "Teko"; */
     text-align: center;
     color: #FFFFFF;
     margin: 0 auto;
@@ -29,6 +30,7 @@
 
 #Btn_Commander_Accueil{
     font-size: var(--font-size-button);
+    font-family: "Teko";
     background-color: #DCA10B;
     color: #FFFFFF;
     border-color: #DCA10B;

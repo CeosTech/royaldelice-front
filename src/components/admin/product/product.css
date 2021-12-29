@@ -122,6 +122,7 @@
   margin: 0;
   font-size: 15px;
   padding: 5px;
+  padding-left: 0;
 }
 .commande__totale-ttc {
   border: none;

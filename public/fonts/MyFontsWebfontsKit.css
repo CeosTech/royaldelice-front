@@ -19,7 +19,7 @@
 
 
 
-  
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
 @font-face {
   font-family: "BebasKai";
   src: url('webFonts/BebasKai/font.woff2') format('woff2'), url('webFonts/BebasKai/font.woff') format('woff');
@@ -39,9 +39,6 @@
 .franchise{
   font-family: BebasKai;
 }
-.home{
-  font-family: BebasKai;
-}
 .commander{
   font-family: BebasKai;
 }
@@ -54,7 +51,7 @@
 
 }
 .panier{
-  font-family: BebasKai;
+  font-family: "Teko";
 
 }
 .product{
@@ -62,14 +59,14 @@
 
 }
 .felicitation{
-  font-family: BebasKai;
+  font-family: "Teko";
 
 }
 .paiment{
-  font-family: BebasKai;
+  font-family: "Teko";
 
 }
 #Navbar_Mustang{
-  font-family: BebasKai;
+  font-family: "Teko";
 
 }

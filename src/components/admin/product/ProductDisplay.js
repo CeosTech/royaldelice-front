@@ -39,7 +39,7 @@ const ProductDisplay = ({ idPanierItem }) => {
             <p className="title-details">
               {panierItem.quantite}x {panierItem.produit?.nom}{""}
             </p>
-            <span class="spacing">{panierItem.produit?.prix + "€"}<br /></span>
+            <span class="spacing">{(panierItem.produit?.prix)*(panierItem.quantite) + "€"}<br /></span>
 
             {/* tester si c'est pizza, car sa structure est differente des autres*/}
             {/* {panierItem?.categorie === 100 ? (
@@ -105,7 +105,7 @@ const ProductDisplay = ({ idPanierItem }) => {
           )} */}
           {supplements&& supplements.hasOwnProperty("pain") && supplements.pain !== null &&(
             <>
-              <p>  <span className="bold-details">Pain : </span> {supplements.pain}</p>
+              <p> <span className="bold-details">Pain : </span><br/> {supplements.pain}</p>
             </>
           )}
 
@@ -139,8 +139,8 @@ const ProductDisplay = ({ idPanierItem }) => {
           {supplements?.boisson && (
             <>
               <p>
-                {" "}
-                <span className="bold-details">Boisson : </span>{" "}
+                
+                <span className="bold-details">Boisson : </span><br/>
                 {supplements.boisson}
               </p>
               {/* <p>{supplements.boisson}</p>  */}

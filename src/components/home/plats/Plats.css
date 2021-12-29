@@ -1,5 +1,6 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
+
 .plats {
   /* background-color: #3c3c3c; */
   width: 100%;
@@ -9,10 +10,12 @@
   justify-content: center;
   padding-bottom: 5px;
 }
+
 .platsTitle {
   color: white;
   text-align: center;
   font-size: 70px !important;
+  font-family: "Teko" !important;
   font-weight: 900 !important;
   padding-top: 135px;
   line-height: 72px;
@@ -20,9 +23,10 @@
   text-decoration-line: underline;
   text-underline-offset: 15px !important;
 }
+
 .cardItem {
   width: 280px;
-  height: 450px!important;
+  height: 450px !important;
   text-align: center;
   border-radius: 22px !important;
   background-color: rgb(87, 43, 131) !important;
@@ -33,18 +37,20 @@
 
 .cardItem img {
   width: 100%;
-  height: 200px!important;
+  height: 200px !important;
 }
 
 .cardTitle {
   color: #DCA10B;
-  padding-top:  10px !important;
+  padding-top: 10px !important;
   text-align: center;
   font-weight: 900 !important;
-  font-size: 35px !important;
+  font-size: 40px !important;
+  font-family: "Teko"!important;
   /* letter-spacing: 0.05em !important; */
   /* text-transform: uppercase; */
 }
+
 .cardPrice {
   color: #DCA10B;
   font-weight: bold !important;
@@ -61,7 +67,7 @@
 
 }
 
-.command_button{
+.command_button {
   text-align: center;
   margin-bottom: 20px !important;
 }
@@ -74,11 +80,13 @@
   border-radius: 15px;
   text-transform: uppercase;
   font-size: var(--font-size-button);
+  font-family: "Teko";
   font-weight: 700;
   display: inline-block;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   padding: 2px 60px;
 }
+
 .telecharger_btn:hover {
   background-color: #dbc12f;
 
@@ -86,7 +94,7 @@
 
 /* --------------- responsive ----------------- */
 #plats {
-  height: 100%!important;
+  height: 100% !important;
   position: relative;
   z-index: 4;
   margin-top: -98px;
@@ -105,12 +113,12 @@
 }
 
 /* for w < 960 or h < 730 */
-@media  screen and (max-width: 960px) , (max-height: 800px) {
-  .platsTitle{
+@media screen and (max-width: 960px), (max-height: 800px) {
+  .platsTitle {
     font-size: var(--font-size-titre-moyenne) !important;
   }
 
-  .telecharger_btn{
+  .telecharger_btn {
     font-size: var(--font-size-button-mobile);
     padding: 8px 20px;
   }
@@ -118,21 +126,23 @@
   .cardTitle {
     font-size: 38px !important;
   }
+
   .cardText {
     font-size: 14px !important;
   }
-  .cardPrice{
+
+  .cardPrice {
     font-size: 24px !important;
   }
 }
 
 /* for w < 960 or h < 730 */
-@media  screen and (max-width: 612px) , (max-height: 600px) {
-  .platsTitle{
+@media screen and (max-width: 612px), (max-height: 600px) {
+  .platsTitle {
     font-size: calc(var(--font-size-titre-petite)/1) !important;
   }
 
-  .telecharger_btn{
+  .telecharger_btn {
     font-size: var(--font-size-button-mobile);
     padding: 8px 20px;
   }
@@ -140,18 +150,21 @@
   .cardTitle {
     font-size: 38px !important;
   }
+
   .cardText {
     font-size: 14px !important;
   }
-  .cardPrice{
+
+  .cardPrice {
     font-size: 24px !important;
   }
 }
 
-@media  screen and (max-width: 428px){
-  .platsTitle{
+@media screen and (max-width: 428px) {
+  .platsTitle {
     font-size: 40px !important;
   }
+
   .cardTitle {
     font-size: 38px !important;
   }
@@ -160,13 +173,13 @@
 /* ------------- WIDTH ----------------*/
 
 @media screen and (max-width: 1262px) {
-  .cardItem{
+  .cardItem {
     width: 270px;
   }
 }
 
 @media screen and (max-width: 959px) {
-  .cardItem{
+  .cardItem {
     width: 270px;
   }
 
@@ -180,7 +193,7 @@
 }
 
 @media screen and (max-width: 450px) {
-  .cardItem{
+  .cardItem {
     width: 66vw;
   }
 }
@@ -240,16 +253,20 @@
     padding-top: 0px !important;
     margin-bottom: 0px !important;
   }
+
   .cardText {
     padding: 0px !important;
   }
+
   .cardPrice {
     margin-bottom: -18px !important;
   }
+
   .command_button {
     margin-top: -10vh;
   }
-  .platsTitle{
+
+  .platsTitle {
     padding-top: 116px;
   }
 }
@@ -258,7 +275,7 @@
 
 /* --------- MOBILE VERSION ------------- */
 @media only screen and (max-width: 960px) and (max-height: 677px) {
-  .command_button{
+  .command_button {
     padding-top: 20px;
   }
 }
@@ -268,8 +285,9 @@
     height: 230px;
   }
 
-  .cardItem  {
+  .cardItem {
     height: max-content;
   }
 }
+
 /* --------- MOBILE VERSION - MIN HEIGHT 493 ------------- */

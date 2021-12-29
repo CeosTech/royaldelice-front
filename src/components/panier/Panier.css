@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
 #Btn_Panier {
 
     font-size: 1.5em;
+    font-family: "Teko";
     background-color: #DCA10B;
     color: #FFFFFF;
     Width: 7em;
@@ -23,6 +25,7 @@
     text-align: center;
     box-shadow: none;
     font-weight: bold;
+    font-family: "Teko";
     border-color: #DCA10B;
     margin: 1em;
 }
@@ -144,6 +147,7 @@
     margin-top: 1em;
     font-style: normal;
     font-weight: bold;
+    font-family: "Teko";
     font-size: 64px;
     line-height: 92px;
 

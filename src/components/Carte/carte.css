@@ -134,11 +134,15 @@
     margin-right: 2em;
   }
 }
+.MuiSvgIcon-root{
+  margin-top: ;
+}
 
 @media (max-width: 600px) {
   .carte_title {
     line-height: normal;
   }
+  
   
 }
 
@@ -167,6 +171,9 @@
   .carte__item{
     font-size: 2.2rem;
   }
+  .menu-arrow-forward{
+    padding-top: 15px;
+  }
   
 }
 
@@ -193,7 +200,13 @@
 .menu-arrow-back .MuiSvgIcon-root {
   fill: white;
   font-size: 50px;
-  margin: 0.3em;
+  margin: 0.5em;
+}
+.menu-arrow-back{
+  padding-top: 25px;
+}
+.menu-arrow-forward{
+  padding-top: 15px;
 }
 
 .menu-arrow-forward .MuiSvgIcon-root {

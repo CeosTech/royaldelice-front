@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
+
 .footer-copyright{
 
     color: #FFFFFF;
@@ -14,6 +17,7 @@
 /* Style for text in Footer */
 #footer h5 {
     font-weight: bolder;
+    font-family: "Teko";
     color: #f7b309;
 }
 #footer p {
