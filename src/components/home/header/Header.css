@@ -7,8 +7,8 @@
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    padding-top: 15em;
-    padding-bottom: 15em;
+    /* padding-top: 15em; */
+    /* padding-bottom: 15em; */
 }
 .commanderHeader {
     text-decoration: none;
@@ -25,7 +25,7 @@
     text-align: center;
     color: #FFFFFF;
     margin: 0 auto;
-    margin-top: -32vh;
+    align-self: center;
 }
 
 #Btn_Commander_Accueil{
@@ -59,6 +59,9 @@
         padding: 8px 20px;  
     }
 }
+.image-logo{
+    display: none;
+}
 
 /* -------------- WIDTH --------------------- */
 /* w <= 1104 */
@@ -66,19 +69,22 @@
 @media screen and (max-width: 1609px) {
     .Div_Text_Header {
        font-size: 5.5em;
-       margin-top: -10vh;
+       /* margin-top: -10vh; */
     }
 }
 @media screen and (max-width: 1380px) {
     .Div_Text_Header {
        font-size: 5em;
-       margin-top: -10vh;
+       /* margin-top: -10vh; */
+    }
+    #header{
+        position: static;
     }
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1000px) {
     .Div_Text_Header {
        font-size: 4.5em;
-       margin-top: -10vh;
+       /* margin-top: -10vh; */
     }
 }
 /* @media screen and (max-width: 1104px) {
@@ -91,8 +97,21 @@
 @media screen and (max-width: 865px) {
     .Div_Text_Header {
        font-size: 4em;
-       margin-top: -10vh;
+       /* margin-top: -10vh; */
     }
+    .image-logo{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        margin-top: 10px;
+    }
+    #header{
+        position: relative;
+    }
+    .Div_Text_Header{
+        align-self: flex-start;
+    }
+    
 }
 
 @media screen and (max-width: 608px) {
@@ -110,6 +129,26 @@
        font-size: 2.5em;
        margin-top: -15vh;
        margin-bottom: 10vh;
+       align-self: center;
+    }
+    #header{
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* align-items: flex-start; */
+        position: relative;
+
+    }
+}
+@media screen and (max-width: 350px) {
+    .image-logo img{
+        width: 80%;
+    }
+    #Btn_Commander_Accueil {
+        font-size: 24px;
+    }
+    .Div_Text_Header {
+        margin-top: -20vh
+;
     }
 }
 

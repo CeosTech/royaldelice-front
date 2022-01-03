@@ -60,7 +60,7 @@
   padding: 5px 0;
   cursor: pointer;
   position: relative;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   border-radius: 5px;
   text-align: left;
   font-family: "Teko" !important;
@@ -87,7 +87,7 @@
   display: block;
 }
 .carte__item.active {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   font-weight: 700;
 }
 

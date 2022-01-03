@@ -773,15 +773,19 @@ const Card = ({
 
           </Modal.Header>
           <Modal.Body>
-            <Modal.Body.Heading>Description</Modal.Body.Heading>
-            <p>{description}</p>
+            <Modal.Body.Heading
+             style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize:"1.5em" }}
+            >
+              Description
+              </Modal.Body.Heading>
+            <Modal.Body.Content>{description}</Modal.Body.Content>
           </Modal.Body>
 
           {/*------------------------- Choix Pain ------------------------------------------*/}
           {painByCategory.length > 0 ? (
             <>
               <Modal.Body.Heading
-                style={{ marginBottom: "1.5rem", marginTop: "1.3rem" }}
+                style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize:"1.5em" }}
               >
                 Choix du Pain
               </Modal.Body.Heading>
@@ -806,7 +810,7 @@ const Card = ({
                                 setPainSelected(data.nom);
                               }}
                             />
-                            <Modal.Body.Heading>{data.nom}</Modal.Body.Heading>
+                            <Modal.Body.Content>{data.nom}</Modal.Body.Content>
                           </div>
                         );
                       }
@@ -823,7 +827,7 @@ const Card = ({
           {garnitureByCategory.length > 0 ? (
             <>
               <Modal.Body.Heading
-                style={{ marginBottom: "1.5rem", marginTop: "1.3rem" }}
+                style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize:"1.5em" }}
               >
                 Garniture(s)
               </Modal.Body.Heading>
@@ -842,9 +846,9 @@ const Card = ({
                               id={data.id}
                               className="radio-choice__menu"
                             />
-                            <Modal.Body.Heading>
+                            <Modal.Body.Content>
                               {data.nom}
-                            </Modal.Body.Heading>
+                            </Modal.Body.Content>
                           </div>
                         );
                       }
@@ -866,7 +870,7 @@ const Card = ({
           {sauceByCategory.length > 0 ? (
             <>
               <Modal.Body.Heading
-                style={{ marginBottom: "1.5rem", marginTop: "1.3rem" }}
+                style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize:"1.5em" }}
               >
                 Sauce(s)
               </Modal.Body.Heading>
@@ -885,9 +889,9 @@ const Card = ({
                               id={data.id}
                               className="radio-choice__menu"
                             />
-                            <Modal.Body.Heading>
+                            <Modal.Body.Content>
                               {data.nom}
-                            </Modal.Body.Heading>
+                            </Modal.Body.Content>
                           </div>
                         );
                       }
@@ -910,7 +914,7 @@ const Card = ({
           {viandeByCategory.length > 0 && ([6, 48].includes(data.id)) ? (
             <>
               <Modal.Body.Heading
-                style={{ marginBottom: "1.5rem", marginTop: "1.3rem" }}
+                 style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize:"1.5em" }}
               >
                 Choix de la viande
               </Modal.Body.Heading>
@@ -935,7 +939,7 @@ const Card = ({
                                 setViande_1_Selected(data.nom);
                               }}
                             />
-                            <Modal.Body.Heading>{data.nom}</Modal.Body.Heading>
+                            <Modal.Body.Content>{data.nom}</Modal.Body.Content>
                           </div>
                         );
                       }
@@ -952,7 +956,7 @@ const Card = ({
           {viandeByCategory.length > 0 && ([7, 49].includes(data.id)) ? (
             <>
               <Modal.Body.Heading
-                style={{ marginBottom: "1.5rem", marginTop: "1.3rem" }}
+                 style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize:"1.5em" }}
               >
                 Choix des 2 viandes
               </Modal.Body.Heading>
@@ -971,9 +975,9 @@ const Card = ({
                               id={data.id}
                               className="radio-choice__menu"
                             />
-                            <Modal.Body.Heading>
+                            <Modal.Body.Content>
                               {data.nom}
-                            </Modal.Body.Heading>
+                            </Modal.Body.Content>
                           </div>
                         );
                       }
@@ -995,7 +999,7 @@ const Card = ({
           {viandeByCategory.length > 0 && ([10, 51].includes(data.id)) ? (
             <>
               <Modal.Body.Heading
-                style={{ marginBottom: "1.5rem", marginTop: "1.3rem" }}
+               style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize:"1.5em" }}
               >
                 Choix des 3 viandes
               </Modal.Body.Heading>
@@ -1014,9 +1018,9 @@ const Card = ({
                               id={data.id}
                               className="radio-choice__menu"
                             />
-                            <Modal.Body.Heading>
+                            <Modal.Body.Content>
                               {data.nom}
-                            </Modal.Body.Heading>
+                            </Modal.Body.Content>
                           </div>
                         );
                       }
@@ -1038,7 +1042,7 @@ const Card = ({
           {data.supplement && supplementByCategory.length > 0 ? (
             <>
               <Modal.Body.Heading
-                style={{ marginBottom: "1.5rem", marginTop: "1.3rem" }}
+                 style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize:"1.5em" }}
               >
                 Supplément(s)
               </Modal.Body.Heading>
@@ -1057,9 +1061,9 @@ const Card = ({
                               id={data.id}
                               className="radio-choice__menu"
                             />
-                            <Modal.Body.Heading>
+                            <Modal.Body.Content>
                               {data.nom} <span className="span_card">({data.prix.toFixed(2)}€)</span>
-                            </Modal.Body.Heading>
+                            </Modal.Body.Content>
                           </div>
                         );
                       }
@@ -1081,7 +1085,7 @@ const Card = ({
           {boissonByCategory.length > 0 ? (
             <>
               <Modal.Body.Heading
-                style={{ marginBottom: "1.5rem", marginTop: "1.3rem" }}
+           style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize:"1.5em" }}
               >
                 Boisson
               </Modal.Body.Heading>
@@ -1105,7 +1109,7 @@ const Card = ({
                                 setBoissonSelected(data.nom)
                               }}
                             />
-                            <Modal.Body.Heading>{data.nom}</Modal.Body.Heading>
+                            <Modal.Body.Content>{data.nom}</Modal.Body.Content>
                           </div>
                         );
                       }

@@ -5,8 +5,8 @@ import Logo_Insta from '../../images/Logo_Insta.png';
 import Logo_Mustang from '../../images/Logo_Royaldelice.png';
 import './Footer.css';
 import { useLocation } from "react-router-dom";
-import CGV from "../../Documents/CGV_MUSTANG_BONDY.pdf";
-import ML from "../../Documents/ML_MUSTANG_BONDY.pdf";
+import CGV from "../../Documents/CGV-RoyalDelice.pdf";
+import ML from "../../Documents/ML-RoyalDelice.pdf";
 
 
 const Footer = () => {
@@ -31,7 +31,7 @@ const Footer = () => {
                         className="footer-link"
                         target="_blank"
                         rel="noreferrer"
-                        href="https://www.google.com/maps/place/24+Rue+Jules+Guesde,+93140+Bondy/"                    
+                        href="https://www.google.com/maps/place/Royal+Delice/@48.7676753,2.0176659,3a,75y,344.93h,91.88t/data=!3m6!1e1!3m4!1sR2qUtbvDtzJOLd29RVd6Hw!2e0!7i16384!8i8192!4m13!1m7!3m6!1s0x47e6814472a05af5:0x2a9cdea442016961!2s3+Rue+Jean+Goujon,+78180+Montigny-le-Bretonneux!3b1!8m2!3d48.7678374!4d2.0176193!3m4!1s0x47e6814472d0df0b:0xeaa22617e04f17e5!8m2!3d48.7677907!4d2.017703"                    
                       >
                         Centre Commercial du Manet <br/>3 rue Jean Goujon<br/> 78180 Montigny-le-Bretonneux 
                       </a>
@@ -49,7 +49,7 @@ const Footer = () => {
                        <br></br> 
                     <a 
                       className="footer-link" 
-                      href="mailto:lemustang93.site@gmail.com"
+                      href="mailto:leroyaldelice.site@gmail.com"
                       rel="noreferrer"
                     > leroyaldelice.site@gmail.com</a>
                     </p>

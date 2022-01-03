@@ -16,9 +16,10 @@
 
 /* Style for text in Footer */
 #footer h5 {
-    font-weight: bolder;
+    font-weight: 700;
     font-family: "Teko";
     color: #f7b309;
+    font-size: 1.6rem;
 }
 #footer p {
     color: rgb(87, 43, 131);

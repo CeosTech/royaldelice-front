@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
+
 .myModal__backdrop {
   position: fixed;
   top: 0;
@@ -11,6 +14,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.myModal__body__content{
+  font-family: "Raleway"!important;
+  font-weight: 500 !important;
 }
 
 .myModal__modal {
@@ -48,6 +55,8 @@
   text-align: center;
   color: rgb(100, 100, 100);
   font-size: 2.2rem;
+  font-family: "Teko";
+  font-weight: 700;
 }
 .myModal__header h2 {
   text-align: center;
@@ -71,7 +80,8 @@
 }
 
 .myModal__body__heading {
-  font-size: 1.3rem;
+  /* font-size: 1rem !important ; */
+  font-family: "Raleway";
 }
 
 .myModal__footer {
