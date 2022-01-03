@@ -52,7 +52,7 @@ const Carte = ({
     {/* Button for Side Menu */}
     <div className={classes.sectionMobile} >
             <div className="menu-arrow-forward" onClick={handleShow}>
-            <ArrowForwardIcon  /> 
+            <ArrowForwardIcon className="fleche" /> 
             </div>
 
           {/* Side Menu */}
@@ -62,7 +62,7 @@ const Carte = ({
                           <div className="menu-side" >
                           
                           <div className="menu-arrow-back" onClick={handleClose}>
-                            <ArrowBackIcon  /> 
+                            <ArrowBackIcon className="fleche" /> 
                           </div>
                             
                               <div className="carte_contain">

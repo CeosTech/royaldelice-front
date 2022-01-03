@@ -134,8 +134,11 @@
     margin-right: 2em;
   }
 }
-.MuiSvgIcon-root{
-  margin-top: ;
+.fleche{
+  background-color: #DCA10B;
+  border-radius: 10px;
+  border: 2px solid #c97e3f;
+
 }
 
 @media (max-width: 600px) {
@@ -161,7 +164,7 @@
     margin-bottom: -2em;
   }
   .carte_contain {
-    background-color: #1C1F2B;
+    background-color: rgb(87, 43, 131);
     border-radius: 20px !important;
   }
   .carte__item.active {
@@ -173,6 +176,7 @@
   }
   .menu-arrow-forward{
     padding-top: 15px;
+    background-color: #DCA10B;
   }
   
 }
@@ -217,7 +221,7 @@
 }
 
 .menu-offcanvas .offcanvas-body {
-  background-color: #1C1F2B;
+  background-color: rgb(87, 43, 131);
   padding: 0rem 0rem;
   
 }
