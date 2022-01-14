@@ -1,0 +1,27 @@
+/* ::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: black;
+}
+
+::-ms-input-placeholder {
+  color: black;
+} */
+
+.click2FA{
+  color: #61e0e6;
+  cursor: pointer;
+}
+
+label.text{
+  margin: 0;
+  display: block;
+  height: 5%;
+}
+
+span.sub_title{
+  text-align: left;
+}
