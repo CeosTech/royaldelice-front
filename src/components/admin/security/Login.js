@@ -86,8 +86,11 @@ const Login = () => {
     errors: " ",
     code: 0,
   });
+  const [canAuth, setCanAuth] = useState(true)
+  const [loadCanAuth, setLoadCanAuth] = useState(false)
   const [auth, setAuth] = useState(false); // Show the 2FA form
   const [count, setCount] = useState(0); // To count 5 mins
+  const [countCanAuth, setCountCanAuth] = useState(10); // To count 10 mins
 
   const updateDisponibiliteRestaurant = async (disponibilite) => {
     await axios
@@ -96,6 +99,12 @@ const Login = () => {
       })
       .then((res) => history.push("/admin"));
   };
+
+  const fetchCanAuth = async () =>{ // Check if user can authentificate
+    await axios
+      .get(`${URL}accounts/canAuth/`)
+      .then((res) => { setCanAuth(res.data.canAuth); setLoadCanAuth(true); console.log("CONNECT: " + res.data.canAuth)});
+  }
 
   const authenticate = async (loginRequest) => {
     // Authentification when the user submit the code
@@ -116,13 +125,18 @@ const Login = () => {
         // dispatch to our securityReducer
         setShoudDisableSignIn(true);
         updateDisponibiliteRestaurant(true);
+        fetchCanAuth()
       })
       .catch((err) => {
+        console.log("HERE")
         setloginState({
           ...loginState,
           errors: "Email ou mot de passe incorrecte",
         });
         setShoudDisableSignIn(false);
+        fetchCanAuth()
+        console.log("=========bp=======")
+        console.log(canAuth)
       });
   };
 
@@ -139,14 +153,18 @@ const Login = () => {
         setAuth(true);
         setCount(5);
         setShoudDisableSignIn(false);
+        fetchCanAuth()
       })
       .catch((err) => {
+        console.log(err.response.data)
         setloginState({
           ...loginState,
           errors: "Email ou mot de passe incorrecte",
         });
         setAuth(false);
         setShoudDisableSignIn(false);
+        fetchCanAuth()
+        console.log(canAuth)
       });
   }
 
@@ -179,6 +197,18 @@ const Login = () => {
   };
 
   useEffect(() => {
+    console.log("===================")
+    fetchCanAuth();
+    console.log(canAuth)
+  }, [loadCanAuth]);
+
+  useEffect(() => {
+    // Able to connect after 10 minutes
+    const timer = (!canAuth && countCanAuth > 0) && setTimeout(() => setCountCanAuth(countCanAuth - 1), 1000);
+    return () => clearInterval(timer);
+  }, [canAuth, countCanAuth])
+
+  useEffect(() => {
     // Timer to resend the code
     const timer = (auth && count > 0) && setTimeout(() => setCount(count - 1), 1000*60);
     return () => clearInterval(timer);
@@ -196,7 +226,7 @@ const Login = () => {
           <Typography component="h1" variant="h5">
             Connexion
           </Typography>
-          {!auth ? (
+          {/* !auth ? (
             <form className={classes.form} noValidate onSubmit={onSubmit}>
               <TextField
                 variant="filled"
@@ -297,6 +327,113 @@ const Login = () => {
                 )}
               </Button>
             </form>
+          ) */}
+
+          { canAuth ? (
+            !auth ? (
+              <form className={classes.form} noValidate onSubmit={onSubmit}>
+                <TextField
+                  variant="filled"
+                  margin="normal"
+                  required
+                  fullWidth
+                  id="email"
+                  classname={classes.input}
+                  label="Nom d'utilisateur"
+                  name="username"
+                  autoComplete="email"
+                  autoFocus
+                  onChange={onChange}
+                />
+                <TextField
+                  variant="filled"
+                  margin="normal"
+                  required
+                  fullWidth
+                  name="password"
+                  label="Mot de passe"
+                  type="password"
+                  id="password"
+                  autoComplete="current-password"
+                  onChange={onChange}
+                />
+                {loginState.errors !== "" && (
+                  <p className={classes.error}>{loginState.errors} </p>
+                )}
+                <Button
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  color="secondary"
+                  className={
+                    !shoudDisableSignIn ? classes.submit : classes.disable
+                  }
+                  disabled={shoudDisableSignIn}
+                >
+                  {shoudDisableSignIn ? (
+                    <div style={{ color: "brown" }}>
+                      Connexion au serveur .....{" "}
+                    </div>
+                  ) : (
+                    "Connexion "
+                  )}
+                </Button>
+              </form>
+            ) : (
+              <form className={classes.form} noValidate onSubmit={onSubmitCode}>
+                <label className="text">Le code est valide pendant : {count} minutes </label>
+                {count === 0 && (
+                  <center>
+                    <br />
+                    <span
+                      onClick={() => {
+                        askAuth({
+                          username: loginState.username,
+                          password: loginState.password,
+                        });
+                      }}
+                      className="click2FA"
+                    >
+                      Renvoyez moi un code !
+                    </span>
+                  </center>
+                )}
+                <br />
+                <h6 className="sub_title"><br />Code :</h6>
+                <br />
+                <input
+                  variant="filled"
+                  fullWidth
+                  id="dashboard-outlined-basic"
+                  type="number"
+                  name="code"
+                  placeholder="Code d'authentification"
+                  onChange={onChange}
+                  style={{ width: "60%" }}
+                />
+                <br />
+                <Button
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  color="secondary"
+                  className={
+                    !shoudDisableSignIn ? classes.submit : classes.disable
+                  }
+                  disabled={shoudDisableSignIn}
+                >
+                  {shoudDisableSignIn ? (
+                    <div style={{ color: "brown" }}>
+                      Connexion au serveur .....{" "}
+                    </div>
+                  ) : (
+                    "Connexion "
+                  )}
+                </Button>
+              </form>
+            )
+          ) : (
+            <div>  <p className={classes.error}> Vous ne pouvez pas vous connectez pendant {countCanAuth} minutes </p></div>
           )}
         </div>
       </Container>

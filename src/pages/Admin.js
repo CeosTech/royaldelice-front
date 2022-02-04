@@ -33,7 +33,7 @@ const Admin = () => {
       fetchCommandes();
 
       // wait for the response from fetchCommandes , before we recall it (delay of 1minute)
-      timeoutId = setTimeout(getLatestCommandes, 1000 * 60);
+      timeoutId = setTimeout(getLatestCommandes, 1000 * 2);
     }
     getLatestCommandes();
 
