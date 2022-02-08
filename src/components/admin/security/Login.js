@@ -90,7 +90,7 @@ const Login = () => {
   const [loadCanAuth, setLoadCanAuth] = useState(false)
   const [auth, setAuth] = useState(false); // Show the 2FA form
   const [count, setCount] = useState(0); // To count 5 mins
-  const [countCanAuth, setCountCanAuth] = useState(10); // To count 10 mins
+  //const [countCanAuth, setCountCanAuth] = useState(10); // To count 10 mins
 
   const updateDisponibiliteRestaurant = async (disponibilite) => {
     await axios
@@ -136,7 +136,7 @@ const Login = () => {
         setShoudDisableSignIn(false);
         fetchCanAuth()
         console.log("=========bp=======")
-        console.log(canAuth)
+        console.log(err.response)
       });
   };
 
@@ -202,11 +202,11 @@ const Login = () => {
     console.log(canAuth)
   }, [loadCanAuth]);
 
-  useEffect(() => {
+  /* useEffect(() => {
     // Able to connect after 10 minutes
     const timer = (!canAuth && countCanAuth > 0) && setTimeout(() => setCountCanAuth(countCanAuth - 1), 1000);
     return () => clearInterval(timer);
-  }, [canAuth, countCanAuth])
+  }, [canAuth, countCanAuth]) */
 
   useEffect(() => {
     // Timer to resend the code
@@ -226,7 +226,7 @@ const Login = () => {
           <Typography component="h1" variant="h5">
             Connexion
           </Typography>
-          {/* !auth ? (
+          {!auth ? (
             <form className={classes.form} noValidate onSubmit={onSubmit}>
               <TextField
                 variant="filled"
@@ -235,7 +235,7 @@ const Login = () => {
                 fullWidth
                 id="email"
                 classname={classes.input}
-                label="addresse mail"
+                label="Nom d'utilisateur"
                 name="username"
                 autoComplete="email"
                 autoFocus
@@ -327,9 +327,9 @@ const Login = () => {
                 )}
               </Button>
             </form>
-          ) */}
+          )}
 
-          { canAuth ? (
+          {/* { canAuth ? (
             !auth ? (
               <form className={classes.form} noValidate onSubmit={onSubmit}>
                 <TextField
@@ -434,7 +434,7 @@ const Login = () => {
             )
           ) : (
             <div>  <p className={classes.error}> Vous ne pouvez pas vous connectez pendant {countCanAuth} minutes </p></div>
-          )}
+          )} */}
         </div>
       </Container>
     </div>
