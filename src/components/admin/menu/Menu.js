@@ -18,17 +18,21 @@ const AdminNav = () => {
 
   const [active, setActive] = useState(false);
   const [items, setItems] = useState([]);
+  const [load, setLoad] = useState(false)
 
-  console.log(active);
+  //console.log(active);
 
   // active
   //   ? (window.document.body.style.overflow = "hidden")
   //   : (window.document.body.style.overflow = "auto");
 
   const get_restaurant = async () => {
-    const { data } = await axios.get(URL + "restaurant/info_restaurant/");
+    await axios.get(URL + "restaurant/info_restaurant/").then( (res) => {
+      setItems(res.data)
+      setLoad(true)
+    });
 
-    setItems(data);
+    //setItems(data);
   };
 
   const deconnexion = async () => {
@@ -40,8 +44,8 @@ const AdminNav = () => {
       await axios.put(URL + "restaurant/info_restaurant/1/", {
         disponibilite_restaurant: false,
       });
-      localStorage.removeItem('jwtToken');
-      history.push("/") // à voir si il y a mieux
+      localStorage.removeItem("jwtToken");
+      history.push("/"); // à voir si il y a mieux
     } else {
       // Code à éxécuter si l'utilisateur clique sur "Annuler"
     }
@@ -51,10 +55,76 @@ const AdminNav = () => {
     console.log(disponibilite);
     await axios.put(URL + "restaurant/info_restaurant/1/", {
       disponibilite_restaurant: disponibilite,
+      automatique: false,
+    }).then(() => {
+      window.location.reload(false)
     });
   };
 
+  // Update the open/close automatiion
+  const updateAutomatiqueRestaurant = async () => {
+    await axios
+      .put(URL + "restaurant/info_restaurant/1/", {
+        automatique: !items[0].automatique,
+      })
+      .then(() => {
+        window.location.reload(false)
+      }).catch((e) =>{
+        console.log(e.response)
+      });
+  };
+
+  // Update the open/close automatically
+  async function automatiqueOpenClose() {
+    console.log("====== TIME ============")
+    console.log(items)
+      let automatique = items[0]?.automatique; // the current information
+      let now = new Date(); // current time
+
+      // Morning
+      let startClock1 = new Date(); // open
+      startClock1.setHours(11, 0, 0, 0);
+      let endClock1 = new Date(); // close
+      endClock1.setHours(22, 0, 0, 0);
+
+      // Only for sunday
+      let startClock3 = new Date(); // open
+      startClock3.setHours(11, 30, 0);
+      let endClock3 = new Date(); // close
+      endClock3.setHours(23, 30, 0);
+
+      if (automatique) {
+          console.log(automatique)
+        if(now.getDay() !== 0){ // Monday to Saturday
+          console.log("NOT SUNDAY")
+          if (now.getTime() >= startClock1.getTime() && now.getTime() < endClock1.getTime()) {
+            console.log("MORNING OPEN ")
+            await axios.put(URL + "restaurant/info_restaurant/1/", {
+              disponibilite_restaurant: true,
+            });
+          } else {
+            console.log("MORNING CLOSE ")
+            await axios.put(URL + "restaurant/info_restaurant/1/", {
+              disponibilite_restaurant: false,
+            });
+          }
+        } else { // Monday
+          if (now.getTime() >= startClock3.getTime() && now.getTime() < endClock3.getTime()) {
+           await axios.put(URL + "restaurant/info_restaurant/1/", {
+             disponibilite_restaurant: true,
+           });
+         } else {
+           await axios.put(URL + "restaurant/info_restaurant/1/", {
+             disponibilite_restaurant: false,
+           });
+         }
+        }
+      }
+
+  }
+
   useEffect(() => {
+    console.log("============USE EFFECT 1 =========")
     get_restaurant();
     console.log(items);
 
@@ -63,26 +133,43 @@ const AdminNav = () => {
     };
   }, []);
 
-  console.log(items[0]);
+  useEffect(() => {
+    console.log("============USE EFFECT 2=========")
+    console.log(load)
+    console.log(items)
+    if (load) {
+      automatiqueOpenClose()
+    }
+
+  }, [load]);
 
   return (
     <div className={"adminNav " + (active ? "active" : "")}>
       <div className="adminNav__header">
         <img src={Logo} alt="df5" />
-      
       </div>
 
-      <h2 className="adminNav__title">Royal Delice</h2>
+      <h2 className="adminNav__title">Royal Délice</h2>
       {/*Switch pour ouvrir et fermer (close and open restaurant)*/}
-      
-      {items[0] != undefined ? (
+
+      {items[0] !== undefined ? (
         <SwitchBtn
           val={items[0].disponibilite_restaurant}
           action={updateDisponibiliteRestaurant}
           item={items[0]}
         />
       ) : null}
-    
+
+      <h5 className="adminNav__title">Ouverture / Fermeture automatique</h5>
+      {load ? (
+        <SwitchBtn
+          val={items[0].automatique}
+          action={updateAutomatiqueRestaurant}
+          item={items[0]}
+          textPrint = {false}
+        />
+      ) : null}
+
       <div className="adminNav__links">
         {admin.pages.map((page) => (
           <button
@@ -125,7 +212,9 @@ const AdminNav = () => {
       <div className="adminNav__close">
         <IconButton
           className="adminNav__close-btn"
-          onClick={() => {setActive(!active)}}
+          onClick={() => {
+            setActive(!active);
+          }}
         >
           <i
             className={"fas fa-" + (active ? "chevron-right" : "chevron-left")}

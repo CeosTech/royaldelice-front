@@ -1,28 +1,33 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./switch.css";
 
-const SwitchBtn = ({ val = true, action, item = {} }) => {
+const SwitchBtn = ({ val = true, action, item = {}, textPrint = true }) => {
   const [open, setOpen] = useState(() => val);
 
   // TODO: donner onChange function au props
 
   const switchFunc = (test) => {
-    if(test === true)
-    {
-        return false;
+    if (test === true) {
+      return false;
     }
-    else
-    {
-        return true;
+    else {
+      return true;
     }
   }
 
+  useEffect(() => {
+    console.log("===== SWITCHBTN =========")
+    console.log(textPrint)
+  })
+
   return (
     <div className='switch__container'>
-      <p className='switch__container-indication '>
-        {open ? "Ouvert" : "Fermé"}
-      </p>
+      {textPrint &&
+        <p className='switch__container-indication '>
+          {open ? "Ouvert" : "Fermé"}
+        </p>
+      }
       <div
         className={["switch", open ? "active" : ""].join(" ")}
         onClick={() => {

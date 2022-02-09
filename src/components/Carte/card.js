@@ -779,22 +779,23 @@ const Card = ({
     setPrevBoissonSelected(boissonSelected)
     console.log("==================================")
     if (boissonSelected !== null) {
-      if (boissonSelected?.indexOf("Dada") !== -1 || boissonSelected?.indexOf("Freez") !== -1) {
+      if (boissonSelected?.indexOf("Dada") !== -1 || boissonSelected?.indexOf("Freez") !== -1) { // Check if the drink selected is Dada or Freez
         console.log("BREAKPOINT 1")
         console.log(boissonSelected)
         console.log(boissonSelected !== null)
         console.log(prevBoissonSelected)
-        if (prevBoissonSelected === null) {
+        if (prevBoissonSelected === null) { // check if it's the first time he take a drink and the drink is Dada/Freez
           console.log("BREAKPOINT 2")
-          setPrixTotal(prixTotal + 2);
-        } else if ((prevBoissonSelected.indexOf("Dada") === -1 && prevBoissonSelected.indexOf("Freez") === -1)) {
+          setPrixTotal(prixTotal + 2); // Add 2€
+        } else if ((prevBoissonSelected.indexOf("Dada") === -1 && prevBoissonSelected.indexOf("Freez") === -1)) { // Check if the previously take a Dada/Freez
           console.log("BREAKPOINT 2-1")
           console.log(prevBoissonSelected.indexOf("Dada"))
           console.log(prevBoissonSelected.indexOf("Freez"))
-          setPrixTotal(prixTotal + 2);
+          setPrixTotal(prixTotal + 2); // Add 2€
         }
         console.log("BREAKPOINT 3")
-      } else if (prevBoissonSelected !== null && ((prevBoissonSelected.indexOf("Dada") !== -1 || prevBoissonSelected.indexOf("Freez") !== -1))) {
+      } else if (prevBoissonSelected !== null && 
+        ((prevBoissonSelected.indexOf("Dada") !== -1 || prevBoissonSelected.indexOf("Freez") !== -1))) { // drink not Dada or Freez
         console.log("BREAKPOINT 4")
         setPrixTotal(prixTotal - 2);
       }
