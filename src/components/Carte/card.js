@@ -72,6 +72,7 @@ const Card = ({
   // const baskets = useSelector(selectBaskets)
   const [quantite, setQuantite] = useState(1);
   const [value, setValue] = useState(null);
+  const [prevBoissonSelected, setPrevBoissonSelected] = useState(null);
   const [boissonSelected, setBoissonSelected] = useState(null);
   const [prixTotal, setPrixTotal] = useState(prix);
   const [comment, setComment] = useState("");
@@ -99,6 +100,7 @@ const Card = ({
       setViande_3_Selected([])
       setPainSelected(null)
       setBoissonSelected(null)
+      setPrevBoissonSelected(null)
 
       compteurUnique = 0;
       compteurDouble = 0;
@@ -484,9 +486,43 @@ const Card = ({
         setErrorSubmit(true);
       }
     }
-    else if (data.categorie === 18 || data.categorie === 20) { // MENU SANDWICH + MENU PANINI & CROCS
+    else if (data.categorie === 18) { // MENU SANDWICH
       if (
         painSelected !== null &&
+        boissonSelected !== null &&
+        tabGarniture.length > 0 &&
+        tabSauce.length > 0 &&
+        errorSupplement !== true &&
+        errorDouble !== true &&
+        errorTriple !== true
+      ) {
+        setError(false);
+        handleSubmit(true);
+
+        compteurSupplement = 0;
+        compteurUnique = 0;
+        compteurDouble = 0;
+        compteurViandes = 0;
+        compteurTriple = 0;
+        tabGarniture = [];
+        tabSauce = [];
+        tabSupplement = [];
+
+        setPainSelected(null);
+        setBoissonSelected(null)
+        setSupplementSelected(null);
+        setViande_1_Selected(null);
+        setViande_2_Selected([]);
+        setViande_3_Selected([]);
+        setPrixTotal(prix);
+        setPrixTotal(prix);
+      } else {
+        //Rajouter les erreurs pour chaque cas
+        setErrorSubmit(true);
+      }
+    }
+    else if (data.categorie === 20) { // MENU PANINI & CROCS
+      if (
         boissonSelected !== null &&
         tabGarniture.length > 0 &&
         tabSauce.length > 0 &&
@@ -554,6 +590,7 @@ const Card = ({
     else {
       handleSubmit(true);
     }
+    setPrevBoissonSelected(null)
 
   };
 
@@ -738,6 +775,32 @@ const Card = ({
     }
   };
 
+  useEffect(() => {
+    setPrevBoissonSelected(boissonSelected)
+    console.log("==================================")
+    if (boissonSelected !== null) {
+      if (boissonSelected?.indexOf("Dada") !== -1 || boissonSelected?.indexOf("Freez") !== -1) {
+        console.log("BREAKPOINT 1")
+        console.log(boissonSelected)
+        console.log(boissonSelected !== null)
+        console.log(prevBoissonSelected)
+        if (prevBoissonSelected === null) {
+          console.log("BREAKPOINT 2")
+          setPrixTotal(prixTotal + 2);
+        } else if ((prevBoissonSelected.indexOf("Dada") === -1 && prevBoissonSelected.indexOf("Freez") === -1)) {
+          console.log("BREAKPOINT 2-1")
+          console.log(prevBoissonSelected.indexOf("Dada"))
+          console.log(prevBoissonSelected.indexOf("Freez"))
+          setPrixTotal(prixTotal + 2);
+        }
+        console.log("BREAKPOINT 3")
+      } else if (prevBoissonSelected !== null && ((prevBoissonSelected.indexOf("Dada") !== -1 || prevBoissonSelected.indexOf("Freez") !== -1))) {
+        console.log("BREAKPOINT 4")
+        setPrixTotal(prixTotal - 2);
+      }
+    }
+  }, [boissonSelected])
+
   return (
     // Depending on the availability or not of the item, the css style will vary, thanks to a different className
     <div className="card__command__container">
@@ -774,10 +837,10 @@ const Card = ({
           </Modal.Header>
           <Modal.Body>
             <Modal.Body.Heading
-             style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize:"1.5em" }}
+              style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize: "1.5em" }}
             >
               Description
-              </Modal.Body.Heading>
+            </Modal.Body.Heading>
             <Modal.Body.Content>{description}</Modal.Body.Content>
           </Modal.Body>
 
@@ -785,7 +848,7 @@ const Card = ({
           {painByCategory.length > 0 ? (
             <>
               <Modal.Body.Heading
-                style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize:"1.5em" }}
+                style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize: "1.5em" }}
               >
                 Choix du Pain
               </Modal.Body.Heading>
@@ -827,7 +890,7 @@ const Card = ({
           {garnitureByCategory.length > 0 ? (
             <>
               <Modal.Body.Heading
-                style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize:"1.5em" }}
+                style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize: "1.5em" }}
               >
                 Garniture(s)
               </Modal.Body.Heading>
@@ -866,60 +929,16 @@ const Card = ({
             </>
           ) : null}
 
-          {/*------------------------- Choix Sauces ------------------------------------------*/}
-          {sauceByCategory.length > 0 ? (
-            <>
-              <Modal.Body.Heading
-                style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize:"1.5em" }}
-              >
-                Sauce(s)
-              </Modal.Body.Heading>
-              <FormControl component="fieldset">
-                <FormGroup>
-                  {
-                    sauceByCategory.map((data) => {
-                      if (data.disponibilite) {
-                        return (
-                          <div className="sides-radioGroup" key={data.id}>
-                            <FormControlLabel
-                              value={data.nom}
-                              control={
-                                <Checkbox onChange={handleChangeSauce} />
-                              }
-                              id={data.id}
-                              className="radio-choice__menu"
-                            />
-                            <Modal.Body.Content>
-                              {data.nom}
-                            </Modal.Body.Content>
-                          </div>
-                        );
-                      }
-                    })
-                  }
-                </FormGroup>
-              </FormControl>
-
-              <div className="separation_ligne"> </div>
-            </>
-          ) : null}
-          {errorDouble && (
-            <p className="error">
-              Veuillez sélectionner jusqu'à 2 éléments maximum
-            </p>
-          )
-          }
-
           {/*------------------------- Choix Viandex1 ------------------------------------------*/}
           {viandeByCategory.length > 0 && ([6, 48].includes(data.id)) ? (
             <>
               <Modal.Body.Heading
-                 style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize:"1.5em" }}
+                style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize: "1.5em" }}
               >
                 Choix de la viande
               </Modal.Body.Heading>
               <FormControl component="fieldset">
-              <RadioGroup
+                <RadioGroup
                   name="viande1"
                   value={viande_1_Selected}
                 >
@@ -956,7 +975,7 @@ const Card = ({
           {viandeByCategory.length > 0 && ([7, 49].includes(data.id)) ? (
             <>
               <Modal.Body.Heading
-                 style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize:"1.5em" }}
+                style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize: "1.5em" }}
               >
                 Choix des 2 viandes
               </Modal.Body.Heading>
@@ -999,7 +1018,7 @@ const Card = ({
           {viandeByCategory.length > 0 && ([10, 51].includes(data.id)) ? (
             <>
               <Modal.Body.Heading
-               style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize:"1.5em" }}
+                style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize: "1.5em" }}
               >
                 Choix des 3 viandes
               </Modal.Body.Heading>
@@ -1038,11 +1057,55 @@ const Card = ({
             </>
           ) : null}
 
+          {/*------------------------- Choix Sauces ------------------------------------------*/}
+          {sauceByCategory.length > 0 ? (
+            <>
+              <Modal.Body.Heading
+                style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize: "1.5em" }}
+              >
+                Sauce(s)
+              </Modal.Body.Heading>
+              <FormControl component="fieldset">
+                <FormGroup>
+                  {
+                    sauceByCategory.map((data) => {
+                      if (data.disponibilite) {
+                        return (
+                          <div className="sides-radioGroup" key={data.id}>
+                            <FormControlLabel
+                              value={data.nom}
+                              control={
+                                <Checkbox onChange={handleChangeSauce} />
+                              }
+                              id={data.id}
+                              className="radio-choice__menu"
+                            />
+                            <Modal.Body.Content>
+                              {data.nom}
+                            </Modal.Body.Content>
+                          </div>
+                        );
+                      }
+                    })
+                  }
+                </FormGroup>
+              </FormControl>
+
+              <div className="separation_ligne"> </div>
+            </>
+          ) : null}
+          {errorDouble && (
+            <p className="error">
+              Veuillez sélectionner jusqu'à 2 éléments maximum
+            </p>
+          )
+          }
+
           {/*------------------------- Choix Supplement ------------------------------------------*/}
           {data.supplement && supplementByCategory.length > 0 ? (
             <>
               <Modal.Body.Heading
-                 style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize:"1.5em" }}
+                style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize: "1.5em" }}
               >
                 Supplément(s)
               </Modal.Body.Heading>
@@ -1085,7 +1148,7 @@ const Card = ({
           {boissonByCategory.length > 0 ? (
             <>
               <Modal.Body.Heading
-           style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize:"1.5em" }}
+                style={{ marginBottom: "1.5rem", marginTop: "1.3rem", fontFamily: "Teko", fontWeight: "500", fontSize: "1.5em" }}
               >
                 Boisson
               </Modal.Body.Heading>

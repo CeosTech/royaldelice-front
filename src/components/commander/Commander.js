@@ -96,7 +96,7 @@ const Commander = () => {
         setViandeByCategory
       ); // categorie correspondant aux viandes
     }
-    if( [18, 20, 23].includes(active)){ // PAIN
+    if( [18, 23].includes(active)){ // PAIN
       console.log("PAIN")
       sendrequest(
         "get",
