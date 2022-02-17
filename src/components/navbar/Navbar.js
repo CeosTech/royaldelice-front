@@ -7,7 +7,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
-import Logo_Mustang from "../../images/Logo_Mustang.png";
+import Logo_Royaldelice from "../../images/Logo_Royaldelice.png";
 import { NavLink } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
@@ -178,7 +178,7 @@ const Navbar = () => {
               </Grid>
               <Grid container justifyContent="flex-start" xs={5} md={4}>
                 <a href="/#header" className="Logo_Mustang">
-                  <img className="Logo_Mustang" src={Logo_Mustang}></img>
+                  <img className="Logo_Mustang" src={Logo_Royaldelice}></img>
                 </a>
               </Grid>
               <Grid container xs={3} md={2} style={{ minWidth: "90px " }}>
